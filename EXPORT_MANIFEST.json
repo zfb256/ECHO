@@ -945,11 +945,6 @@
       "original_sha256": "ad4e735d0adac94914d693ae3c0c67e4d6ebfb34a95049bfa9faa3b119806de6",
       "modified": false
     },
-    "scripts/mock.py": {
-      "sha256": "5705f6703e2820ccb00a8ff0c512ae396cd1f9e96b0fd70a7cb1d78ff46c9de2",
-      "original_sha256": "5705f6703e2820ccb00a8ff0c512ae396cd1f9e96b0fd70a7cb1d78ff46c9de2",
-      "modified": false
-    },
     "scripts/plan_selfinduced_scaleup.py": {
       "sha256": "5e974a0cfc99ce3566c2a8efcaa5000d7a1ee16447a0cf7edde0098d82f5c8ef",
       "original_sha256": "5e974a0cfc99ce3566c2a8efcaa5000d7a1ee16447a0cf7edde0098d82f5c8ef",
