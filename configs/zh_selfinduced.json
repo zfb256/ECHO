@@ -1,0 +1,109 @@
+{
+  "random_seed": 20260801,
+  "hf_endpoint": "https://huggingface.co",
+  "_comment": "Chinese self-induced redesign only. The entire question bank must be human-verified and frozen before any generation; no item may be selected using model error yield.",
+  "paths": {
+    "datasets_dir": "datasets_zh",
+    "models_dir": "models",
+    "raw_dir": "datasets_zh/raw",
+    "interim_dir": "datasets_zh/interim",
+    "processed_dir": "datasets_zh/processed",
+    "runs_dir": "datasets_zh/runs",
+    "reports_dir": "reports_zh",
+    "seed_bank": "configs/zh_seed_bank.json",
+    "selfinduced_bank": "configs/zh_selfinduced_questions.json"
+  },
+  "datasets": [],
+  "pilot": {
+    "run_name": "zh_selfinduced",
+    "turns_target": 2,
+    "inference_backend": "vllm",
+    "model_pool": [
+      "Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-3B-Instruct",
+      "Qwen2.5-7B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "internlm2_5-7b-chat"
+    ],
+    "model_repositories": {
+      "Qwen2.5-1.5B-Instruct": "Qwen/Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-3B-Instruct": "Qwen/Qwen2.5-3B-Instruct",
+      "Qwen2.5-7B-Instruct": "Qwen/Qwen2.5-7B-Instruct",
+      "Qwen2.5-14B-Instruct": "Qwen/Qwen2.5-14B-Instruct",
+      "internlm2_5-7b-chat": "internlm/internlm2_5-7b-chat"
+    },
+    "selfinduced": {
+      "enabled": true,
+      "questions_per_model": 60,
+      "stage2_followup_default": "请根据你刚才的回答，再补充一个相关的具体事实，并用一两句话解释。"
+    },
+    "prompts": {
+      "selfinduced_stage1": "请始终使用简体中文，用一个简短段落直接回答下面的事实问题。如果确实不知道，可以明确说不知道，不要猜测。\n\n问题：{question}",
+      "selfinduced_stage2_fallback": "请始终使用简体中文，忠实、简洁地继续对话。\n\n用户：{question}\n助手：{turn1}\n用户：{followup}"
+    },
+    "ccr": {
+      "decoding_temperature_generation": 0.7,
+      "decoding_temperature_selfinduced_stage1": 0.0,
+      "bootstrap_samples": 2000
+    },
+    "nli": {
+      "enabled": false,
+      "model": "IDEA-CCNL/Erlangshen-Roberta-110M-NLI",
+      "threshold": 0.70
+    },
+    "annotation": {
+      "primary_question_ids": [
+        "zh_date_003",
+        "zh_date_002",
+        "zh_date_014",
+        "zh_date_015",
+        "zh_date_012",
+        "zh_date_008",
+        "zh_date_009",
+        "zh_date_006",
+        "zh_date_011",
+        "zh_date_007",
+        "zh_entity_015",
+        "zh_entity_003",
+        "zh_entity_014",
+        "zh_entity_013",
+        "zh_entity_010",
+        "zh_entity_012",
+        "zh_entity_011",
+        "zh_entity_009",
+        "zh_entity_007",
+        "zh_entity_006",
+        "zh_false_premise_004",
+        "zh_false_premise_014",
+        "zh_false_premise_008",
+        "zh_false_premise_001",
+        "zh_false_premise_007",
+        "zh_false_premise_009",
+        "zh_false_premise_012",
+        "zh_false_premise_011",
+        "zh_false_premise_010",
+        "zh_false_premise_002",
+        "zh_science_011",
+        "zh_science_006",
+        "zh_science_013",
+        "zh_science_003",
+        "zh_science_002",
+        "zh_science_008",
+        "zh_science_004",
+        "zh_science_014",
+        "zh_science_010",
+        "zh_science_007"
+      ],
+      "_primary_sampling_note": "Forty questions fixed without inspecting model-output labels: ten per q_id prefix, selected by SHA-256 order of random_seed:q_id. All five models use the same questions.",
+      "turn1_second_annotator_n": 100,
+      "inheritance_second_annotator_n": 0,
+      "min_kappa_decidable_fraction": 0.75,
+      "external_tools_prohibited": true,
+      "allow_uncertain": true
+    },
+    "go_no_go": {
+      "min_selfinduced_hcr": 0.10,
+      "min_kappa": 0.60
+    }
+  }
+}

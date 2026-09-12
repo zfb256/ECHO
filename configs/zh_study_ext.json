@@ -1,0 +1,126 @@
+{
+  "random_seed": 20260728,
+  "hf_endpoint": "https://huggingface.co",
+  "_comment": "Chinese full-chain redesign. Banks are locked before model generation. Pilot-only items must use separate files and must never be promoted based on model error yield.",
+  "paths": {
+    "datasets_dir": "datasets_zh",
+    "models_dir": "models",
+    "raw_dir": "datasets_zh/raw",
+    "interim_dir": "datasets_zh/interim",
+    "processed_dir": "datasets_zh/processed",
+    "runs_dir": "datasets_zh/runs",
+    "reports_dir": "reports_zh",
+    "seed_bank": "configs/zh_seed_bank.json",
+    "selfinduced_bank": "configs/zh_selfinduced_bank.json"
+  },
+  "datasets": [
+    {
+      "key": "kdconv",
+      "hf_name": "thu-coai/kd_conv_with_kb",
+      "hf_config": "all_dialogues",
+      "split": "train",
+      "sample_size": 400,
+      "language": "zh"
+    },
+    {
+      "key": "lccc",
+      "hf_name": "thu-coai/lccc",
+      "hf_config": "base",
+      "split": "train",
+      "sample_size": 400,
+      "language": "zh"
+    }
+  ],
+  "pilot": {
+    "run_name": "zh_study_ext",
+    "turns_target": 6,
+    "inference_backend": "vllm",
+    "model_pool": [
+      "glm-4-9b-chat-hf",
+      "Yi-1.5-9B-Chat"
+    ],
+    "model_repositories": {
+      "glm-4-9b-chat-hf": "zai-org/glm-4-9b-chat-hf",
+      "Yi-1.5-9B-Chat": "01-ai/Yi-1.5-9B-Chat"
+    },
+    "_model_pool_note": "Pre-registered extension arm. Frozen before extension generation. The primary five-model pool in configs/zh_study.json is unchanged and is not regenerated. Family coverage: GLM (glm-4-9b-chat-hf), Yi (Yi-1.5-9B-Chat).",
+    "selfinduced": {
+      "enabled": true,
+      "questions_per_model": 40,
+      "stage2_followup_default": "请根据你刚才的回答，再补充一个相关的具体事实，并用一两句话解释。"
+    },
+    "prompts": {
+      "default_entity": "这个主题",
+      "entity_probe": "结束前，请用一两句话重述关于“{entity}”最需要记住的关键事实。",
+      "clean_instruction": "请始终使用简体中文，忠实、简洁地继续这段多轮对话。",
+      "contaminated_instruction": "请始终使用简体中文，忠实、简洁地继续这段多轮对话。",
+      "user_role": "用户",
+      "assistant_role": "助手",
+      "selfinduced_stage1": "请始终使用简体中文，用一个简短段落直接回答下面的事实问题。如果确实不知道，可以明确说不知道，不要猜测。\n\n问题：{question}",
+      "selfinduced_stage2_fallback": "请始终使用简体中文，忠实、简洁地继续对话。\n\n用户：{question}\n助手：{turn1}\n用户：{followup}"
+    },
+    "ccr": {
+      "placebo_clean_vs_clean": true,
+      "n_clean_samples": 2,
+      "decoding_temperature_generation": 0.7,
+      "decoding_temperature_selfinduced_stage1": 0.0,
+      "min_real_minus_placebo_ccr": 0.05,
+      "bootstrap_samples": 2000
+    },
+    "detector": {
+      "negation_window": 6,
+      "min_precision": 0.9,
+      "min_f1": 0.9,
+      "nli_clean_guard": false
+    },
+    "nli": {
+      "enabled": false,
+      "model": "IDEA-CCNL/Erlangshen-Roberta-110M-NLI",
+      "threshold": 0.7,
+      "_note": "Candidate only. Must pass a Chinese construct-gold validation before headline use."
+    },
+    "annotation": {
+      "turn1_second_annotator_n": 80,
+      "inheritance_second_annotator_n": 80,
+      "injected_recall_audit_n": 120,
+      "injected_recall_positive_fraction": 0.5,
+      "injected_recall_min_decidable_fraction": 0.75,
+      "min_kappa_decidable_fraction": 0.75,
+      "correction_audit_n": 50,
+      "external_tools_prohibited": true,
+      "allow_uncertain": true
+    },
+    "go_no_go": {
+      "min_contaminated_hcr": 0.1,
+      "min_ccr": 0.08,
+      "min_selfinduced_hcr": 0.1,
+      "min_kappa": 0.6,
+      "min_real_output_detector_precision": 0.9
+    }
+  },
+  "_extension_note": {
+    "role": "pre-registered extension arm",
+    "parent_config": "configs/zh_study.json",
+    "parent_config_sha256": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b",
+    "reuses": [
+      "configs/zh_seed_bank.json (40 verified false propositions)",
+      "datasets_zh/processed/zh_study_pairs_all.jsonl (800 dialogue-seed pairs)",
+      "prompts, decoding settings, detector settings, go/no-go gates"
+    ],
+    "differs_only_in": [
+      "pilot.run_name",
+      "pilot.model_pool",
+      "pilot.model_repositories"
+    ],
+    "analysis_tiers": {
+      "primary": "5 open-weight models x 40-question cohort (pre-registered, unchanged)",
+      "extension": "7 open-weight models x 40-question cohort",
+      "sensitivity": "7 open-weight models x 60-question full bank"
+    },
+    "required_explicit_paths": {
+      "_why": "Several scripts derive default input paths from run_name. With run_name='zh_study_ext' those defaults point at files that do not exist, so the frozen primary inputs must be passed explicitly.",
+      "export_generation_tasks.py": "--pairs datasets_zh/processed/zh_study_pairs_all.jsonl",
+      "_note": "build_selfinduced_stage1.py reads paths.selfinduced_bank, which is run-name independent, so it needs no override."
+    }
+  }
+}

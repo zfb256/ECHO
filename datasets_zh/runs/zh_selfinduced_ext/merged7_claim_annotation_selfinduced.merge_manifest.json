@@ -1,0 +1,40 @@
+{
+  "kind": "selfinduced_annotation",
+  "key_fields": [
+    "task_id"
+  ],
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "detector_freeze_verified": true,
+  "primary": {
+    "path": "datasets_zh/runs/zh_selfinduced/claim_annotation_selfinduced.jsonl",
+    "sha256": "8a13ed5b41a757ded41732fbc02a27f9a9af9d7d40456dd5aaf105b3a2cda061",
+    "rows": 200,
+    "models": [
+      "Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "Qwen2.5-3B-Instruct",
+      "Qwen2.5-7B-Instruct",
+      "internlm2_5-7b-chat"
+    ]
+  },
+  "extensions": [
+    {
+      "path": "datasets_zh/runs/zh_selfinduced_ext/claim_annotation_selfinduced.jsonl",
+      "sha256": "75ba87ba2c6e3d3e86d6803faef44885323f3ac692bfe5f315653b5e7ab8a404"
+    }
+  ],
+  "merged": {
+    "path": "datasets_zh/runs/zh_selfinduced_ext/merged7_claim_annotation_selfinduced.jsonl",
+    "sha256": "710406861383c0c79fc9bd6dea7d9890bf74c45090c2299149bf0cb4dc954667",
+    "rows": 280,
+    "rows_by_model": {
+      "Qwen2.5-1.5B-Instruct": 40,
+      "Qwen2.5-14B-Instruct": 40,
+      "Qwen2.5-3B-Instruct": 40,
+      "Qwen2.5-7B-Instruct": 40,
+      "Yi-1.5-9B-Chat": 40,
+      "glm-4-9b-chat-hf": 40,
+      "internlm2_5-7b-chat": 40
+    }
+  }
+}

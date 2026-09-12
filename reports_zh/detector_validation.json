@@ -1,0 +1,33 @@
+{
+  "detector_trustworthy": true,
+  "errors": [],
+  "f1": 1.0,
+  "fn": 0,
+  "fp": 0,
+  "gate_metric": "precision",
+  "min_f1_reported": 0.9,
+  "min_precision_gate": 0.9,
+  "n_gold": 480,
+  "negation_window": 6,
+  "precision": 1.0,
+  "provenance": {
+    "config_path": "configs/zh_study.json",
+    "config_sha256": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b",
+    "construct_gold_path": "datasets_zh/runs/zh_study/construct_gold.jsonl",
+    "construct_gold_sha256": "15e49271625370ba80949e5ed2db1c2599b58f575c1251c4271720a4029ac2cc",
+    "detector_path": "auto_labeling/detector.py",
+    "detector_settings": {
+      "min_precision": 0.9,
+      "negation_window": 6
+    },
+    "detector_settings_sha256": "7881e7e95000b2c346271c58424d608975d59444cc91ef34ab53d71bfa80a097",
+    "detector_sha256": "eb1b7fc7b425ea09090b3b7545eeee6bbcf1cdef6d19a9bebed30341193c4306",
+    "seed_bank_path": "configs/zh_seed_bank.json",
+    "seed_bank_sha256": "20f475f55bd25bf9cc05d8533e3effbede8ee0f5af782f6d31b1bffd0a1a50e9"
+  },
+  "recall": 1.0,
+  "recall_is_upper_bound": true,
+  "recall_note": "Real-output recall is estimated separately from the human audit.",
+  "tn": 280,
+  "tp": 200
+}

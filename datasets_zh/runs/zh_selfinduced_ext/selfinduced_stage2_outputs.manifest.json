@@ -1,0 +1,91 @@
+{
+  "backends": [
+    "transformers",
+    "vllm"
+  ],
+  "chat_template": true,
+  "config_path": "configs/zh_selfinduced_ext.json",
+  "config_sha256": "e24a2682b9fa56f51b0e359b7b8d6c2af64000741fb7f9d87e94697d38bfb44b",
+  "created_at_utc": "2026-09-04T14:22:19.173315+00:00",
+  "decoding": {
+    "max_tokens": 256,
+    "per_condition_temperature": {
+      "cli_override": null,
+      "generation_arms": 0.7,
+      "selfinduced_stage1": 0.0
+    },
+    "seed": 20260801,
+    "temperatures_by_condition": {
+      "self_induced": 0.7
+    },
+    "top_p": 1.0
+  },
+  "dtype": "bfloat16",
+  "gpu_memory_utilization": 0.9,
+  "hardware": {
+    "gpu_compute_capability": [
+      8,
+      0
+    ],
+    "gpu_count_visible": 1,
+    "gpu_name": "NVIDIA A800-SXM4-40GB"
+  },
+  "hf_endpoint": "https://huggingface.co",
+  "max_model_len": null,
+  "model_artifacts": {
+    "Yi-1.5-9B-Chat": {
+      "directory_sha256": "6f925ee322640716bfa579a0b72d68d9a74f05384d9352eb52b23fba3ce544d6",
+      "model_path": "models/Yi-1.5-9B-Chat",
+      "repository": "01-ai/Yi-1.5-9B-Chat",
+      "runtime_profile": {
+        "backend": "vllm",
+        "stop_token_ids": [
+          2
+        ],
+        "tokenizer_mode": "slow",
+        "use_fast_tokenizer": false
+      }
+    },
+    "glm-4-9b-chat-hf": {
+      "directory_sha256": "d323eebbb46bb3ae02776ad971ff0d6bc0aa8a281ba792cd2728fb4b92e110a9",
+      "model_path": "models/glm-4-9b-chat-hf",
+      "repository": "zai-org/glm-4-9b-chat-hf",
+      "runtime_profile": {
+        "backend": "transformers",
+        "stop_token_ids": [
+          151329,
+          151336,
+          151338
+        ],
+        "tokenizer_mode": "auto",
+        "use_fast_tokenizer": true
+      }
+    }
+  },
+  "models": [
+    "Yi-1.5-9B-Chat",
+    "glm-4-9b-chat-hf"
+  ],
+  "models_this_invocation": [
+    "Yi-1.5-9B-Chat"
+  ],
+  "num_outputs": 120,
+  "output_path": "datasets_zh/runs/zh_selfinduced_ext/selfinduced_stage2_outputs.jsonl",
+  "output_sha256": "dbc53beaefa651d7f7fcc0294996c843e5adb293135c869317e36cb83b5a856e",
+  "platform": "Linux-6.2.0-37-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "random_seed": 20260801,
+  "runner": "mixed",
+  "runner_path": "scripts/run_vllm_inference.py",
+  "runner_sha256": "2053eba3f97e497708d65bb9bfd62e25bceacfdb11375949bc358a3b081d07ed",
+  "software_versions": {
+    "cuda": "12.4",
+    "cudnn": "90100",
+    "torch": "2.5.1",
+    "transformers": "4.47.1",
+    "vllm": "0.6.6.post1"
+  },
+  "tasks_path": "datasets_zh/runs/zh_selfinduced_ext/selfinduced_stage2_tasks.jsonl",
+  "tasks_sha256": "88888c859d506ae08cd8e47d83530a79383e04d849a96318f0adf502ea5c37db",
+  "wall_seconds": 55.71
+}

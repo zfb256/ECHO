@@ -1,0 +1,157 @@
+{
+  "design_sha256": "25bbd4325a8e696479fdaf335f9c0cf6fde2ef3a306f6f1b7c54402d2c30794f",
+  "scores_sha256": "df23bb808cc3c1e1cca28e52576b9d63f8a6d4eb222a44f4b06d27b02a5b4615",
+  "interpretation": "Clean-clean pair type has no human calibration. Do not transfer the contaminated-clean Wilson error allowance.",
+  "results": {
+    "all": {
+      "n": 5600,
+      "comparable": 5600,
+      "injected_events": 2133,
+      "placebo_events": 66,
+      "gap_on_comparable": 0.36910714285714286,
+      "undecidable_only_range": [
+        0.36910714285714286,
+        0.36910714285714286
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.2928526785714286,
+        0.45161160714285714
+      ]
+    },
+    "model:Qwen2.5-1.5B-Instruct": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 460,
+      "placebo_events": 12,
+      "gap_on_comparable": 0.56,
+      "undecidable_only_range": [
+        0.56,
+        0.56
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.45,
+        0.67
+      ]
+    },
+    "dataset:kdconv": {
+      "n": 2800,
+      "comparable": 2800,
+      "injected_events": 1073,
+      "placebo_events": 29,
+      "gap_on_comparable": 0.37285714285714283,
+      "undecidable_only_range": [
+        0.37285714285714283,
+        0.37285714285714283
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.2957142857142857,
+        0.45643749999999994
+      ]
+    },
+    "model:Qwen2.5-14B-Instruct": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 53,
+      "placebo_events": 6,
+      "gap_on_comparable": 0.05875,
+      "undecidable_only_range": [
+        0.05875,
+        0.05875
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.01125,
+        0.12375
+      ]
+    },
+    "model:Qwen2.5-3B-Instruct": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 349,
+      "placebo_events": 9,
+      "gap_on_comparable": 0.425,
+      "undecidable_only_range": [
+        0.425,
+        0.425
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.31125,
+        0.55
+      ]
+    },
+    "model:Qwen2.5-7B-Instruct": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 292,
+      "placebo_events": 3,
+      "gap_on_comparable": 0.36125,
+      "undecidable_only_range": [
+        0.36125,
+        0.36125
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.24246874999999998,
+        0.48125
+      ]
+    },
+    "model:Yi-1.5-9B-Chat": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 270,
+      "placebo_events": 17,
+      "gap_on_comparable": 0.31625,
+      "undecidable_only_range": [
+        0.31625,
+        0.31625
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.2225,
+        0.4150312499999998
+      ]
+    },
+    "model:glm-4-9b-chat-hf": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 324,
+      "placebo_events": 6,
+      "gap_on_comparable": 0.3975,
+      "undecidable_only_range": [
+        0.3975,
+        0.3975
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.27371875,
+        0.51875
+      ]
+    },
+    "model:internlm2_5-7b-chat": {
+      "n": 800,
+      "comparable": 800,
+      "injected_events": 385,
+      "placebo_events": 13,
+      "gap_on_comparable": 0.465,
+      "undecidable_only_range": [
+        0.465,
+        0.465
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.3525,
+        0.5800312499999998
+      ]
+    },
+    "dataset:lccc": {
+      "n": 2800,
+      "comparable": 2800,
+      "injected_events": 1060,
+      "placebo_events": 37,
+      "gap_on_comparable": 0.3653571428571429,
+      "undecidable_only_range": [
+        0.3653571428571429,
+        0.3653571428571429
+      ],
+      "gap_ci95_seed_clustered_conditional_on_judge": [
+        0.2878482142857143,
+        0.4514285714285714
+      ]
+    }
+  }
+}

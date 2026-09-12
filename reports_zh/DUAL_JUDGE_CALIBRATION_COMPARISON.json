@@ -1,0 +1,25 @@
+{
+  "n_pairs": 216,
+  "kimi_model": "kimi-k3",
+  "hunyuan_model": "hy4-preview",
+  "kimi_scores_sha256": "9bb979d8d5bc51f0566b629a5445bd3cab921444e9c16a5328fac0672275f246",
+  "hunyuan_scores_sha256": "ae3a8c28f1436af2516297a6528b0b5e7644bb728fed47d53a4cbb9b7bd5a63f",
+  "contaminated_labels": {
+    "agreement": 0.9814814814814815,
+    "kappa": 0.9613595706618963,
+    "kimi_positive": 86,
+    "hunyuan_positive": 86
+  },
+  "clean_labels": {
+    "agreement": 0.9953703703703703,
+    "kappa": 0.8548387096774182,
+    "kimi_positive": 4,
+    "hunyuan_positive": 3
+  },
+  "pair_ccr_events": {
+    "agreement": 0.9907407407407407,
+    "kappa": 0.9805194805194805,
+    "kimi_positive": 84,
+    "hunyuan_positive": 84
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "agreement": {
+    "hcr_has_contagious": {
+      "cohen_kappa": 0.8578680203045685,
+      "decidable_fraction": 1.0,
+      "field": "hcr_has_contagious",
+      "go_kappa": true,
+      "min_decidable_fraction": 0.75,
+      "min_decidable_rows": 21,
+      "min_kappa_threshold": 0.6,
+      "n_compared": 28,
+      "percent_agreement": 0.9285714285714286,
+      "skipped_incomplete": 0
+    },
+    "turn1_was_false": {
+      "cohen_kappa": 0.9514327343370568,
+      "decidable_fraction": 1.0,
+      "field": "turn1_was_false",
+      "go_kappa": true,
+      "min_decidable_fraction": 0.75,
+      "min_decidable_rows": 75,
+      "min_kappa_threshold": 0.6,
+      "n_compared": 100,
+      "percent_agreement": 0.98,
+      "skipped_incomplete": 0
+    }
+  },
+  "errors": [],
+  "ok": true,
+  "provenance": {
+    "annotations_path": "datasets_zh/runs/zh_selfinduced/claim_annotation_selfinduced.jsonl",
+    "annotations_sha256": "8a13ed5b41a757ded41732fbc02a27f9a9af9d7d40456dd5aaf105b3a2cda061",
+    "checker_path": "scripts/check_selfinduced_second_annotator_chain.py",
+    "checker_sha256": "da78b5eadb5b99d5507d5054483a91a21bafdc7d11b82a8fa554e40f79c7bfbf",
+    "hcr_packet_path": "datasets_zh/runs/zh_selfinduced/second_annotator_selfinduced_sample.jsonl",
+    "hcr_packet_sha256": "366631108295e4ef17d5e5bf6a0ef80f3c001989e46cbd781a8bc05051557f07",
+    "min_decidable_fraction": 0.75,
+    "min_kappa": 0.6,
+    "turn1_packet_path": "datasets_zh/runs/zh_selfinduced/second_annotator_selfinduced_sample.jsonl",
+    "turn1_packet_sha256": "366631108295e4ef17d5e5bf6a0ef80f3c001989e46cbd781a8bc05051557f07"
+  },
+  "rows": {
+    "annotation_2_rows": 100,
+    "annotations": 200,
+    "confirmed_false": 29,
+    "hcr_packet": 28,
+    "joint_packet": 100,
+    "turn1_packet": 100
+  }
+}

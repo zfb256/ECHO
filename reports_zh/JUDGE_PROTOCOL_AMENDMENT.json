@@ -1,0 +1,36 @@
+{
+  "amended_at_local": "2026-09-05T20:45:00+08:00",
+  "classification": "execution-validity corrections before calibration statistics",
+  "reason": "Kimi-K3 exhausted the output budget in reasoning_content before returning a complete JSON verdict.",
+  "v1_checkpoint_rows": 129,
+  "v1_decidable_rows": 0,
+  "v1_protocol_sha256": "63e7b5d3500f34946440053d4b6202204f982272f0403b5d61ca4fb9082109fb",
+  "v1_protocol_archive": "reports_zh/JUDGE_PROTOCOL.v1_execution_failure_64tokens.json",
+  "v1_checkpoint_archive": "reports_zh/JUDGE_CALIBRATION_SCORES.v1_execution_failure_64tokens.partial.jsonl",
+  "v2_checkpoint_rows": 20,
+  "v2_decidable_rows": 20,
+  "v2_failure": "The next response ended with finish_reason=length at max_tokens=1024; no calibration statistics had been computed.",
+  "v2_protocol_sha256": "737680240fbf8ca0529f6f78f9b08c319a56bd86db4e18456126b0c481976ec3",
+  "v2_protocol_archive": "reports_zh/JUDGE_PROTOCOL.v2_execution_failure_1024tokens.json",
+  "v2_checkpoint_archive": "reports_zh/JUDGE_CALIBRATION_SCORES.v2_execution_failure_1024tokens.partial.jsonl",
+  "changes": {
+    "max_tokens": [64, 1024, 4096],
+    "truncation_handling": "finish_reason=length now aborts scoring instead of producing an undecidable label"
+  },
+  "unchanged": [
+    "judge model",
+    "temperature",
+    "prompt",
+    "pair construction",
+    "human calibration labels",
+    "calibration gates"
+  ],
+  "synthetic_probe": {
+    "research_sample": false,
+    "finish_reason": "stop",
+    "content": "{\"a\": true, \"b\": false}",
+    "completion_tokens": 136,
+    "reasoning_tokens": 111
+  },
+  "v3_protocol_sha256": "a7129b54ebbda847b51ef51c4df4ac88318177c1dcad3f82b8cb536b81664141"
+}

@@ -1,0 +1,24 @@
+{
+  "assigned": 60,
+  "cohen_kappa": 0.9644549763033174,
+  "cohen_kappa_ci95_bootstrap": [
+    0.8831168831168831,
+    1.0
+  ],
+  "comparison": "annotator C vs blind annotator B on U1 contaminated overlap",
+  "decidable_fraction": 1.0,
+  "go_kappa": true,
+  "n_compared": 60,
+  "percent_agreement": 0.9833333333333333,
+  "provenance": {
+    "design_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_second_annotator_design.json",
+    "design_sha256": "296e5e04bf52e888d7ae2b1eaa1df04a9a94ed67a195474d17721c0af05dce39",
+    "packet_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_second_annotator.jsonl",
+    "packet_sha256": "152e226052ae9ccc96db76dc3141a4a8f44ec25d722f58fc773a70e761bb0a63",
+    "script_sha256": "041b39fc5d05be2626498076535144224e26e006c48206cb3bec0e41aeb3664c"
+  },
+  "thresholds": {
+    "min_decidable_fraction": 0.75,
+    "min_kappa": 0.6
+  }
+}

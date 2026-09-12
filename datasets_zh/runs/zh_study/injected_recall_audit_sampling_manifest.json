@@ -1,0 +1,21 @@
+{
+  "audit_sha256": "205317b000cbb37d59e7383310822c39b0470e23c30272dbde5df3f69112489f",
+  "description": "Sampling strata used to draw the blind audit before the relation-aware detector repair.",
+  "population_by_model": {
+    "Qwen2.5-1.5B-Instruct": {"negative": 431, "positive": 369},
+    "Qwen2.5-14B-Instruct": {"negative": 761, "positive": 39},
+    "Qwen2.5-3B-Instruct": {"negative": 583, "positive": 217},
+    "Qwen2.5-7B-Instruct": {"negative": 583, "positive": 217},
+    "internlm2_5-7b-chat": {"negative": 575, "positive": 225}
+  },
+  "population_negative": 2933,
+  "population_positive": 1067,
+  "post_revision_negative_to_positive_audit_ids": [],
+  "post_revision_positive_to_negative_audit_ids": [
+    "injrec_01393",
+    "injrec_01468",
+    "injrec_03508"
+  ],
+  "sample_negative": 60,
+  "sample_positive": 60
+}

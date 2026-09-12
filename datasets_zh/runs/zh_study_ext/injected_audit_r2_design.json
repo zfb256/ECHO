@@ -1,0 +1,2518 @@
+{
+  "_warning": "DESIGN RECORD - never give this file to the annotator.",
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "seed": 20260728,
+  "quota": {
+    "positives_per_endpoint": 8,
+    "negatives_per_endpoint": 16,
+    "clean_partners": 24
+  },
+  "excluded_pair_model_count": 120,
+  "excluded_from": [
+    "datasets_zh/runs/zh_study/injected_recall_human_audit_sample.jsonl"
+  ],
+  "sources": [
+    [
+      "datasets_zh/runs/zh_study_ext/merged7_claim_annotation_injected.jsonl",
+      "datasets_zh/runs/zh_study_ext/merged7_model_outputs.jsonl"
+    ],
+    [
+      "datasets_zh/runs/zh_study/claim_annotation_injected_api_deepseek.jsonl",
+      "datasets_zh/runs/zh_study/model_outputs_api_deepseek.jsonl"
+    ],
+    [
+      "datasets_zh/runs/zh_study/claim_annotation_injected_api_doubao.jsonl",
+      "datasets_zh/runs/zh_study/model_outputs_api_doubao.jsonl"
+    ]
+  ],
+  "endpoint_codes": {
+    "Qwen2.5-3B-Instruct": "E01",
+    "Qwen2.5-1.5B-Instruct": "E02",
+    "internlm2_5-7b-chat": "E03",
+    "Qwen2.5-7B-Instruct": "E04",
+    "doubao-seed-2-1-pro-260628": "E05",
+    "Yi-1.5-9B-Chat": "E06",
+    "Qwen2.5-14B-Instruct": "E07",
+    "deepseek-v4-flash": "E08",
+    "glm-4-9b-chat-hf": "E09"
+  },
+  "per_endpoint": {
+    "Qwen2.5-1.5B-Instruct": {
+      "code": "E02",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 357,
+      "population_negative": 419,
+      "clean_partners": 2
+    },
+    "Qwen2.5-14B-Instruct": {
+      "code": "E07",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 23,
+      "population_negative": 753,
+      "clean_partners": 3
+    },
+    "Qwen2.5-3B-Instruct": {
+      "code": "E01",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 204,
+      "population_negative": 572,
+      "clean_partners": 3
+    },
+    "Qwen2.5-7B-Instruct": {
+      "code": "E04",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 206,
+      "population_negative": 570,
+      "clean_partners": 2
+    },
+    "Yi-1.5-9B-Chat": {
+      "code": "E06",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 169,
+      "population_negative": 631,
+      "clean_partners": 3
+    },
+    "deepseek-v4-flash": {
+      "code": "E08",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 37,
+      "population_negative": 763,
+      "clean_partners": 3
+    },
+    "doubao-seed-2-1-pro-260628": {
+      "code": "E05",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 14,
+      "population_negative": 786,
+      "clean_partners": 2
+    },
+    "glm-4-9b-chat-hf": {
+      "code": "E09",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 233,
+      "population_negative": 567,
+      "clean_partners": 3
+    },
+    "internlm2_5-7b-chat": {
+      "code": "E03",
+      "sampled_positive": 8,
+      "sampled_negative": 16,
+      "population_positive": 213,
+      "population_negative": 563,
+      "clean_partners": 3
+    }
+  },
+  "shortfalls": [],
+  "packet_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_packet.jsonl",
+  "packet_sha256": "97b11b0ce6197bd740e497cb999217998902c1b26318e8d7715d034732d9fbb1",
+  "rows": [
+    {
+      "audit_id": "r2_74786b2709b6",
+      "pair_id": "kdconv-0328",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "4730cda1745c6108d3443d91698fb37bfed5690313d525532073d8f3a2015dbf"
+    },
+    {
+      "audit_id": "r2_ec510ee948af",
+      "pair_id": "lccc-0089",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "30aded635d56ca1d67917f588c7183e6eef1af2e13c95bf1c3f9b9de2b7b689b"
+    },
+    {
+      "audit_id": "r2_c5c6cef80bde",
+      "pair_id": "kdconv-0218",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "675a5619dd2b94c35b4667d2b89985284c978566ce44d1d928b8ce221602f424"
+    },
+    {
+      "audit_id": "r2_6743e887e5be",
+      "pair_id": "lccc-0132",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "ddc5fc6647b6cf8417da8974db46e856e433a2d830aa3884f8a48981d13403c3"
+    },
+    {
+      "audit_id": "r2_89d07d87b21d",
+      "pair_id": "lccc-0165",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "345462a0f97df1473ddd650fc8dbe091bddefa3d322d3ce70ac4dda2ae63f835"
+    },
+    {
+      "audit_id": "r2_e1ae3f77e519",
+      "pair_id": "kdconv-0081",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "fc414599f93d6a492aaacb44c01d1c9bfef1a509f22567b38fa07b6380045017"
+    },
+    {
+      "audit_id": "r2_45c1f4afb140",
+      "pair_id": "lccc-0300",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "030d88496ff1c230e6bd2cc5badb8da0a4ecbd5a8843370c8ab979c3edac404e"
+    },
+    {
+      "audit_id": "r2_cbc02930382f",
+      "pair_id": "lccc-0140",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "382da68a35777df48f990d383ec284aec1f432496e2be20b05112aeabc4eb494"
+    },
+    {
+      "audit_id": "r2_aa35a81bf377",
+      "pair_id": "lccc-0073",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "248e932544bc6b4ce375a17ea3c164e6d17d480927ad4cfff30a08a44261274a"
+    },
+    {
+      "audit_id": "r2_8f1014f0fb52",
+      "pair_id": "lccc-0362",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0dc0c9f47aa90e2767b1d1288371797b4f6f36404aaf88e1bf3414afa8def228"
+    },
+    {
+      "audit_id": "r2_680bb8cddf96",
+      "pair_id": "kdconv-0008",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "2297aaf7e420375ed0800ed31df606134e69deb42fdb37f2c9a7b30bef670e6c"
+    },
+    {
+      "audit_id": "r2_fac168f2d724",
+      "pair_id": "kdconv-0284",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "3bf0e69431fc33b281fab9fd54add308410f805329a6320eba8c9f04e51fef2d"
+    },
+    {
+      "audit_id": "r2_15714c05ccc9",
+      "pair_id": "lccc-0092",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "2db2999a0db970aa7e581d59d0b388ed86e365b856b0194bd97d47266e783d48"
+    },
+    {
+      "audit_id": "r2_bfff620a69fa",
+      "pair_id": "kdconv-0328",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6de30fd8617c4da80d3225db5d9ee8924b68bfb3a74ba7155a4d9a7d03ed9ff7"
+    },
+    {
+      "audit_id": "r2_cad79318ef69",
+      "pair_id": "kdconv-0008",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "77c2b7e5bc14d81da4a947a8aeb25aa6c0dde0981b02b6b7366c82d0a6a4e059"
+    },
+    {
+      "audit_id": "r2_ca52b296df76",
+      "pair_id": "lccc-0392",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "7b89240960a7e9970c55a1433e8547763983498065d188381bcc3620b33bfe07"
+    },
+    {
+      "audit_id": "r2_471e113c381d",
+      "pair_id": "kdconv-0227",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "af0436677b7ee826737fc087175dd4dd807b0d5b78ddefd8b3e813343f7f25a9"
+    },
+    {
+      "audit_id": "r2_757820e57550",
+      "pair_id": "kdconv-0233",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "96ae91c0455a6c794f6351b8be73dd0bd36efbd99df1c1eaa4219ca303a5fb2b"
+    },
+    {
+      "audit_id": "r2_eeab2f26ac13",
+      "pair_id": "lccc-0253",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "07eec61c4164f5ff29b76eeba0cd18fe45051bfa80e7df90628574e644894230"
+    },
+    {
+      "audit_id": "r2_e269acd04548",
+      "pair_id": "kdconv-0305",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "204b1c478331aa64bbdb357f0b4da19407d4ce6dc763f70f619847dcdf832326"
+    },
+    {
+      "audit_id": "r2_f10728b24513",
+      "pair_id": "lccc-0252",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6584a1f49e2edaddb9b5dd7c97bef29522d04107ddac2c6f40d3190dad6dfc00"
+    },
+    {
+      "audit_id": "r2_13eb086bc5d3",
+      "pair_id": "lccc-0078",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "200090b22bb74128ba7ae715357a1b58e8ae5677d26df40482ca85628a800060"
+    },
+    {
+      "audit_id": "r2_6246054784d4",
+      "pair_id": "lccc-0078",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "acd7e05a155d1d623aec1da681f2051cf6e73a5ecf5b301f7addf466be123ed1"
+    },
+    {
+      "audit_id": "r2_15a2121c7f64",
+      "pair_id": "lccc-0345",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "42fdbe738d925e5ebdc2a5d5fe21eea0afd304cefed471eecb0010227ede017c"
+    },
+    {
+      "audit_id": "r2_d3152933178f",
+      "pair_id": "kdconv-0115",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "d14e68b6f7f1d12af2c6041ca4b313e5e5c2ba459a2fadae1d01710113fffa58"
+    },
+    {
+      "audit_id": "r2_30dcdfdb3c24",
+      "pair_id": "kdconv-0220",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1c63737e5634acf05fd078ecb82fe956e1df6337e97c412e4b70a47c310a0edd"
+    },
+    {
+      "audit_id": "r2_9493c2291f2f",
+      "pair_id": "lccc-0208",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "80d584b2098aa7b1fa5771ea48e9ea9e02f6ff39dc53af490dd284819fc79707"
+    },
+    {
+      "audit_id": "r2_89e1dbf6aef4",
+      "pair_id": "kdconv-0075",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "af6068aaaad65c0aebf50c7262fd6a18547663935a25d6e53b5a13ed50733e2b"
+    },
+    {
+      "audit_id": "r2_fd16059f9315",
+      "pair_id": "lccc-0301",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "1fa98b6b6f2bb100eaeb6dc2651b2eb83cccfd927c2dcb922ddf9bc7deba1f47"
+    },
+    {
+      "audit_id": "r2_5174241284ef",
+      "pair_id": "lccc-0047",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "7954a405780636f807cc0ac1243d575649b943e83dad9a66871411eae2f6b505"
+    },
+    {
+      "audit_id": "r2_4ef32a37c896",
+      "pair_id": "lccc-0048",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "97563a6d6c9665b955cfcfd485b744fd0ba5e514e80456bca8129c07701119f5"
+    },
+    {
+      "audit_id": "r2_2f4d48599621",
+      "pair_id": "kdconv-0043",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "68ec7bd231a31176d57fba504b66cc62963b230f67ebc3e413761a1b49647bfc"
+    },
+    {
+      "audit_id": "r2_20b9ca89c1c9",
+      "pair_id": "lccc-0348",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "4a0717834c2c570dc4be22d3437284cf56b2961b104f0703001b53f25cc27b02"
+    },
+    {
+      "audit_id": "r2_75a008ca8129",
+      "pair_id": "lccc-0207",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "5a2c3a1d1accf670002cc0fe419fad9e2039ae45a42cd95199e76a45b898cf31"
+    },
+    {
+      "audit_id": "r2_66bc681a5f78",
+      "pair_id": "lccc-0187",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "f4c10f90ccf77e7b7417e08d69dd3a750eab45394b66ddf91b9dd7f69ae77051"
+    },
+    {
+      "audit_id": "r2_94ca28cdf7fa",
+      "pair_id": "kdconv-0019",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1a7cd12e4119649c4dd57c8325dd5f30d9540ce6340515be22862b25f6164c2d"
+    },
+    {
+      "audit_id": "r2_9507c9587883",
+      "pair_id": "kdconv-0115",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "3bd66f04698392630e4b9a015210b00027a3f804a23bd6ea4e8ce11b9e86f42b"
+    },
+    {
+      "audit_id": "r2_5d1b7f4823b2",
+      "pair_id": "lccc-0365",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1c9d20da911c31baa1771883704170a9f432825d2e909b87f8cea5eb946fba82"
+    },
+    {
+      "audit_id": "r2_271482a36ba0",
+      "pair_id": "kdconv-0031",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "70bda289f9f90bf1839efb5f1a8defb7accc17d47a3a81ccf997cbf386a43d6f"
+    },
+    {
+      "audit_id": "r2_1c958cca5632",
+      "pair_id": "kdconv-0063",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6ba5caa035cb5c648a901d3ee6da22d9594b297032b4620fed3140ab2028cac2"
+    },
+    {
+      "audit_id": "r2_70a7a42957a5",
+      "pair_id": "lccc-0110",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b4d155caabaaed9537c3f4705e8bc6def3486da7d745cf239e00479e7a2ce291"
+    },
+    {
+      "audit_id": "r2_680825dfe535",
+      "pair_id": "kdconv-0386",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b6e0b4326b47859e94cc1a6f09fe4139f68046de5940a638108c73e52275e759"
+    },
+    {
+      "audit_id": "r2_bf6e29d37c81",
+      "pair_id": "kdconv-0072",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "999f601f164014681ee8b877dd920f8f25757ae6766a49c95fdec7317986bc97"
+    },
+    {
+      "audit_id": "r2_0272815f3aa6",
+      "pair_id": "lccc-0219",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "cd573d0a6be37809bd35fd8554e495d55ddf58f7f06fe36912536f569d004ee5"
+    },
+    {
+      "audit_id": "r2_436cc2ed9f76",
+      "pair_id": "lccc-0394",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "52567eca70de466b7110d6ffec53c8423889aad0de0d5c7f2bd94dbe503ac9de"
+    },
+    {
+      "audit_id": "r2_e2a85c892fe0",
+      "pair_id": "kdconv-0280",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "acabab81336248fe1875c5ddcab55c905c2cb661a457f31aa71d2dd71651c669"
+    },
+    {
+      "audit_id": "r2_f5aaab07e95f",
+      "pair_id": "kdconv-0379",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "d44a74bc109b67104cd21b61fcb070b9871caa6036ff17151009b2e78962511d"
+    },
+    {
+      "audit_id": "r2_7566161add7f",
+      "pair_id": "lccc-0234",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "15c490f6828969aa4cb6f589b4e0e41b2c7e41a6ea90dd5299990e10eacfb70e"
+    },
+    {
+      "audit_id": "r2_0f0458f28ed7",
+      "pair_id": "lccc-0214",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "35fd3fe6f5bf8881ea4039dcc295627a035bbb064aa854f175280c30cfb15de2"
+    },
+    {
+      "audit_id": "r2_664b8c8cef48",
+      "pair_id": "lccc-0307",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "e6c3e8cf84752ee6f27ef8778bdbf3b12073547c4f887889139b35533512d926"
+    },
+    {
+      "audit_id": "r2_6e3b7a9ee6e1",
+      "pair_id": "kdconv-0109",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6b361dc32b748af9ee111bf25b7ce6cb5638aeba41ec4927a36163652a4cba85"
+    },
+    {
+      "audit_id": "r2_bf6b7675d4dc",
+      "pair_id": "lccc-0154",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "2d617319af08e1c0537e02344ef7f35c84f3b3f80c6b2d7ab22a690bc191ee41"
+    },
+    {
+      "audit_id": "r2_3675e584635d",
+      "pair_id": "lccc-0112",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ea954ef5610081a7e37c2288443c9890ae98f9de9ff1b726a90c455004775609"
+    },
+    {
+      "audit_id": "r2_3ad02db9771c",
+      "pair_id": "lccc-0055",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "e0a21d211e50075d750c92770ca579b203469657869055d41b4985b218c5dbb9"
+    },
+    {
+      "audit_id": "r2_7f7b681d0dcf",
+      "pair_id": "kdconv-0288",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "22103de48957fdf94a276cfd82a30d6d609b1dbaf629f280208b600a823d3761"
+    },
+    {
+      "audit_id": "r2_1de9e0288846",
+      "pair_id": "kdconv-0346",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "ee018cfbe49db784e31c25d2161ae9e7febd914b4d83d5d6efc1b0235a73f58d"
+    },
+    {
+      "audit_id": "r2_da9d84f1cc9c",
+      "pair_id": "kdconv-0113",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "cfaf24e0a37b5c5635703a019138ab4b685304c2786bad8e1d545ad06cbab939"
+    },
+    {
+      "audit_id": "r2_c7283263d20e",
+      "pair_id": "kdconv-0133",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b002617f28d2228754892e27addc290906aef1eaccefd3b8df6f99235d0ed2e8"
+    },
+    {
+      "audit_id": "r2_fd2ff76e8eb4",
+      "pair_id": "kdconv-0094",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "97d0663dc007f64760ff77e778b2429f2bd1c2e97c9f9eba928569cee36db09f"
+    },
+    {
+      "audit_id": "r2_f12d1e2b3b3b",
+      "pair_id": "lccc-0346",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "e40740c61926d64b42fce3d44ad6f7cda4a25785fca8e2dc63f46e049d236b99"
+    },
+    {
+      "audit_id": "r2_22bd5e8d8c1c",
+      "pair_id": "lccc-0096",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "3bb8cc1215c1c3f5da55b6018ee50c854220a9a68c65a1029b568a22725dc08b"
+    },
+    {
+      "audit_id": "r2_f5a4ec9896b7",
+      "pair_id": "kdconv-0285",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "fcdb4526b4760198fc3ba7beefd49e74420edbf5339807112545d88789db4343"
+    },
+    {
+      "audit_id": "r2_d4bd627d4c55",
+      "pair_id": "kdconv-0336",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b6abded29242b073796458a5faf06b682feaa7aaac9fb92b979b17aa4612f4c1"
+    },
+    {
+      "audit_id": "r2_bbc5c6732c7a",
+      "pair_id": "lccc-0101",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "f18eae3fdb3d29e4471395ad1c4a5bbc6bf5595bc13e2bab1c06772cc296480e"
+    },
+    {
+      "audit_id": "r2_fb392354147c",
+      "pair_id": "lccc-0372",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "5e445bfa60dab98d5a3d9981aa376417f9a6c7c168420b60d366017be6cdd225"
+    },
+    {
+      "audit_id": "r2_f61a99d9198f",
+      "pair_id": "lccc-0080",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "42d88178b6f891a5f3b67f0b6d54a864969ca06e6edbc067d354809a30bc95c9"
+    },
+    {
+      "audit_id": "r2_bbd588612ee7",
+      "pair_id": "kdconv-0202",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b206d7e2c652700468689c38d76d111bb5d1c6fdc8ecac9be1908384b4970711"
+    },
+    {
+      "audit_id": "r2_65521cd3afd6",
+      "pair_id": "lccc-0309",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "9b3ddc75c778da3e49613fbe29c76b6ca78427ab37afe276450c3e5276f05310"
+    },
+    {
+      "audit_id": "r2_e8bc57fcfbe1",
+      "pair_id": "lccc-0239",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "05c67493f0461020032e594988634e9cc778a4e08ef7d05124cf7963ba22f782"
+    },
+    {
+      "audit_id": "r2_ab548e88b50f",
+      "pair_id": "kdconv-0155",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6eab2967f480a686404129542ca267b9254e35ff4171910b002ce5273ce49031"
+    },
+    {
+      "audit_id": "r2_40908dfe93ef",
+      "pair_id": "lccc-0173",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "24d10f0558abf0222a0f7a4f4b84a4bddd5df3b070cfb86955a66c5163b3269a"
+    },
+    {
+      "audit_id": "r2_7d944c5f1cac",
+      "pair_id": "lccc-0392",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "af4946bafe998b6e2436fd3f6e778447809de592bb53b24edf9b4192f4f69635"
+    },
+    {
+      "audit_id": "r2_faf0cad3ec0c",
+      "pair_id": "kdconv-0334",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "51f2239435461ba8c3b8773592b677995f7a944cff248edbb7ddb61d2c16ae1c"
+    },
+    {
+      "audit_id": "r2_d53591fd3fce",
+      "pair_id": "kdconv-0127",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "472b92adea96b2af8bf0bf646294f3475e4bc2a98a2c172cd5bd3b2f04d4bb73"
+    },
+    {
+      "audit_id": "r2_5dfd588817ce",
+      "pair_id": "lccc-0212",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "bfc35f1feee7f7cf3e71f12d92e754bfcea77a5c204050d643d765bcd7b1229f"
+    },
+    {
+      "audit_id": "r2_0100cb1cf50a",
+      "pair_id": "kdconv-0267",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "66d220ec0b6c8b6f7c5a1fdfd438dea779f80c0a24aeef4c82526f1c3af37143"
+    },
+    {
+      "audit_id": "r2_b358a7da736a",
+      "pair_id": "lccc-0060",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "e0f6a4ab0cf48a12c811c212d8fde7bc91d5613752fd6c86fbace4fe58703bf8"
+    },
+    {
+      "audit_id": "r2_520156a05ea6",
+      "pair_id": "lccc-0253",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "f5f59feb8801762ac97f086de680cb26ad15720582cd708958ed0846d810d4a5"
+    },
+    {
+      "audit_id": "r2_4492011797ff",
+      "pair_id": "kdconv-0075",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "03fa576d1af93e299180a8eb4b5643fcee555ffe171070cc394da30c47849531"
+    },
+    {
+      "audit_id": "r2_8dc806cacc66",
+      "pair_id": "lccc-0172",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "048a3422063e066f7a72346af228866bb518d322209459f8c724f4ccaa05621c"
+    },
+    {
+      "audit_id": "r2_0e16f067fd29",
+      "pair_id": "kdconv-0264",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "8a79b0eb47a8a8b3c729fcdba3460d24f20fe5636d05729679eb590924d0c2d5"
+    },
+    {
+      "audit_id": "r2_6b0470dadaa2",
+      "pair_id": "kdconv-0293",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "e9c1ded1f2294489f9e4d7575f6b31eecd0dcee603083216d043f98dffcbbd03"
+    },
+    {
+      "audit_id": "r2_6f7fe30db23b",
+      "pair_id": "lccc-0366",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0a6fb5236ffd990fd40ab1c43ebb3e9f1b59e44057c5c05bfa8e241cd458f6dd"
+    },
+    {
+      "audit_id": "r2_9fa07c0ec806",
+      "pair_id": "lccc-0321",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6264261815968725b3f73b773f51f96e30159c07e8d8c70690744a5eee37ffcf"
+    },
+    {
+      "audit_id": "r2_c2eee19c0386",
+      "pair_id": "kdconv-0172",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "903cdbaf5082a098ed5d6fd297f4dc0a10afd4e5de1f0e0a0bb82e3ead1b82fd"
+    },
+    {
+      "audit_id": "r2_f02e706b3e63",
+      "pair_id": "kdconv-0075",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "145cf87c0ffb3d4f42bea0945728a08ad9c01aeab021c951ec7b295488ad1565"
+    },
+    {
+      "audit_id": "r2_8164fa9e7b1b",
+      "pair_id": "kdconv-0307",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "e04b2605fd5bafe01332c9a7d4b6e64adac6fa00773a0adbd92e43449a6bc2ba"
+    },
+    {
+      "audit_id": "r2_29a0f6d35b01",
+      "pair_id": "lccc-0228",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0966ddc69ebfea5683521347441f593dbf672f30260435f4f10c827a77095499"
+    },
+    {
+      "audit_id": "r2_80b31ff24cda",
+      "pair_id": "lccc-0307",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "75cf240729a8d7844272792b25637a9ab45159fd09ab148f092130eb78ab2880"
+    },
+    {
+      "audit_id": "r2_4a53be6ad928",
+      "pair_id": "lccc-0321",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "05723315ecfe67af557f2fd0f6921a5998d50e06760f0f51da3853365f8dbb40"
+    },
+    {
+      "audit_id": "r2_4842f5d93826",
+      "pair_id": "lccc-0251",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "5b9ba830483be68e2f6c6579d1e4f5c897b827a386bfcd3699a1f1a01394321a"
+    },
+    {
+      "audit_id": "r2_bc051e67cd56",
+      "pair_id": "kdconv-0081",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0844e55040fdfebe91c67930a153a37f1199545ea76dea05a9d2e4d8d87ebe14"
+    },
+    {
+      "audit_id": "r2_400d38e14a1c",
+      "pair_id": "kdconv-0260",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "972a36ee63ff549da085e4f53b6a874a932911814ddf937ab108494cc273563e"
+    },
+    {
+      "audit_id": "r2_063e3e07b388",
+      "pair_id": "kdconv-0306",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "05d768be0cc4129acdee7a5cf3c9e8d126e87179b79f501b37b2b8bfa96d3c25"
+    },
+    {
+      "audit_id": "r2_4bb7860250a1",
+      "pair_id": "kdconv-0364",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "99f54d160dbb2dc08aeb1b35e85f79551e8b45100b9dc898d5122b0e35ad0ade"
+    },
+    {
+      "audit_id": "r2_42787dc5b420",
+      "pair_id": "kdconv-0082",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "4cd85a3f90f240f4f3b544f66aeb8494a7de7e0f7ed3f4d96e70913f1c94d860"
+    },
+    {
+      "audit_id": "r2_9dfa6fc8700b",
+      "pair_id": "kdconv-0300",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "c90773e1692d1931bd63153493ef03b91a3cf9b82553fcba53627eb8854de7a3"
+    },
+    {
+      "audit_id": "r2_d9c94f684b96",
+      "pair_id": "lccc-0075",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "48b8522191fb78eb1083d1ef64c513434470e00b3d5d22a2ff491189f0a0e86a"
+    },
+    {
+      "audit_id": "r2_2481fa64a603",
+      "pair_id": "kdconv-0166",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "06978ffc1e3de5d0af394863b9285a106bd5c3895c4301d8f665ec158e2a087d"
+    },
+    {
+      "audit_id": "r2_380c305fcbb5",
+      "pair_id": "kdconv-0007",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ef7b7d5be704b5e6657f7d08d268c3e8c5265b0ac0e3a05cdad8f00e3b3746b4"
+    },
+    {
+      "audit_id": "r2_14f05dab97eb",
+      "pair_id": "kdconv-0346",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "bbc492d508f5e800d26d3dfb0003ffab5218c47026ffd4f021a279d5de94ae1a"
+    },
+    {
+      "audit_id": "r2_51b828788827",
+      "pair_id": "kdconv-0001",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "02acf2c7f4fe4656b516b1b03fc0d7a2db2928672fbede3372c00c56aec2d24d"
+    },
+    {
+      "audit_id": "r2_e72536381973",
+      "pair_id": "kdconv-0364",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1f404046fcb5ee546d5cc48768cd0e1380bd918a3da815e46c25952c12385640"
+    },
+    {
+      "audit_id": "r2_c6f208ee59d4",
+      "pair_id": "kdconv-0282",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "f479574ac12356c61c19f1c8483fc1f5d181e611043c7aeb0cfa8123ae96e540"
+    },
+    {
+      "audit_id": "r2_70ad48ab333f",
+      "pair_id": "kdconv-0199",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b939e8da56130f475276a0da581e0e44f4552f73906b2f1508fd8f299d95b8a3"
+    },
+    {
+      "audit_id": "r2_a697e59897d3",
+      "pair_id": "kdconv-0287",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "6bbc26d684d622fdd6d7e816249d04ce28d7df05699a1754a0b9ad6e13d9c68e"
+    },
+    {
+      "audit_id": "r2_6978601ca9fc",
+      "pair_id": "kdconv-0004",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "ccd7468d680faed0b737b531b2653c74bcadb821a0b2d567f631bc74444308c5"
+    },
+    {
+      "audit_id": "r2_c4f033f539c1",
+      "pair_id": "kdconv-0206",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "42a3c94f98eca547716b4015d03fdb932c4ac60873ff26fff193386101fb845f"
+    },
+    {
+      "audit_id": "r2_790311e66f05",
+      "pair_id": "lccc-0084",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "93130e11446d3d20d40bc3f5cb6f4efbb2d78a1facd472e5aa961d65bc2bf39b"
+    },
+    {
+      "audit_id": "r2_550f2e3fcf89",
+      "pair_id": "kdconv-0047",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ffb8db8c81c5c43729cf0491d45e42b1872b4b8a1eca6253d35448fa116ceeca"
+    },
+    {
+      "audit_id": "r2_6f86e421d847",
+      "pair_id": "lccc-0106",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "43a3a1ec5467b3c6d59f5e4f29bf6c299def9398fabfedad57223b72a041ba8d"
+    },
+    {
+      "audit_id": "r2_b9b4b64e9698",
+      "pair_id": "lccc-0059",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6e23b9fec019263655ef0eeab154b2c1c7206614a353436689ed30fdff3bee9a"
+    },
+    {
+      "audit_id": "r2_357b092c1137",
+      "pair_id": "lccc-0306",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ccd41851f1f22be2fcaecf20052678bc59d55b8577c1a2f995b69d7ed2833f14"
+    },
+    {
+      "audit_id": "r2_f349cb71514b",
+      "pair_id": "kdconv-0117",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b61bbc526e85ceb32655426baf57ed33207403ff6609212a4ae7448837f2360d"
+    },
+    {
+      "audit_id": "r2_86c0d7ed6763",
+      "pair_id": "kdconv-0184",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "fe347f5c8f1ed45084e56bd8c62a68a5e61ff8da812a444790d6616a648f407c"
+    },
+    {
+      "audit_id": "r2_d7e6653a30d5",
+      "pair_id": "lccc-0071",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "c0007f5e2ff5c2bc374d23b93d1d6c8f87846f6b7b015933b4748b4c862c3c16"
+    },
+    {
+      "audit_id": "r2_917f702665a3",
+      "pair_id": "lccc-0353",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "daa85bf99d03f83b9814bd1fd40c629165736c22226bb7369f8ecdf6405c6b82"
+    },
+    {
+      "audit_id": "r2_741428fecedd",
+      "pair_id": "kdconv-0176",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1cc476ab8bfcf70027204e8d906e5968a209aec8d706bc67fc689bbad231d2fc"
+    },
+    {
+      "audit_id": "r2_6e7038097fa7",
+      "pair_id": "kdconv-0105",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "7a8ebebfdaa4558ba49a0b0ed21fefc440959e6be6bdba9a87b81c9ecb353a7c"
+    },
+    {
+      "audit_id": "r2_828aa9c1e83d",
+      "pair_id": "kdconv-0399",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "50a321172ee10d3532d0b33863a7a6ef5e1d21ce4698c5f73ffde2615da42307"
+    },
+    {
+      "audit_id": "r2_94bf2bcd0287",
+      "pair_id": "kdconv-0077",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "d76fc6f4dcf4742a64bf08502a9500b6be1b33ab11d2bc91dc02b18bce756e4b"
+    },
+    {
+      "audit_id": "r2_12e4ac3f1ee7",
+      "pair_id": "kdconv-0242",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "2a6a0acd6457569358010b1768217e2573f5bad153c30afa6274c906ef3f9cf1"
+    },
+    {
+      "audit_id": "r2_7ee73a332376",
+      "pair_id": "kdconv-0336",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "8a759d424caaf9a2f88fe498431d6f9eb2955db74e0f7cf1bffd86fac0a4b31b"
+    },
+    {
+      "audit_id": "r2_84d112868b42",
+      "pair_id": "lccc-0384",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "fd6ee1930f711bfc6e3921d4ed968fafa4aae104a1eb5ba757fca43dc19f4ffc"
+    },
+    {
+      "audit_id": "r2_0c4c6a487b67",
+      "pair_id": "kdconv-0267",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "84ada7613134d6b8baa4c98814161c9b5f32491220dc18945173b8f695b3a1a7"
+    },
+    {
+      "audit_id": "r2_05a7d1edd79a",
+      "pair_id": "kdconv-0233",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "92bc1881e1efd322af7516b31e1e0acab7d7e4e79bf09a1b263638566e9904b0"
+    },
+    {
+      "audit_id": "r2_0049e76a1af1",
+      "pair_id": "kdconv-0326",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "605e55a643364425465445f8d4b835be5e4b9a799461d95ebe146ecfeaeb7b04"
+    },
+    {
+      "audit_id": "r2_c94cb5010216",
+      "pair_id": "lccc-0220",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "7ae78661c8667021a67a7801259741c170834f843ce70da953168b44b920a56b"
+    },
+    {
+      "audit_id": "r2_4688f49ecd1f",
+      "pair_id": "lccc-0121",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "2c7807f87ee25d78ed7fa86604bffdc3905cc9f005be2a5e82ec686315e8a233"
+    },
+    {
+      "audit_id": "r2_a5256ced79f3",
+      "pair_id": "kdconv-0051",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "565dedc9071383c150697cf2dc2c07abf7db3e919de4c31a33c8a83c0f606363"
+    },
+    {
+      "audit_id": "r2_f8046b12f0ca",
+      "pair_id": "kdconv-0244",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "fa8a5223653e8e74a7ecdcbcf90d4cd66bd71357b2f51dbaf2d6cb205e0647ef"
+    },
+    {
+      "audit_id": "r2_7ddb3a5d7de0",
+      "pair_id": "kdconv-0033",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "7a237d0f4b99ea397fe071b4af777f658e5b614b6e61aed87b78faa6f0d4273a"
+    },
+    {
+      "audit_id": "r2_aac1a84eb528",
+      "pair_id": "lccc-0156",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "2dd35bbb9c0370a95a9273481279866b1e32d4d92828f1ae455f2ea6d78ba7fa"
+    },
+    {
+      "audit_id": "r2_4a0356fc4a2e",
+      "pair_id": "lccc-0292",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "d396e7d3e31a02585b000cbb75325b2ab4f4efcb01fee55f473800c961cd1b7c"
+    },
+    {
+      "audit_id": "r2_70499885183b",
+      "pair_id": "kdconv-0039",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "9b9aea46f3a19ccab2b21bd2109a5d4376b494d04e7e992916daf3b0b896e4a9"
+    },
+    {
+      "audit_id": "r2_2260ae70ceb1",
+      "pair_id": "kdconv-0088",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "8fedac125105d6967c51259baee05ffef40eab955e7312475a836e7f83af0090"
+    },
+    {
+      "audit_id": "r2_eb7dc2ba565d",
+      "pair_id": "lccc-0367",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "4e1e47f6e191ac0d7a2efc1e9824692ecba395805c766f1f6c8e3912f2e124cc"
+    },
+    {
+      "audit_id": "r2_8dec7ab8e9f6",
+      "pair_id": "kdconv-0001",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "8c7557445a9161a7eae0916f7140dd99366814147efb1d0dc7a75f57fee47ec8"
+    },
+    {
+      "audit_id": "r2_bab48128d793",
+      "pair_id": "lccc-0147",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "10ea3bc928a8b766d9c18a283f4dfaf817c020261db0a76175f9d15fe0a1c562"
+    },
+    {
+      "audit_id": "r2_89d6c44ae10b",
+      "pair_id": "lccc-0096",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "7e00ccb7d522e1b2e6ead1cec19fca2818a3c8b2d8d7c5af27a954cfcc296cef"
+    },
+    {
+      "audit_id": "r2_867398e8d9f3",
+      "pair_id": "lccc-0336",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1ad2777b60941f4d4d7d590eacfa77579c4763eb6228bc29cc3c3b7c49f7daa5"
+    },
+    {
+      "audit_id": "r2_23e07b1d9666",
+      "pair_id": "lccc-0281",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "24d596b2af0197b164ca4d67f784af0ad487436a9fefd17dbf5ce2772ec94b75"
+    },
+    {
+      "audit_id": "r2_f1d83b4ab680",
+      "pair_id": "lccc-0107",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1f62db0501947436709fb9c280cfbf461f05b452adf5179eedc0641a125bfc63"
+    },
+    {
+      "audit_id": "r2_70f44f0c67cf",
+      "pair_id": "lccc-0255",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "d3049f5888d66e6c0e82c7f488667bc0103cdab0f1fdb94b2fc6ac3a91961e53"
+    },
+    {
+      "audit_id": "r2_c7643292b86c",
+      "pair_id": "kdconv-0365",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "567b26c329a3558059e77e888fb6e120b692e9f5b7c57f952bdfc608210880d4"
+    },
+    {
+      "audit_id": "r2_b4ea048a0e7b",
+      "pair_id": "kdconv-0258",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1642fc76ed40d841455b5e16d701be8535c93b9725e19fc7d952cf9914017a2e"
+    },
+    {
+      "audit_id": "r2_3cf55819ded8",
+      "pair_id": "kdconv-0127",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ee1e7dee45fc25ba2a55655e4dcb006bd45a8119c33f0e58ee2a8bc3ad568dfd"
+    },
+    {
+      "audit_id": "r2_a609aee356b4",
+      "pair_id": "kdconv-0001",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ece0c459392f64e06e78d9a195a306ff3072e0a5e8e62ccfee0cecc25e6a766b"
+    },
+    {
+      "audit_id": "r2_d5b5688114c0",
+      "pair_id": "lccc-0002",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "209b750fee2a0ae5779255a109ae659723daef2b80e6d7eea262d1688cc3c20e"
+    },
+    {
+      "audit_id": "r2_a60480d10054",
+      "pair_id": "lccc-0343",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "c2aabaa943fda370f5f617b40a57a6c2cc506a706afb66c3837932be46b7fac9"
+    },
+    {
+      "audit_id": "r2_8783e9f05ba7",
+      "pair_id": "kdconv-0368",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "705cca292888fe5d56310176185feaf54952882707971b9036af1b204fe3a0d2"
+    },
+    {
+      "audit_id": "r2_46e7825d6302",
+      "pair_id": "lccc-0327",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "87f75d44de7cc890da2abe56b4c6a6600ac69e7977a58b8f6ae50a3e3749fac7"
+    },
+    {
+      "audit_id": "r2_642875f6a346",
+      "pair_id": "lccc-0096",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "400302088785137a5eb635df9b74979ae0ff3e511d29a7b3b274032373e736ba"
+    },
+    {
+      "audit_id": "r2_895a51201344",
+      "pair_id": "kdconv-0000",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "30fbe4ae426f95d94f9ba6b007aaefa0d3248dc2ec14bf1ab48af4d399f017d0"
+    },
+    {
+      "audit_id": "r2_07b77707ec88",
+      "pair_id": "lccc-0027",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "3dfade1c20cd2e17738120126fcbab6e2b8451d8557df2fbfbfafd6dd7cac216"
+    },
+    {
+      "audit_id": "r2_4078b13f1197",
+      "pair_id": "lccc-0162",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "98b16d7e267455044cda0e568697068e8595f2a39f242ed0b1dee73e1997e406"
+    },
+    {
+      "audit_id": "r2_d69cfca2d03e",
+      "pair_id": "lccc-0024",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1e45cdc18322398495990b6997db46ba293ff7bb87472b1cfb39f7a4d69c3f22"
+    },
+    {
+      "audit_id": "r2_bfd9eae32370",
+      "pair_id": "lccc-0267",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "35a4aa5aa72774532b5c1b97ad708cc96c085aa4acfd681000f4d2d228d54007"
+    },
+    {
+      "audit_id": "r2_656cd20109c9",
+      "pair_id": "kdconv-0248",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "457f73671a58cb97a79ef7c4a2d61934a370c3722f0e2eb734009f2b509a4f4e"
+    },
+    {
+      "audit_id": "r2_00f950da4ac8",
+      "pair_id": "lccc-0169",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "91a486a440a15f0c79d18166eb60d1532d2b57ecc599afe9cf02bb72ad6d0cb9"
+    },
+    {
+      "audit_id": "r2_6421a6b2b40e",
+      "pair_id": "kdconv-0307",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "b67533989c34e5c2ae8e53acf2b55cbe3f17d876cac3cf17c7ff331107365fdb"
+    },
+    {
+      "audit_id": "r2_ea9f65e39896",
+      "pair_id": "kdconv-0127",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "b8d44fdde174de199b3f799478ec70086e05add88f519599c45a6c30b3c7eaf4"
+    },
+    {
+      "audit_id": "r2_9a2665d17ea2",
+      "pair_id": "lccc-0090",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "707282f286f229b15cfb3f5fc0264726770ea3f156ff820461525d99854c7dba"
+    },
+    {
+      "audit_id": "r2_4f28c8d98078",
+      "pair_id": "kdconv-0272",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "add08e82453432f8324e80a4671904d6707c2547c8ef30a312a37008669a0ec2"
+    },
+    {
+      "audit_id": "r2_404078e80e3a",
+      "pair_id": "kdconv-0176",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0708053ba10c31d43bd78f4ad1d161ef293ee7a59e8e45e6a2e69ef060085cab"
+    },
+    {
+      "audit_id": "r2_6510c832a817",
+      "pair_id": "kdconv-0187",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "28fe203b4a6506b4dfff46c335b62bc59d9df2930246e964c386b027b3c1be68"
+    },
+    {
+      "audit_id": "r2_a1fe92e93464",
+      "pair_id": "kdconv-0281",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "c3d982b96dcb0622fbe0337116961429145ad93b808ae99cda3b971842f82657"
+    },
+    {
+      "audit_id": "r2_671014addb46",
+      "pair_id": "kdconv-0077",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "29c4c7e03bfc316efcac4b611b60a0fa47d6c0f23bd67693ba39b2c3384e83b5"
+    },
+    {
+      "audit_id": "r2_e911f538adcc",
+      "pair_id": "lccc-0340",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "a1415aff6759199caffea25b0951e338a2aa2e7a406d793bd6d9f04ebbd64ab1"
+    },
+    {
+      "audit_id": "r2_c51c36bec54b",
+      "pair_id": "kdconv-0183",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "32d2b0f678bad25f8c135c88f999f72ad0f47de6d93358f88e8dcf3243bcdbb4"
+    },
+    {
+      "audit_id": "r2_dd9bbcd7cb1c",
+      "pair_id": "kdconv-0343",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "bc2a44e53b7e1cb9a04a408f47cdecb1fce4e8437d1fbec4c0504149ad012c84"
+    },
+    {
+      "audit_id": "r2_8c2b42107d0e",
+      "pair_id": "lccc-0303",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "4438c35aa4af3406c5ef093ef940e18a926ca6f5dbf3f75cafc3ad731dc5bcf4"
+    },
+    {
+      "audit_id": "r2_f29a7c84828d",
+      "pair_id": "lccc-0087",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ba68d17e7d935fa4a329738955b378e176f8cda2fd4d67c5cd592a20fe660468"
+    },
+    {
+      "audit_id": "r2_ed2f6aa9ec23",
+      "pair_id": "kdconv-0144",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "619bc89fd3b2d7a9cfa6822961256d35a30674b53d1cefc7db24e4460b4f88de"
+    },
+    {
+      "audit_id": "r2_6bc7e7f25925",
+      "pair_id": "kdconv-0222",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "de081bb583ea23acc808fbd9563c51be9661565df40ee99cc06be08667cb1e60"
+    },
+    {
+      "audit_id": "r2_df883ef0683e",
+      "pair_id": "kdconv-0105",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "clean",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "03a4ab081030c58ced440cbe2eea6cd5aa8b55c758b31b3b35845bf7b014acca"
+    },
+    {
+      "audit_id": "r2_7d17693ce780",
+      "pair_id": "lccc-0027",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "d6c25262279e28e18579efc9920cca6eaec89433be256b77c26bc2fd875c28f2"
+    },
+    {
+      "audit_id": "r2_76499b434b57",
+      "pair_id": "lccc-0256",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "e3a204cf8e2d0d4c11d1708f25163a3d3853c3eb1b3024ac0ab1e994c4abbc1c"
+    },
+    {
+      "audit_id": "r2_277f45b3f5ac",
+      "pair_id": "lccc-0144",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "3f8e06e124ef3e631a83d5d70db3b2448fe79d58716aa4ac33b0a33e9e4f19d0"
+    },
+    {
+      "audit_id": "r2_a7295a0e8266",
+      "pair_id": "lccc-0227",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "bc0df1aa4c9c78e75b8573ee78199eecfe90cb31261eb604329f609e6d195505"
+    },
+    {
+      "audit_id": "r2_281cfda4e644",
+      "pair_id": "lccc-0392",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "ee485a84b016144c00088200edd3a864325a5d864531ab875206d7c464b3f343"
+    },
+    {
+      "audit_id": "r2_186a7b96f0e3",
+      "pair_id": "kdconv-0181",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "55930831c7049fe64e00c6285e7a45de1d6651ce7da1cbe439d23ba3931cb4d2"
+    },
+    {
+      "audit_id": "r2_db386f2fde1a",
+      "pair_id": "kdconv-0094",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "765251a3ae661674f6aa1639aaa4075e8619d61eebfb04e04ad8b324ba5a19bd"
+    },
+    {
+      "audit_id": "r2_7d0b523fd2b8",
+      "pair_id": "lccc-0317",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "7bbebab1439b67c487d12ad750e24cdd833de26e90b1306e0a1f7931a8fadbba"
+    },
+    {
+      "audit_id": "r2_bf7b604ebb66",
+      "pair_id": "lccc-0311",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "625a2bcffc3de5f62dcef365d45872d87eb7070aef0303fa91bf8d48c45cc6a2"
+    },
+    {
+      "audit_id": "r2_6fe6f9072716",
+      "pair_id": "kdconv-0381",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "11969d6bc405a21c2fbdc2b4e33bfa0730afdea2928cf2c08a1efb7f53b82dcc"
+    },
+    {
+      "audit_id": "r2_b02bfb0ff3c2",
+      "pair_id": "kdconv-0350",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "61867f38435d6d7ead95351b767b6967ffcc815e6e2ae855dfa7b8b7aa99a041"
+    },
+    {
+      "audit_id": "r2_d14295bc0742",
+      "pair_id": "lccc-0075",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "11144d0ef8af0b115f1888ad5051718612f940d831a7c9a2f4cbac4092c62a88"
+    },
+    {
+      "audit_id": "r2_218d808bc26a",
+      "pair_id": "lccc-0221",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "d61fa9169ac001885a1db15c68f8b8147dc5bfcb13cb9c9657876c29eefd7fe4"
+    },
+    {
+      "audit_id": "r2_f49eeccce0f4",
+      "pair_id": "lccc-0120",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0154229f7c29a9be76d59f87fbcc01203f0b9114a87466fd1350ec97d1e5b446"
+    },
+    {
+      "audit_id": "r2_65b1af41899e",
+      "pair_id": "kdconv-0395",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "ca07b06ba5168c4e29fab9143881ea917517e66728bcee82de9cf66e415684d5"
+    },
+    {
+      "audit_id": "r2_f8366f4f437f",
+      "pair_id": "kdconv-0012",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "af2a54110f1a85f35c22198fd1579dc9c62fe8820683984a4d42a752b2e89e9e"
+    },
+    {
+      "audit_id": "r2_5f7ea60ea9d9",
+      "pair_id": "kdconv-0297",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "819d00382158c65cb78739c6ecc0601c87b46323396d935579d438b64894cb94"
+    },
+    {
+      "audit_id": "r2_929eecdd369e",
+      "pair_id": "lccc-0044",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "770104af093e8d5c1284def87ea4458abdac543143642c01a4d3417a25d2326a"
+    },
+    {
+      "audit_id": "r2_72402cc13ed6",
+      "pair_id": "lccc-0164",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "c8575ef8120bfdc02fce1abdcd3f8d42fd7d154ca507689afe422f984297063d"
+    },
+    {
+      "audit_id": "r2_ed7eec03b278",
+      "pair_id": "lccc-0120",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6c3bc9208938e59a2613e5cf657a794f6c92c4c0e08e1381bda88b65ca462995"
+    },
+    {
+      "audit_id": "r2_0baead604237",
+      "pair_id": "kdconv-0226",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "64e39498890d707cb4dec034aa01ff1f1a15fc14eb0374b9abb00eabb1709076"
+    },
+    {
+      "audit_id": "r2_d1ce3cdf53e3",
+      "pair_id": "kdconv-0325",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "968a491a86f3fc15de60a89d3135de2b20feae6e39864d8b97539c6c91903c2c"
+    },
+    {
+      "audit_id": "r2_217b9a18966e",
+      "pair_id": "lccc-0398",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "16718232c3e1cc9db1ebf97ce0550195ba92ba508dfb85754d266fd50a841bcd"
+    },
+    {
+      "audit_id": "r2_7c9a3e735b21",
+      "pair_id": "kdconv-0166",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "693b4656b36d34b6a39c3377260d097edb553f7b94d031736e5cfe1c2342c192"
+    },
+    {
+      "audit_id": "r2_243951b7e343",
+      "pair_id": "kdconv-0371",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "9ef8ff89a5e229b529c632f5ac983f6c2c50ee5406c9b5f7fc4fac59ce260dc6"
+    },
+    {
+      "audit_id": "r2_81cf25336fe9",
+      "pair_id": "lccc-0306",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "a2e436575466b5c9f3bf0b5a11207c80873b10087356422e425a29f170b9933f"
+    },
+    {
+      "audit_id": "r2_248027f7fa6a",
+      "pair_id": "lccc-0316",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "f508f4be9836429567ff8e3a37e32903d1cfec398b88b04575fdf1e82025daa9"
+    },
+    {
+      "audit_id": "r2_a4bd796c96e0",
+      "pair_id": "lccc-0083",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "22b3d57ef87b9718621955d110902c8e94dac8204520c774ccfd5437f37f3801"
+    },
+    {
+      "audit_id": "r2_a1b90943bd76",
+      "pair_id": "lccc-0107",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6e422712c683413bac7b289f8a653bd3a70bbe412435b342b4f07bedbbaddefc"
+    },
+    {
+      "audit_id": "r2_2203e8795281",
+      "pair_id": "lccc-0088",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "11b2a71cc7e00b1cdc800fb4afb742df89f7a1e51b04ede4766146c139eab8d8"
+    },
+    {
+      "audit_id": "r2_7c92bac52f02",
+      "pair_id": "kdconv-0106",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "eb83750099e13b28c6dd7aed5b073cf366950b3e3fa435a1422996b73a3cd0f0"
+    },
+    {
+      "audit_id": "r2_8f0b1b3ba305",
+      "pair_id": "kdconv-0334",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "be27c12c16e7e6b3170b2a33b4b4b3b59651f67a29353720e1d90b56d75d6055"
+    },
+    {
+      "audit_id": "r2_505f98563d73",
+      "pair_id": "kdconv-0341",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "14410ebdb1adce89749e0f4f982eb34a3a1e9657a71b9d8271d30114b433165c"
+    },
+    {
+      "audit_id": "r2_8364ccba5f1a",
+      "pair_id": "lccc-0306",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "78a0e162c5cd37d3e0c6710d33d5f83e19b1a75f1b079fa6f06e9d508d8277fd"
+    },
+    {
+      "audit_id": "r2_8285e67cc782",
+      "pair_id": "lccc-0045",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "84d6d7e96a533be7df89a424282370374aadd390722a5874218ceeb8294e6fa8"
+    },
+    {
+      "audit_id": "r2_6ec97bb4f261",
+      "pair_id": "lccc-0256",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "0be0560a1a08df2f9772ba3b8590a2598a592b949d739e27ca9568d464d18683"
+    },
+    {
+      "audit_id": "r2_f99590b09456",
+      "pair_id": "kdconv-0199",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "29ead2721d6ff69dd96b6e0f08664b3963e15e5b8e45c73d37b4508ca75dd8d9"
+    },
+    {
+      "audit_id": "r2_2d076d7d38d1",
+      "pair_id": "lccc-0163",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0f5d72d6f3f7ef499da77f523dbecabe88a53815febff23463e9c753cf081087"
+    },
+    {
+      "audit_id": "r2_d745f4546766",
+      "pair_id": "lccc-0187",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "27b5b423c09a44cfe7d9abd95c5be4486692a6727820c987b7e74dd56d2c3905"
+    },
+    {
+      "audit_id": "r2_71b50f858fb8",
+      "pair_id": "lccc-0165",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "55b82d7a1d582ff2df236f16a7d382de24cd6ddfa6066d4cdad336897a47fb9e"
+    },
+    {
+      "audit_id": "r2_5900b7c02e49",
+      "pair_id": "kdconv-0100",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "a2b7af98fa1c7f26911dc654fcb4ef43e69cc2c1976de1b011ae13279b430fdd"
+    },
+    {
+      "audit_id": "r2_8fd04f1714ff",
+      "pair_id": "kdconv-0224",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "92347604da362cce673dab467e518ec6e3cd328b67a0952da4ad4ad65f0dea4b"
+    },
+    {
+      "audit_id": "r2_4f0006c3dfca",
+      "pair_id": "kdconv-0119",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "2400bebd857a89ac200d50ff2173aea2807fe8d90a78fbcfe0fe5240001f151b"
+    },
+    {
+      "audit_id": "r2_a225e66339fe",
+      "pair_id": "kdconv-0167",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "fbd13c89d4db3b10fcd800d6f47b01fe8822e2efdb4f1d177911cdcca16f6fd2"
+    },
+    {
+      "audit_id": "r2_70ee9baf505f",
+      "pair_id": "lccc-0169",
+      "model": "deepseek-v4-flash",
+      "endpoint_code": "E08",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "claim_annotation_injected_api_deepseek.jsonl",
+      "blind_row_sha256": "0f61125dbef36617c0938e0917e1170d740b654399a932fa6410f865e1b89ea2"
+    },
+    {
+      "audit_id": "r2_6bd86942d9d3",
+      "pair_id": "kdconv-0035",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "0a30f6f51f46f9fca3f0bed1361d0a80fad5f5185a1383a571c78fd2912883e7"
+    },
+    {
+      "audit_id": "r2_fd39a02b9952",
+      "pair_id": "lccc-0274",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "7cec10b7350c43dd4bb868aacb15138a01e862bb237ead2c748a62ec24e8d8db"
+    },
+    {
+      "audit_id": "r2_2da7ac26dcb8",
+      "pair_id": "kdconv-0261",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "7b544a6143463b545dfbed4b13d4feea013e480634c8a799ed92b8e3dd10b230"
+    },
+    {
+      "audit_id": "r2_e39c143efd0c",
+      "pair_id": "kdconv-0155",
+      "model": "doubao-seed-2-1-pro-260628",
+      "endpoint_code": "E05",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "claim_annotation_injected_api_doubao.jsonl",
+      "blind_row_sha256": "a95ac12e0d6bffdae373a7db578a6ff871794766b5f0f81bbe0b945fb6a38ebe"
+    },
+    {
+      "audit_id": "r2_6cf08eccb633",
+      "pair_id": "lccc-0363",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "bc6d86a81566cf68088e331d705c767b51147a8bd46807c75343820fc7ec00a6"
+    },
+    {
+      "audit_id": "r2_667926abb76d",
+      "pair_id": "lccc-0093",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "8cacd9643dc354b12fe066b181f00fde6f49c1d74f00f7d41b890b587c9111c3"
+    },
+    {
+      "audit_id": "r2_71cf80fe343a",
+      "pair_id": "lccc-0395",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "9f8e859d2c91b916e6f3073faec71ed4e3cf94af7f7db80d26eb0529fcc66eee"
+    },
+    {
+      "audit_id": "r2_3c00df27e60d",
+      "pair_id": "kdconv-0291",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "af4f01f15f4be6241e996fe2c938250a9571f50fffd0c2ec63b05ca765095275"
+    },
+    {
+      "audit_id": "r2_aebed2f3509e",
+      "pair_id": "lccc-0173",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "95b94cf134b37f126a679ac81f36fd53ccd0e3c6e9c13ae052e8d2b55ee83253"
+    },
+    {
+      "audit_id": "r2_6c294f07110c",
+      "pair_id": "kdconv-0284",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "bf78fc967e0db880cad063e92bbe50909d917c4e2d95ccdcde1df69f997886c7"
+    },
+    {
+      "audit_id": "r2_7abd724408a5",
+      "pair_id": "lccc-0136",
+      "model": "glm-4-9b-chat-hf",
+      "endpoint_code": "E09",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "30d4459b594738302275d7f090f3e826e423f5e440bda8496beb09f89dd167d4"
+    },
+    {
+      "audit_id": "r2_889870b3557d",
+      "pair_id": "lccc-0087",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "509b006219f072be1199ddee1e14ed64621932feba21783dccba62aa41f4bee2"
+    },
+    {
+      "audit_id": "r2_582f49455683",
+      "pair_id": "lccc-0047",
+      "model": "Qwen2.5-14B-Instruct",
+      "endpoint_code": "E07",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "64f318f2d78d7f39a8ed286750168ddffbc37750f9218a26bbebc33dc4cd774c"
+    },
+    {
+      "audit_id": "r2_bd1b98dd8d87",
+      "pair_id": "lccc-0054",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "endpoint_code": "E02",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "1c8650fc4761858a98a97c7a43dd85d92e0c971189012301ab37cfab3d088781"
+    },
+    {
+      "audit_id": "r2_b4ffebf0ad83",
+      "pair_id": "kdconv-0228",
+      "model": "internlm2_5-7b-chat",
+      "endpoint_code": "E03",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "a904fd81fee6d821c769017dec43dce13f0135b1dac2322e4be4fb2076d1d4fd"
+    },
+    {
+      "audit_id": "r2_31ccbe6f0abe",
+      "pair_id": "kdconv-0133",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "6b69f381249c4663cc4d43426ad2ce15635d9c3fa95d1971d0b16d27a110eef2"
+    },
+    {
+      "audit_id": "r2_a252e61f8906",
+      "pair_id": "kdconv-0325",
+      "model": "Qwen2.5-3B-Instruct",
+      "endpoint_code": "E01",
+      "condition": "clean",
+      "detector_label": true,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "8b78a6b072fb57aacda7fdf6c3c1fd75ff515aa7c497a9b42267d440dc9f4f99"
+    },
+    {
+      "audit_id": "r2_6a40716a3ad2",
+      "pair_id": "lccc-0071",
+      "model": "Yi-1.5-9B-Chat",
+      "endpoint_code": "E06",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "3faa7428bb42ee6162885cbc2ec998a44b16be0d8ba3b8c6051ae4324efd585e"
+    },
+    {
+      "audit_id": "r2_714947b260f1",
+      "pair_id": "lccc-0103",
+      "model": "Qwen2.5-7B-Instruct",
+      "endpoint_code": "E04",
+      "condition": "contaminated",
+      "detector_label": false,
+      "source_file": "merged7_claim_annotation_injected.jsonl",
+      "blind_row_sha256": "516e33b0ec264710e93115c7bb21ad1dbdefe277dfb4cf04b916d691bf6457bc"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "decision": {
+    "arms_computed": [
+      "injected",
+      "self_induced",
+      "placebo"
+    ],
+    "cluster_dispersion": {
+      "ci_width": {
+        "model_clustered": 0.2452,
+        "row_level": 0.02780000000000002,
+        "seed_clustered": 0.1365
+      },
+      "ci_width_ratio_vs_row_level": {
+        "model_clustered": 8.82,
+        "seed_clustered": 4.91
+      },
+      "per_model": {
+        "max": 0.4562,
+        "min": 0.04,
+        "n": 5,
+        "stdev": 0.1479
+      },
+      "per_seed": {
+        "max": 0.93,
+        "min": 0.0,
+        "n": 40,
+        "stdev": 0.2222
+      }
+    },
+    "coverage": {
+      "complete": true,
+      "configured_selfinduced_rows": 200,
+      "duplicate_injected_pair_model_rows": 0,
+      "duplicate_placebo_pair_model_rows": 0,
+      "duplicate_selfinduced_rows": 0,
+      "expected_injected_pair_model_rows": 4000,
+      "expected_selfinduced_question_model_rows": 200,
+      "expected_selfinduced_rows": 200,
+      "expected_selfinduced_task_rows": 200,
+      "injected_complete": true,
+      "observed_injected_rows": 4000,
+      "observed_injected_unique_pair_model_rows": 4000,
+      "observed_placebo_rows": 4000,
+      "observed_placebo_unique_pair_model_rows": 4000,
+      "observed_selfinduced_rows": 200,
+      "observed_selfinduced_unique_question_model_rows": 200,
+      "observed_selfinduced_unique_rows": 200,
+      "placebo_complete": true,
+      "selfinduced_human_complete": true,
+      "selfinduced_output_complete": true,
+      "source_mock_rows": 0
+    },
+    "detector_f1": 1.0,
+    "detector_provenance_current": true,
+    "detector_trustworthy": true,
+    "go": true,
+    "go_ccr": true,
+    "go_contaminated_hcr": true,
+    "go_coverage": true,
+    "go_detector": true,
+    "go_kappa": true,
+    "go_placebo": true,
+    "go_real_output_detector": true,
+    "go_selfinduced": true,
+    "kappa_chain_ok": true,
+    "kappa_hcr_has_contagious": 0.8578680203045685,
+    "kappa_provenance_current": true,
+    "kappa_required": true,
+    "kappa_turn1_was_false": 0.9514327343370568,
+    "mean_ccr": 0.264,
+    "mean_injected_hcr": 0.265,
+    "mean_placebo_ccr": 0.00075,
+    "mean_selfinduced_hcr": 0.5329004329004329,
+    "min_ccr_observed": 0.0375,
+    "placebo_provided": true,
+    "pooled_selfinduced_error_count": 29,
+    "pooled_selfinduced_hcr": 0.5172413793103449,
+    "pooled_selfinduced_hcr_ci95_model_clustered": [
+      0.3793,
+      0.6471
+    ],
+    "pooled_selfinduced_hcr_ci95_question_clustered": [
+      0.3,
+      0.7143
+    ],
+    "pooled_selfinduced_inherited_count": 15,
+    "real_minus_placebo_ccr": 0.26325000000000004,
+    "real_minus_placebo_ccr_ci95": [
+      0.2492,
+      0.277
+    ],
+    "real_minus_placebo_ccr_ci95_model_clustered": [
+      0.1348,
+      0.38
+    ],
+    "real_minus_placebo_ccr_ci95_seed_clustered": [
+      0.1965,
+      0.333
+    ],
+    "real_minus_placebo_ccr_ci_excludes_zero": true,
+    "real_output_detector_precision": 0.9908622305529522,
+    "real_output_detector_precision_required": 0.9,
+    "recall_audit_complete": true,
+    "recall_audit_provenance_current": true,
+    "thresholds": {
+      "min_ccr": 0.08,
+      "min_contaminated_hcr": 0.1,
+      "min_real_minus_placebo_ccr": 0.05,
+      "min_selfinduced_hcr": 0.1
+    }
+  },
+  "summaries": [
+    {
+      "arm": "injected",
+      "ccr": 0.455,
+      "clean_seed_rate": 0.005,
+      "hcr": 0.46,
+      "model": "Qwen2.5-1.5B-Instruct",
+      "n": 400,
+      "source_dataset": "kdconv"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.0425,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.0425,
+      "model": "Qwen2.5-14B-Instruct",
+      "n": 400,
+      "source_dataset": "kdconv"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.3025,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.3025,
+      "model": "Qwen2.5-3B-Instruct",
+      "n": 400,
+      "source_dataset": "kdconv"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.2875,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.2875,
+      "model": "Qwen2.5-7B-Instruct",
+      "n": 400,
+      "source_dataset": "kdconv"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.2975,
+      "clean_seed_rate": 0.005,
+      "hcr": 0.2975,
+      "model": "internlm2_5-7b-chat",
+      "n": 400,
+      "source_dataset": "kdconv"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.4575,
+      "clean_seed_rate": 0.005,
+      "hcr": 0.4625,
+      "model": "Qwen2.5-1.5B-Instruct",
+      "n": 400,
+      "source_dataset": "lccc"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.0375,
+      "clean_seed_rate": 0.0025,
+      "hcr": 0.0375,
+      "model": "Qwen2.5-14B-Instruct",
+      "n": 400,
+      "source_dataset": "lccc"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.2375,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.2375,
+      "model": "Qwen2.5-3B-Instruct",
+      "n": 400,
+      "source_dataset": "lccc"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.2575,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.2575,
+      "model": "Qwen2.5-7B-Instruct",
+      "n": 400,
+      "source_dataset": "lccc"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.265,
+      "clean_seed_rate": 0.0075,
+      "hcr": 0.265,
+      "model": "internlm2_5-7b-chat",
+      "n": 400,
+      "source_dataset": "lccc"
+    },
+    {
+      "arm": "self_induced",
+      "hcr_si": 0.5454545454545454,
+      "model": "Qwen2.5-1.5B-Instruct",
+      "n_inheritance_judged": 11,
+      "n_total": 40,
+      "n_turn1_false": 11,
+      "n_turn1_judged": 40,
+      "turn1_false_rate": 0.275
+    },
+    {
+      "arm": "self_induced",
+      "hcr_si": 0.5,
+      "model": "Qwen2.5-14B-Instruct",
+      "n_inheritance_judged": 2,
+      "n_total": 40,
+      "n_turn1_false": 2,
+      "n_turn1_judged": 40,
+      "turn1_false_rate": 0.05
+    },
+    {
+      "arm": "self_induced",
+      "hcr_si": 0.6666666666666666,
+      "model": "Qwen2.5-3B-Instruct",
+      "n_inheritance_judged": 6,
+      "n_total": 40,
+      "n_turn1_false": 6,
+      "n_turn1_judged": 40,
+      "turn1_false_rate": 0.15
+    },
+    {
+      "arm": "self_induced",
+      "hcr_si": 0.6666666666666666,
+      "model": "Qwen2.5-7B-Instruct",
+      "n_inheritance_judged": 3,
+      "n_total": 40,
+      "n_turn1_false": 3,
+      "n_turn1_judged": 40,
+      "turn1_false_rate": 0.075
+    },
+    {
+      "arm": "self_induced",
+      "hcr_si": 0.2857142857142857,
+      "model": "internlm2_5-7b-chat",
+      "n_inheritance_judged": 7,
+      "n_total": 40,
+      "n_turn1_false": 7,
+      "n_turn1_judged": 40,
+      "turn1_false_rate": 0.175
+    }
+  ]
+}

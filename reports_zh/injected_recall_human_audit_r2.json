@@ -1,0 +1,200 @@
+{
+  "audit_complete": true,
+  "audit_decidable_fraction": 1.0,
+  "audit_filled_rows": 216,
+  "audit_missed_count": 23,
+  "audit_missed_rate_among_auto_negatives": 0.1397137268847795,
+  "audit_missed_rate_ci95_seed_clustered": [
+    0.06854889246530114,
+    0.2203266633771244
+  ],
+  "audit_post_revision_missed_count": 23,
+  "audit_post_revision_negative_filled": 144,
+  "audit_post_revision_positive_filled": 72,
+  "audit_post_revision_true_positive_count": 63,
+  "audit_rows": 216,
+  "audit_sampling_negative_filled": 144,
+  "audit_sampling_positive_filled": 72,
+  "audit_true_positive_count": 63,
+  "audit_uncertain_rows": 0,
+  "audit_unresolved_rows": 0,
+  "auto_negative_hcr_count": 5687,
+  "auto_positive_hcr_count": 1513,
+  "ci_method": "Original model-by-detector-label design weights; seed-cluster bootstrap for precision, miss rate, and recall.",
+  "detector_real_output_trustworthy": true,
+  "estimated_real_output_precision": 0.9568166208791209,
+  "estimated_real_output_precision_ci95_seed_clustered": [
+    0.8963961385836386,
+    0.9951923076923077
+  ],
+  "estimated_real_output_recall": 0.6393781194423728,
+  "estimated_real_output_recall_ci95_seed_clustered": [
+    0.5278463437708582,
+    0.7833642333517186
+  ],
+  "estimated_total_missed": 785.75,
+  "estimated_total_missed_ci95_seed_clustered": [
+    385.51897122485366,
+    1239.1171548329476
+  ],
+  "min_decidable_fraction": 0.75,
+  "min_precision_gate": 0.9,
+  "model_stratified_reweighting": {
+    "estimated_false_negative_count": 785.75,
+    "estimated_precision": 0.9568166208791209,
+    "estimated_recall": 0.6393781194423728,
+    "estimated_true_positive_count": 1393.125,
+    "note": "Primary design estimate: reweights every model-by-initial-label stratum to its full-run count."
+  },
+  "note": "Single-reviewer audit. Primary estimates retain all pre-revision model-by-label sampling strata; post-revision packet precision is diagnostic only.",
+  "per_model_audit": {
+    "Qwen2.5-1.5B-Instruct": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 419,
+      "auto_positive_count": 357,
+      "false_positive_count": 0,
+      "miss_rate": 0.4375,
+      "missed_count": 7,
+      "precision": 1.0,
+      "true_positive_count": 8
+    },
+    "Qwen2.5-14B-Instruct": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 753,
+      "auto_positive_count": 23,
+      "false_positive_count": 0,
+      "miss_rate": 0.0625,
+      "missed_count": 1,
+      "precision": 1.0,
+      "true_positive_count": 8
+    },
+    "Qwen2.5-3B-Instruct": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 572,
+      "auto_positive_count": 204,
+      "false_positive_count": 0,
+      "miss_rate": 0.125,
+      "missed_count": 2,
+      "precision": 1.0,
+      "true_positive_count": 8
+    },
+    "Qwen2.5-7B-Instruct": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 570,
+      "auto_positive_count": 206,
+      "false_positive_count": 0,
+      "miss_rate": 0.0625,
+      "missed_count": 1,
+      "precision": 1.0,
+      "true_positive_count": 8
+    },
+    "Yi-1.5-9B-Chat": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 631,
+      "auto_positive_count": 169,
+      "false_positive_count": 1,
+      "miss_rate": 0.1875,
+      "missed_count": 3,
+      "precision": 0.875,
+      "true_positive_count": 7
+    },
+    "deepseek-v4-flash": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 763,
+      "auto_positive_count": 37,
+      "false_positive_count": 1,
+      "miss_rate": 0.0625,
+      "missed_count": 1,
+      "precision": 0.875,
+      "true_positive_count": 7
+    },
+    "doubao-seed-2-1-pro-260628": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 786,
+      "auto_positive_count": 14,
+      "false_positive_count": 6,
+      "miss_rate": 0.0,
+      "missed_count": 0,
+      "precision": 0.25,
+      "true_positive_count": 2
+    },
+    "glm-4-9b-chat-hf": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 567,
+      "auto_positive_count": 233,
+      "false_positive_count": 0,
+      "miss_rate": 0.1875,
+      "missed_count": 3,
+      "precision": 1.0,
+      "true_positive_count": 8
+    },
+    "internlm2_5-7b-chat": {
+      "audit_negative_count": 16,
+      "audit_positive_count": 8,
+      "auto_negative_count": 563,
+      "auto_positive_count": 213,
+      "false_positive_count": 1,
+      "miss_rate": 0.3125,
+      "missed_count": 5,
+      "precision": 0.875,
+      "true_positive_count": 7
+    }
+  },
+  "post_revision_packet_precision": 0.875,
+  "post_revision_packet_precision_ci95_wilson": [
+    0.7791894627583916,
+    0.9328221577942649
+  ],
+  "provenance": {
+    "annotations_path": "datasets_zh/runs/zh_study_ext/merged9_claim_annotation_injected.jsonl",
+    "annotations_sha256": "820fc7d6d3d9739965c3fe243a5a72fd1d7c67b8fd1132103a612da247474450",
+    "audit_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_contaminated.jsonl",
+    "audit_sha256": "26658464f1e81f67c718aecfa1943dfe7e781f66680f9995c1a4af8cfe9f827b",
+    "compute_script_path": "scripts/compute_injected_recall_audit.py",
+    "compute_script_sha256": "488418be4f126fc9b6e2ac3d9bb8c1225286c237d760d8f9cab25a4bad9c1b9d",
+    "min_decidable_fraction": 0.75,
+    "min_precision": 0.9,
+    "sampling_manifest_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_sampling_manifest.json",
+    "sampling_manifest_sha256": "f5c3741fa51cb33551c806cd603f5b690f0a59ac3146cb5f84e689ba3df156f3"
+  },
+  "reviewer_count": 1,
+  "sampling_population_negative_count": 5624,
+  "sampling_population_positive_count": 1456,
+  "seed_cluster_bootstrap_valid_replicates": 1822,
+  "source_annotations": "datasets_zh/runs/zh_study_ext/merged9_claim_annotation_injected.jsonl",
+  "source_audit": "datasets_zh/runs/zh_study_ext/injected_audit_r2_contaminated.jsonl",
+  "unstratified_sensitivity": {
+    "estimated_miss_rate": 0.1597222222222222,
+    "estimated_miss_rate_ci95_seed_clustered": [
+      0.08208955223880597,
+      0.24285714285714285
+    ],
+    "estimated_miss_rate_ci95_wilson": [
+      0.10885235621873393,
+      0.22827539683694384
+    ],
+    "estimated_precision": 0.875,
+    "estimated_precision_ci95_seed_clustered": [
+      0.6792452830188679,
+      0.9879518072289156
+    ],
+    "estimated_precision_ci95_wilson": [
+      0.7791894627583916,
+      0.9328221577942649
+    ],
+    "estimated_recall": 0.5864811641645994,
+    "estimated_recall_ci95_seed_clustered": [
+      0.46933728981206724,
+      0.7365327657225286
+    ],
+    "note": "Sensitivity analysis that pools across the model quotas."
+  }
+}

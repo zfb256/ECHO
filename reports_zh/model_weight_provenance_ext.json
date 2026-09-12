@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-09-04T13:17:28Z",
+  "source": "Hugging Face official model API with blobs=true",
+  "models": {
+    "glm-4-9b-chat-hf": {
+      "repository": "zai-org/glm-4-9b-chat-hf",
+      "revision": "8599336fc6c125203efb2360bfaf4c80eef1d1bf",
+      "local_directory_sha256": "d323eebbb46bb3ae02776ad971ff0d6bc0aa8a281ba792cd2728fb4b92e110a9",
+      "verified_lfs_sha256": {
+        "model-00001-of-00004.safetensors": "36b42739ee927f68ec00fbb329b78938784654b4269b6ef68e6c0f86244fe8fe",
+        "model-00002-of-00004.safetensors": "029329f34bb73bd71b7e5f6391c62383d6bf888b88d4168fb7c416ea283da3f7",
+        "model-00003-of-00004.safetensors": "b5e6131e4059dcd8f29b006c8d951684fdf2a89cc79132d74e1b071a42fb9cae",
+        "model-00004-of-00004.safetensors": "02e9f256892a30b5e1c1176b0fff19d143f7944432529f16f2c7e8bb0d8106a0",
+        "tokenizer.json": "8a7269d6daa6328de533def0082ff9d3a825bb89036cbcc665c324f941f67fbf"
+      }
+    },
+    "Yi-1.5-9B-Chat": {
+      "repository": "01-ai/Yi-1.5-9B-Chat",
+      "revision": "1a0fc698cf883c4f5c325f026ca79f0ebd9955a5",
+      "local_directory_sha256": "6f925ee322640716bfa579a0b72d68d9a74f05384d9352eb52b23fba3ce544d6",
+      "verified_lfs_sha256": {
+        "model-00001-of-00004.safetensors": "9a78ba38d63842b47dbc31123fbb29e704a9f077d2f8719a70672a340b2e1d64",
+        "model-00002-of-00004.safetensors": "366b6c27b7dfbb5c737f420f99e443cd4d3719d37d95e3519562b50d594cb7ec",
+        "model-00003-of-00004.safetensors": "3b3a7a0a0f36f8c173fe53520642e440899943f2fa8a85afc954de3d071d87b6",
+        "model-00004-of-00004.safetensors": "ca084a3507b603cf45b323555311a394fcd213832ff039aa37b734f8365ea5b2",
+        "tokenizer.model": "386c49cf943d71aa110361135338c50e38beeff0a66593480421f37b319e1a39"
+      }
+    }
+  }
+}

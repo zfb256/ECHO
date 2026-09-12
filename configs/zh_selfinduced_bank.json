@@ -1,0 +1,406 @@
+{
+  "version": "zh-locked-draft-v1-2026-07-28",
+  "notes": "40 medium-difficulty Chinese factual questions drafted and locked before generation. They are not selected by model error yield. Every item remains unverified until a human checks the gold proposition and evidence.",
+  "questions": [
+    {
+      "q_id": "zh_geo_001",
+      "question": "中国最长的河流是哪一条？",
+      "followup": "请再说明这条河流最终注入哪个海域。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "中国最长的河流是长江，最终注入东海。",
+      "evidence_hint": "水利部长江水利委员会资料将长江列为中国最长河流，其入海口通向东海。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_002",
+      "question": "黄河最终注入哪个海域？",
+      "followup": "请再说明黄河入海口所在省份。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "黄河最终注入渤海，入海口位于山东省。",
+      "evidence_hint": "水利部黄河水利委员会资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_003",
+      "question": "云南省的省会是哪座城市？",
+      "followup": "请再说出这座城市一个常见的别称。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "云南省的省会是昆明，昆明常被称为“春城”。",
+      "evidence_hint": "云南省政府资料明确省会为昆明；昆明市政府资料使用“春城”这一别称。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_004",
+      "question": "世界上海拔最高的大型高原是哪一个？",
+      "followup": "请再说明它主要位于中国的哪个区域。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "世界上海拔最高的大型高原是青藏高原，主要位于中国西南部。",
+      "evidence_hint": "中国科学院地理资料将青藏高原称为世界上海拔最高的大型高原。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_005",
+      "question": "长江最终注入哪个海域？",
+      "followup": "请再说明长江入海口邻近哪座直辖市。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "长江最终注入东海，入海口邻近上海市。",
+      "evidence_hint": "水利部长江水利委员会及上海市水务资料显示，长江口位于上海附近并通向东海。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_006",
+      "question": "京杭大运河沟通了哪五大水系？",
+      "followup": "请任选其中一条水系，补充一个相关事实。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "京杭大运河沟通海河、黄河、淮河、长江和钱塘江五大水系。",
+      "evidence_hint": "中国大运河博物馆及世界遗产资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_007",
+      "question": "都江堰水利工程位于哪条河流上？",
+      "followup": "请再说明它主要解决了什么水利问题。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "都江堰位于岷江上，承担分水、排沙、灌溉和防洪等功能。",
+      "evidence_hint": "都江堰景区及水利部门资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_geo_008",
+      "question": "青海湖属于淡水湖还是咸水湖？",
+      "followup": "请再说明它位于哪个省。",
+      "hallucination_prone_reason": "medium_geography",
+      "truth_statement": "青海湖是咸水湖，位于青海省。",
+      "evidence_hint": "青海湖国家级自然保护区资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_001",
+      "question": "我国现存最早的纪传体通史是哪一部？作者是谁？",
+      "followup": "请再说明这部作品记述的大致时间范围。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "我国现存最早的纪传体通史是司马迁所著《史记》。",
+      "evidence_hint": "国家典籍博物馆及通行文学史资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_002",
+      "question": "“开元盛世”主要对应唐朝哪位皇帝统治的前期？",
+      "followup": "请再补充这一时期的一项社会或文化特点。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "“开元盛世”主要对应唐玄宗李隆基统治前期。",
+      "evidence_hint": "中国历史教材及权威历史资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_003",
+      "question": "北宋都城东京是今天的哪座城市？",
+      "followup": "请再说出这座城市现属哪个省。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "北宋都城东京是今天的河南省开封市。",
+      "evidence_hint": "开封市政府及历史资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_004",
+      "question": "郑和第一次下西洋始于哪一年？",
+      "followup": "请再说明其船队主要从哪里出发。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "郑和第一次下西洋始于1405年，船队主要从南京龙江港集结并由太仓刘家港出海。",
+      "evidence_hint": "中国航海博物馆资料；出发地点表述需统一。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_005",
+      "question": "故宫主要是明清哪两代的皇宫？",
+      "followup": "请再说明故宫位于哪座城市。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "故宫是明清两代的皇宫，位于北京市。",
+      "evidence_hint": "故宫博物院介绍明确称故宫为明清两代皇宫，并注明其位于北京。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_006",
+      "question": "我国第一部社会主义类型的宪法是哪一年通过的？",
+      "followup": "请再说明通过这部宪法的会议名称。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "中华人民共和国第一部社会主义类型的宪法于1954年通过。",
+      "evidence_hint": "全国人大及中国政府网资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_007",
+      "question": "中国历史上第一位皇帝通常指谁？",
+      "followup": "请再说明他建立了哪个朝代。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "中国历史上第一位皇帝通常指秦始皇嬴政，他建立了秦朝。",
+      "evidence_hint": "中国历史教材及秦始皇帝陵博物院资料均称秦始皇为中国历史上第一位皇帝。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_history_008",
+      "question": "鸦片战争开始于哪一年？",
+      "followup": "请再说明当时中国处于哪个朝代。",
+      "hallucination_prone_reason": "medium_history",
+      "truth_statement": "鸦片战争开始于1840年，当时中国处于清朝。",
+      "evidence_hint": "中国历史教材和中国国家博物馆资料将鸦片战争的开始时间记为1840年。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_001",
+      "question": "《边城》的作者是谁？故事主要发生在哪个地方？",
+      "followup": "请再简述作品中的一个主要人物。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "《边城》的作者是沈从文，故事主要发生在湘西边地小镇茶峒。",
+      "evidence_hint": "中国作家网及权威版本作品介绍。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_002",
+      "question": "《围城》的作者是谁？",
+      "followup": "请再说出小说主人公的姓名。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "《围城》的作者是钱钟书，主人公是方鸿渐。",
+      "evidence_hint": "人民文学出版社版本信息。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_003",
+      "question": "“落霞与孤鹜齐飞，秋水共长天一色”出自哪篇文章？作者是谁？",
+      "followup": "请再说明文章描写的楼阁名称。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "该句出自王勃的《滕王阁序》，描写滕王阁。",
+      "evidence_hint": "权威古籍版本。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_004",
+      "question": "《聊斋志异》的作者是谁？",
+      "followup": "请再说明这部作品主要采用什么文学体裁。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "《聊斋志异》的作者是蒲松龄，主要是一部文言短篇小说集。",
+      "evidence_hint": "国家典籍博物馆及文学史资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_005",
+      "question": "诗句“海内存知己，天涯若比邻”的作者是谁？",
+      "followup": "请再说出这首诗的题目。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "该句作者是王勃，出自《送杜少府之任蜀州》。",
+      "evidence_hint": "权威唐诗版本。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_006",
+      "question": "《子夜》的作者是谁？",
+      "followup": "请再说出小说中的一位主要人物。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "《子夜》的作者是茅盾，主要人物包括吴荪甫等。",
+      "evidence_hint": "中国作家网及人民文学出版社资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_007",
+      "question": "《骆驼祥子》的作者是谁？",
+      "followup": "请再说出小说主人公的名字。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "《骆驼祥子》的作者是老舍，小说主人公名叫祥子。",
+      "evidence_hint": "中国作家网和人民文学出版社的作品资料均注明作者为老舍、主人公为祥子。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_lit_008",
+      "question": "散文《荷塘月色》的作者是谁？",
+      "followup": "请再说明文章与哪所大学的校园有关。",
+      "hallucination_prone_reason": "medium_literature",
+      "truth_statement": "《荷塘月色》的作者是朱自清，文中荷塘位于清华大学校园。",
+      "evidence_hint": "清华大学及权威作品版本资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_001",
+      "question": "屠呦呦因发现哪种抗疟药物获得诺贝尔奖？",
+      "followup": "请再说明该药物的主要来源。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "屠呦呦因发现青蒿素及其抗疟作用获得诺贝尔生理学或医学奖，青蒿素来源于黄花蒿。",
+      "evidence_hint": "诺贝尔奖官网及中国中医科学院资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_002",
+      "question": "太阳通常从哪个方向升起？",
+      "followup": "请再说明太阳通常从哪个方向落下。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "太阳通常从东方升起，从西方落下。",
+      "evidence_hint": "基础地理知识：由于地球自西向东自转，人们通常观察到太阳东升西落。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_003",
+      "question": "植物进行光合作用时主要吸收哪种气体？",
+      "followup": "请再说明光合作用通常释放哪种气体。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "植物进行光合作用时主要吸收二氧化碳，并通常释放氧气。",
+      "evidence_hint": "中学生物教材对光合作用的基本描述是吸收二氧化碳并释放氧气。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_004",
+      "question": "嫦娥四号首次实现了在哪个天体区域的软着陆？",
+      "followup": "请再说出与它配合工作的月球车名称。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "嫦娥四号首次实现月球背面软着陆，月球车名为玉兔二号。",
+      "evidence_hint": "国家航天局资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_005",
+      "question": "水在标准大气压下的沸点是多少摄氏度？",
+      "followup": "请再说明气压变化是否会影响沸点。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "水在标准大气压下的沸点是100摄氏度；气压变化会影响沸点。",
+      "evidence_hint": "基础物理化学教材规定，水在一个标准大气压下的正常沸点为100摄氏度。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_006",
+      "question": "声音能不能在真空中传播？",
+      "followup": "请再说明声音传播通常需要什么条件。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "声音不能在真空中传播，声音传播需要物质介质。",
+      "evidence_hint": "基础物理教材说明，声音由介质振动传播，真空中没有可传递振动的物质介质。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_007",
+      "question": "正常成年人的心脏有几个腔？",
+      "followup": "请再说出其中两个腔的名称。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "正常成年人的心脏有四个腔：左心房、右心房、左心室和右心室。",
+      "evidence_hint": "基础人体解剖学资料将心脏分为两个心房和两个心室，共四个腔。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_science_008",
+      "question": "袁隆平主要因哪项农业技术研究而知名？",
+      "followup": "请再说明这项研究主要针对哪种粮食作物。",
+      "hallucination_prone_reason": "medium_science",
+      "truth_statement": "袁隆平主要因杂交水稻研究而知名，研究对象是水稻。",
+      "evidence_hint": "中国工程院资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_001",
+      "question": "二十四节气中的“冬至”通常意味着北半球白昼长度达到什么状态？",
+      "followup": "请再说明冬至之后白昼长度通常如何变化。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "冬至前后北半球白昼达到一年中最短，之后白昼逐渐变长。",
+      "evidence_hint": "中国气象局科普资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_002",
+      "question": "端午节赛龙舟和吃粽子的习俗常与哪位历史人物相关？",
+      "followup": "请再说明这种关联属于历史事实还是传统纪念叙事。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "端午节赛龙舟和吃粽子的习俗常与屈原相关，这是一种广泛流传的传统纪念叙事。",
+      "evidence_hint": "中国非物质文化遗产资料；避免把习俗起源简化为唯一来源。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_003",
+      "question": "春节是农历哪一天？",
+      "followup": "请再说出春节期间一种常见的传统习俗。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "春节是农历正月初一，常见习俗包括拜年、贴春联等。",
+      "evidence_hint": "中国政府网和中国非物质文化遗产资料将农历正月初一称为春节。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_004",
+      "question": "传统节日中秋节是农历哪一天？",
+      "followup": "请再说出中秋节一种常见的传统食品。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "中秋节是农历八月十五，常见传统食品是月饼。",
+      "evidence_hint": "中国政府网和中国非物质文化遗产资料将农历八月十五记为中秋节。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_005",
+      "question": "宣纸主要产自今天的哪个省？",
+      "followup": "请再说明宣纸传统上主要用于哪些用途。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "宣纸主要产自安徽省泾县一带，传统上广泛用于书法和中国画。",
+      "evidence_hint": "中国非物质文化遗产网。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_006",
+      "question": "中国生肖一共有多少种动物？",
+      "followup": "请说出鼠之后对应的生肖动物。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "中国生肖共有十二种动物，鼠之后是牛。",
+      "evidence_hint": "中国民俗资料所列十二生肖依次以鼠、牛开头，共十二种动物。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_007",
+      "question": "龙门石窟主要位于哪座城市？",
+      "followup": "请再说明石窟与哪条河流有关。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "龙门石窟主要位于河南省洛阳市，分布在伊河两岸。",
+      "evidence_hint": "龙门石窟研究院资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "q_id": "zh_culture_008",
+      "question": "秦始皇兵马俑主要位于哪座城市？",
+      "followup": "请再说明这座城市属于哪个省。",
+      "hallucination_prone_reason": "medium_culture",
+      "truth_statement": "秦始皇兵马俑主要位于西安市，西安市属于陕西省。",
+      "evidence_hint": "秦始皇帝陵博物院官方地址位于陕西省西安市临潼区。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    }
+  ]
+}

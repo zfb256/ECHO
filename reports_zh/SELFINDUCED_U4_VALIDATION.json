@@ -1,0 +1,28 @@
+{
+  "design_path": "reports_zh/SELFINDUCED_U4_FROZEN.json",
+  "design_sha256": "440d96b50fdec2837b9c40ac328ea57ada0f02d04ef301e9e1af57542bd88530",
+  "filled_packet_path": "datasets_zh/runs/zh_selfinduced_ext/selfinduced_u4_author_packet.jsonl",
+  "filled_packet_sha256": "16372dfa417fef592789fe213868c856065fdae34739be8879cc44b55fd7acbb",
+  "rows": 220,
+  "turn1_complete": 220,
+  "inheritance_required": 38,
+  "inheritance_complete": 38,
+  "immutable_validation": {
+    "method": "Reconstruct every pre-annotation row from the task/output manifests, remove only fields written by annotate_ui.py, then compare per-task hashes.",
+    "original_aggregate_sha256": "9e6adf81878db450e2347072465ca312e615712a328c7638dae56212f9dac081",
+    "filled_aggregate_sha256": "9e6adf81878db450e2347072465ca312e615712a328c7638dae56212f9dac081",
+    "mismatches": 0,
+    "allowed_changed_fields": [
+      "annotation.annotator",
+      "annotation.hcr_has_contagious",
+      "annotation.hcr_has_contagious_uncertain",
+      "annotation.hcr_machine",
+      "annotation.human_confirmed",
+      "annotation.human_fields",
+      "annotation.needs_human_review",
+      "annotation.turn1_was_false",
+      "annotation.turn1_was_false_uncertain"
+    ]
+  },
+  "validator_correction": "The frozen preparer mistakenly included annotation.needs_human_review in its immutable hash even though annotate_ui.py changes it on every completed primary annotation. The analysis rule, selection, packet, task/output inputs, and labels were not changed. The corrected validation reconstructs the original rows and excludes only the UI-owned fields listed above."
+}

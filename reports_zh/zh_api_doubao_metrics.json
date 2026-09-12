@@ -1,0 +1,120 @@
+{
+  "decision": {
+    "arms_computed": [
+      "injected",
+      "placebo"
+    ],
+    "cluster_dispersion": {
+      "ci_width": {
+        "model_clustered": 0.0,
+        "row_level": 0.0187,
+        "seed_clustered": 0.0363
+      },
+      "ci_width_ratio_vs_row_level": {
+        "model_clustered": null,
+        "seed_clustered": 1.94
+      },
+      "per_seed": {
+        "max": 0.35,
+        "min": 0.0,
+        "n": 40,
+        "stdev": 0.0594
+      }
+    },
+    "coverage": {
+      "complete": false,
+      "configured_selfinduced_rows": 200,
+      "duplicate_injected_pair_model_rows": 0,
+      "duplicate_placebo_pair_model_rows": 0,
+      "duplicate_selfinduced_rows": 0,
+      "expected_injected_pair_model_rows": 4000,
+      "expected_selfinduced_question_model_rows": 200,
+      "expected_selfinduced_rows": 0,
+      "expected_selfinduced_task_rows": 0,
+      "injected_complete": false,
+      "observed_injected_rows": 800,
+      "observed_injected_unique_pair_model_rows": 800,
+      "observed_placebo_rows": 800,
+      "observed_placebo_unique_pair_model_rows": 800,
+      "observed_selfinduced_rows": 0,
+      "observed_selfinduced_unique_question_model_rows": 0,
+      "observed_selfinduced_unique_rows": 0,
+      "placebo_complete": false,
+      "selfinduced_human_complete": false,
+      "selfinduced_output_complete": false,
+      "source_mock_rows": 0
+    },
+    "detector_f1": 1.0,
+    "detector_provenance_current": true,
+    "detector_trustworthy": true,
+    "go": null,
+    "go_ccr": false,
+    "go_contaminated_hcr": false,
+    "go_coverage": false,
+    "go_detector": false,
+    "go_kappa": true,
+    "go_placebo": false,
+    "go_real_output_detector": null,
+    "go_selfinduced": null,
+    "kappa_chain_ok": null,
+    "kappa_hcr_has_contagious": null,
+    "kappa_provenance_current": false,
+    "kappa_required": false,
+    "kappa_turn1_was_false": null,
+    "mean_ccr": 0.0175,
+    "mean_injected_hcr": 0.0175,
+    "mean_placebo_ccr": 0.0,
+    "mean_selfinduced_hcr": null,
+    "min_ccr_observed": 0.0075,
+    "placebo_provided": true,
+    "pooled_selfinduced_error_count": null,
+    "pooled_selfinduced_hcr": null,
+    "pooled_selfinduced_hcr_ci95_model_clustered": null,
+    "pooled_selfinduced_hcr_ci95_question_clustered": null,
+    "pooled_selfinduced_inherited_count": null,
+    "real_minus_placebo_ccr": 0.0175,
+    "real_minus_placebo_ccr_ci95": [
+      0.0088,
+      0.0275
+    ],
+    "real_minus_placebo_ccr_ci95_model_clustered": [
+      0.0175,
+      0.0175
+    ],
+    "real_minus_placebo_ccr_ci95_seed_clustered": [
+      0.0037,
+      0.04
+    ],
+    "real_minus_placebo_ccr_ci_excludes_zero": true,
+    "real_output_detector_precision": null,
+    "real_output_detector_precision_required": 0.9,
+    "recall_audit_complete": null,
+    "recall_audit_provenance_current": false,
+    "thresholds": {
+      "min_ccr": 0.08,
+      "min_contaminated_hcr": 0.1,
+      "min_real_minus_placebo_ccr": 0.05,
+      "min_selfinduced_hcr": 0.1
+    }
+  },
+  "summaries": [
+    {
+      "arm": "injected",
+      "ccr": 0.0275,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.0275,
+      "model": "doubao-seed-2-1-pro-260628",
+      "n": 400,
+      "source_dataset": "kdconv"
+    },
+    {
+      "arm": "injected",
+      "ccr": 0.0075,
+      "clean_seed_rate": 0.0,
+      "hcr": 0.0075,
+      "model": "doubao-seed-2-1-pro-260628",
+      "n": 400,
+      "source_dataset": "lccc"
+    }
+  ]
+}

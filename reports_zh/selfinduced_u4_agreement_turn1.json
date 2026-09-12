@@ -1,0 +1,17 @@
+{
+  "bootstrap_samples": 2000,
+  "cohen_kappa": 0.949748743718593,
+  "cohen_kappa_ci95_bootstrap": [
+    0.8721227621483376,
+    1.0
+  ],
+  "comparison": "inter-annotator: annotation vs annotation_2 (turn1_was_false)",
+  "field": "turn1_was_false",
+  "go_kappa": true,
+  "is_inter_annotator": true,
+  "kappa_note": null,
+  "min_kappa_threshold": 0.6,
+  "n_compared": 80,
+  "percent_agreement": 0.975,
+  "skipped_incomplete": 0
+}

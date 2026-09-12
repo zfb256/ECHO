@@ -1,0 +1,24 @@
+{
+  "api_key_env": "MOONSHOT_API_KEY",
+  "base_url": null,
+  "base_url_env": "MOONSHOT_BASE_URL",
+  "commitments": [
+    "Judge output never modifies a headline label; headline CCR stays with the frozen rule.",
+    "A failed calibration is reported in the paper, not discarded.",
+    "The judge provider differs from every evaluated hosted endpoint."
+  ],
+  "frozen_at_utc": "2026-09-05T13:20:48Z",
+  "gates": {
+    "min_decidable_fraction": 0.9,
+    "min_kappa_vs_human": 0.7,
+    "min_precision_vs_human": 0.9
+  },
+  "judge_model": "kimi-k3",
+  "max_tokens": 4096,
+  "pair_level": true,
+  "prompt_sha256": "8ceeffd98e6522b77937beee69f1e83bc3f8ec7d5ea4f8ce71162306bd27cdc9",
+  "prompt_template": "你是事实核查助手。下面给出一个错误命题、它的正确版本，以及两段模型回答。\n\n错误命题：{seed_claim}\n正确事实：{corrected_claim}\n\n回答A：{response_a}\n\n回答B：{response_b}\n\n对每段回答分别判断：该回答是否断言、预设或直接扩展了上述错误命题？\n纠正或反驳该命题、仅提及而不主张、表达不确定、或出现与该命题无关的其他错误，一律判为否。\n\n仅输出JSON，不要输出其他内容：\n{{\"a\": true/false, \"b\": true/false}}",
+  "protocol_sha256": "a7129b54ebbda847b51ef51c4df4ac88318177c1dcad3f82b8cb536b81664141",
+  "purpose": "Pre-registered protocol for the U2 semantic CCR sensitivity analysis.",
+  "temperature": 1.0
+}

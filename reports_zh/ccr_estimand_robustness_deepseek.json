@@ -1,0 +1,1224 @@
+{
+  "bootstrap": {
+    "method": "percentile cluster bootstrap",
+    "random_seed": 20260728,
+    "replicates": 2000
+  },
+  "definition": {
+    "independence_benchmark": "p1*(1-p0)",
+    "net_contrast": "p10-p01, equal to p1-p0",
+    "p01": "P(Y1=0, Y0=1), the reverse discordance",
+    "p10": "P(Y1=1, Y0=0), the directed discordance reported as CCR",
+    "y0_current": "annotation.clean_asserts_false",
+    "y0_symmetric": "annotation.clean_rule_asserts_false",
+    "y1": "annotation.hcr_has_contagious",
+    "y1_ambiguity_inclusive": "annotation.hcr_has_contagious OR annotation.contaminated_ambiguous"
+  },
+  "inputs": {
+    "config": "configs/zh_study.json",
+    "injected": "datasets_zh/runs/zh_study/claim_annotation_injected_api_deepseek.jsonl",
+    "placebo": "datasets_zh/runs/zh_study/claim_annotation_placebo_api_deepseek.jsonl"
+  },
+  "results": {
+    "ambiguity_inclusive": {
+      "injected": {
+        "contaminated_state_counts": {
+          "ambiguous": 27,
+          "other": 348,
+          "positive": 37,
+          "refuted": 388
+        },
+        "contaminated_state_rates": {
+          "ambiguous": 0.03375,
+          "other": 0.435,
+          "positive": 0.04625,
+          "refuted": 0.485
+        },
+        "counts": {
+          "00": 736,
+          "01": 0,
+          "10": 64,
+          "11": 0
+        },
+        "independence_benchmark": 0.08,
+        "n": 800,
+        "net_contrast": 0.08,
+        "p0": 0.0,
+        "p01": 0.0,
+        "p1": 0.08,
+        "p10": 0.08
+      },
+      "injected_by_model": {
+        "deepseek-v4-flash": {
+          "contaminated_state_counts": {
+            "ambiguous": 27,
+            "other": 348,
+            "positive": 37,
+            "refuted": 388
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.03375,
+            "other": 0.435,
+            "positive": 0.04625,
+            "refuted": 0.485
+          },
+          "counts": {
+            "00": 736,
+            "01": 0,
+            "10": 64,
+            "11": 0
+          },
+          "independence_benchmark": 0.08,
+          "n": 800,
+          "net_contrast": 0.08,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.08,
+          "p10": 0.08
+        }
+      },
+      "injected_by_seed_type": {
+        "entity_substitution": {
+          "contaminated_state_counts": {
+            "ambiguous": 8,
+            "other": 71,
+            "positive": 2,
+            "refuted": 79
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.05,
+            "other": 0.44375,
+            "positive": 0.0125,
+            "refuted": 0.49375
+          },
+          "counts": {
+            "00": 150,
+            "01": 0,
+            "10": 10,
+            "11": 0
+          },
+          "independence_benchmark": 0.0625,
+          "n": 160,
+          "net_contrast": 0.0625,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0625,
+          "p10": 0.0625
+        },
+        "numeric_perturbation": {
+          "contaminated_state_counts": {
+            "ambiguous": 13,
+            "other": 92,
+            "positive": 10,
+            "refuted": 45
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.08125,
+            "other": 0.575,
+            "positive": 0.0625,
+            "refuted": 0.28125
+          },
+          "counts": {
+            "00": 137,
+            "01": 0,
+            "10": 23,
+            "11": 0
+          },
+          "independence_benchmark": 0.14375,
+          "n": 160,
+          "net_contrast": 0.14375,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.14375,
+          "p10": 0.14375
+        },
+        "relation_swap": {
+          "contaminated_state_counts": {
+            "ambiguous": 1,
+            "other": 19,
+            "positive": 6,
+            "refuted": 134
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.00625,
+            "other": 0.11875,
+            "positive": 0.0375,
+            "refuted": 0.8375
+          },
+          "counts": {
+            "00": 153,
+            "01": 0,
+            "10": 7,
+            "11": 0
+          },
+          "independence_benchmark": 0.04375,
+          "n": 160,
+          "net_contrast": 0.04375,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.04375,
+          "p10": 0.04375
+        },
+        "temporal_shift": {
+          "contaminated_state_counts": {
+            "ambiguous": 4,
+            "other": 58,
+            "positive": 16,
+            "refuted": 82
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.025,
+            "other": 0.3625,
+            "positive": 0.1,
+            "refuted": 0.5125
+          },
+          "counts": {
+            "00": 140,
+            "01": 0,
+            "10": 20,
+            "11": 0
+          },
+          "independence_benchmark": 0.125,
+          "n": 160,
+          "net_contrast": 0.125,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.125,
+          "p10": 0.125
+        },
+        "unsupported_fabricated_detail": {
+          "contaminated_state_counts": {
+            "ambiguous": 1,
+            "other": 108,
+            "positive": 3,
+            "refuted": 48
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.00625,
+            "other": 0.675,
+            "positive": 0.01875,
+            "refuted": 0.3
+          },
+          "counts": {
+            "00": 156,
+            "01": 0,
+            "10": 4,
+            "11": 0
+          },
+          "independence_benchmark": 0.025,
+          "n": 160,
+          "net_contrast": 0.025,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.025,
+          "p10": 0.025
+        }
+      },
+      "injected_minus_placebo": {
+        "net_contrast_gap": 0.08,
+        "net_contrast_gap_ci95_model_clustered": [
+          0.08,
+          0.08
+        ],
+        "net_contrast_gap_ci95_seed_clustered": [
+          0.04,
+          0.1313
+        ],
+        "p10_gap": 0.08
+      },
+      "placebo": {
+        "contaminated_state_counts": {
+          "ambiguous": 0,
+          "other": 776,
+          "positive": 0,
+          "refuted": 24
+        },
+        "contaminated_state_rates": {
+          "ambiguous": 0.0,
+          "other": 0.97,
+          "positive": 0.0,
+          "refuted": 0.03
+        },
+        "counts": {
+          "00": 800,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "independence_benchmark": 0.0,
+        "n": 800,
+        "net_contrast": 0.0,
+        "p0": 0.0,
+        "p01": 0.0,
+        "p1": 0.0,
+        "p10": 0.0
+      },
+      "placebo_by_model": {
+        "deepseek-v4-flash": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 776,
+            "positive": 0,
+            "refuted": 24
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 0.97,
+            "positive": 0.0,
+            "refuted": 0.03
+          },
+          "counts": {
+            "00": 800,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 800,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        }
+      },
+      "placebo_by_seed_type": {
+        "entity_substitution": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "numeric_perturbation": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "relation_swap": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "temporal_shift": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "unsupported_fabricated_detail": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 136,
+            "positive": 0,
+            "refuted": 24
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 0.85,
+            "positive": 0.0,
+            "refuted": 0.15
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        }
+      }
+    },
+    "current": {
+      "injected": {
+        "contaminated_state_counts": {
+          "ambiguous": 27,
+          "other": 348,
+          "positive": 37,
+          "refuted": 388
+        },
+        "contaminated_state_rates": {
+          "ambiguous": 0.03375,
+          "other": 0.435,
+          "positive": 0.04625,
+          "refuted": 0.485
+        },
+        "counts": {
+          "00": 763,
+          "01": 0,
+          "10": 37,
+          "11": 0
+        },
+        "independence_benchmark": 0.04625,
+        "n": 800,
+        "net_contrast": 0.04625,
+        "p0": 0.0,
+        "p01": 0.0,
+        "p1": 0.04625,
+        "p10": 0.04625
+      },
+      "injected_by_model": {
+        "deepseek-v4-flash": {
+          "contaminated_state_counts": {
+            "ambiguous": 27,
+            "other": 348,
+            "positive": 37,
+            "refuted": 388
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.03375,
+            "other": 0.435,
+            "positive": 0.04625,
+            "refuted": 0.485
+          },
+          "counts": {
+            "00": 763,
+            "01": 0,
+            "10": 37,
+            "11": 0
+          },
+          "independence_benchmark": 0.04625,
+          "n": 800,
+          "net_contrast": 0.04625,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.04625,
+          "p10": 0.04625
+        }
+      },
+      "injected_by_seed_type": {
+        "entity_substitution": {
+          "contaminated_state_counts": {
+            "ambiguous": 8,
+            "other": 71,
+            "positive": 2,
+            "refuted": 79
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.05,
+            "other": 0.44375,
+            "positive": 0.0125,
+            "refuted": 0.49375
+          },
+          "counts": {
+            "00": 158,
+            "01": 0,
+            "10": 2,
+            "11": 0
+          },
+          "independence_benchmark": 0.0125,
+          "n": 160,
+          "net_contrast": 0.0125,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0125,
+          "p10": 0.0125
+        },
+        "numeric_perturbation": {
+          "contaminated_state_counts": {
+            "ambiguous": 13,
+            "other": 92,
+            "positive": 10,
+            "refuted": 45
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.08125,
+            "other": 0.575,
+            "positive": 0.0625,
+            "refuted": 0.28125
+          },
+          "counts": {
+            "00": 150,
+            "01": 0,
+            "10": 10,
+            "11": 0
+          },
+          "independence_benchmark": 0.0625,
+          "n": 160,
+          "net_contrast": 0.0625,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0625,
+          "p10": 0.0625
+        },
+        "relation_swap": {
+          "contaminated_state_counts": {
+            "ambiguous": 1,
+            "other": 19,
+            "positive": 6,
+            "refuted": 134
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.00625,
+            "other": 0.11875,
+            "positive": 0.0375,
+            "refuted": 0.8375
+          },
+          "counts": {
+            "00": 154,
+            "01": 0,
+            "10": 6,
+            "11": 0
+          },
+          "independence_benchmark": 0.0375,
+          "n": 160,
+          "net_contrast": 0.0375,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0375,
+          "p10": 0.0375
+        },
+        "temporal_shift": {
+          "contaminated_state_counts": {
+            "ambiguous": 4,
+            "other": 58,
+            "positive": 16,
+            "refuted": 82
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.025,
+            "other": 0.3625,
+            "positive": 0.1,
+            "refuted": 0.5125
+          },
+          "counts": {
+            "00": 144,
+            "01": 0,
+            "10": 16,
+            "11": 0
+          },
+          "independence_benchmark": 0.1,
+          "n": 160,
+          "net_contrast": 0.1,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.1,
+          "p10": 0.1
+        },
+        "unsupported_fabricated_detail": {
+          "contaminated_state_counts": {
+            "ambiguous": 1,
+            "other": 108,
+            "positive": 3,
+            "refuted": 48
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.00625,
+            "other": 0.675,
+            "positive": 0.01875,
+            "refuted": 0.3
+          },
+          "counts": {
+            "00": 157,
+            "01": 0,
+            "10": 3,
+            "11": 0
+          },
+          "independence_benchmark": 0.01875,
+          "n": 160,
+          "net_contrast": 0.01875,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.01875,
+          "p10": 0.01875
+        }
+      },
+      "injected_minus_placebo": {
+        "net_contrast_gap": 0.04625,
+        "net_contrast_gap_ci95_model_clustered": [
+          0.0462,
+          0.0462
+        ],
+        "net_contrast_gap_ci95_seed_clustered": [
+          0.0175,
+          0.0887
+        ],
+        "p10_gap": 0.04625
+      },
+      "placebo": {
+        "contaminated_state_counts": {
+          "ambiguous": 0,
+          "other": 776,
+          "positive": 0,
+          "refuted": 24
+        },
+        "contaminated_state_rates": {
+          "ambiguous": 0.0,
+          "other": 0.97,
+          "positive": 0.0,
+          "refuted": 0.03
+        },
+        "counts": {
+          "00": 800,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "independence_benchmark": 0.0,
+        "n": 800,
+        "net_contrast": 0.0,
+        "p0": 0.0,
+        "p01": 0.0,
+        "p1": 0.0,
+        "p10": 0.0
+      },
+      "placebo_by_model": {
+        "deepseek-v4-flash": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 776,
+            "positive": 0,
+            "refuted": 24
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 0.97,
+            "positive": 0.0,
+            "refuted": 0.03
+          },
+          "counts": {
+            "00": 800,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 800,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        }
+      },
+      "placebo_by_seed_type": {
+        "entity_substitution": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "numeric_perturbation": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "relation_swap": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "temporal_shift": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "unsupported_fabricated_detail": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 136,
+            "positive": 0,
+            "refuted": 24
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 0.85,
+            "positive": 0.0,
+            "refuted": 0.15
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        }
+      }
+    },
+    "symmetric_rule_only": {
+      "injected": {
+        "contaminated_state_counts": {
+          "ambiguous": 27,
+          "other": 348,
+          "positive": 37,
+          "refuted": 388
+        },
+        "contaminated_state_rates": {
+          "ambiguous": 0.03375,
+          "other": 0.435,
+          "positive": 0.04625,
+          "refuted": 0.485
+        },
+        "counts": {
+          "00": 763,
+          "01": 0,
+          "10": 37,
+          "11": 0
+        },
+        "independence_benchmark": 0.04625,
+        "n": 800,
+        "net_contrast": 0.04625,
+        "p0": 0.0,
+        "p01": 0.0,
+        "p1": 0.04625,
+        "p10": 0.04625
+      },
+      "injected_by_model": {
+        "deepseek-v4-flash": {
+          "contaminated_state_counts": {
+            "ambiguous": 27,
+            "other": 348,
+            "positive": 37,
+            "refuted": 388
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.03375,
+            "other": 0.435,
+            "positive": 0.04625,
+            "refuted": 0.485
+          },
+          "counts": {
+            "00": 763,
+            "01": 0,
+            "10": 37,
+            "11": 0
+          },
+          "independence_benchmark": 0.04625,
+          "n": 800,
+          "net_contrast": 0.04625,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.04625,
+          "p10": 0.04625
+        }
+      },
+      "injected_by_seed_type": {
+        "entity_substitution": {
+          "contaminated_state_counts": {
+            "ambiguous": 8,
+            "other": 71,
+            "positive": 2,
+            "refuted": 79
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.05,
+            "other": 0.44375,
+            "positive": 0.0125,
+            "refuted": 0.49375
+          },
+          "counts": {
+            "00": 158,
+            "01": 0,
+            "10": 2,
+            "11": 0
+          },
+          "independence_benchmark": 0.0125,
+          "n": 160,
+          "net_contrast": 0.0125,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0125,
+          "p10": 0.0125
+        },
+        "numeric_perturbation": {
+          "contaminated_state_counts": {
+            "ambiguous": 13,
+            "other": 92,
+            "positive": 10,
+            "refuted": 45
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.08125,
+            "other": 0.575,
+            "positive": 0.0625,
+            "refuted": 0.28125
+          },
+          "counts": {
+            "00": 150,
+            "01": 0,
+            "10": 10,
+            "11": 0
+          },
+          "independence_benchmark": 0.0625,
+          "n": 160,
+          "net_contrast": 0.0625,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0625,
+          "p10": 0.0625
+        },
+        "relation_swap": {
+          "contaminated_state_counts": {
+            "ambiguous": 1,
+            "other": 19,
+            "positive": 6,
+            "refuted": 134
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.00625,
+            "other": 0.11875,
+            "positive": 0.0375,
+            "refuted": 0.8375
+          },
+          "counts": {
+            "00": 154,
+            "01": 0,
+            "10": 6,
+            "11": 0
+          },
+          "independence_benchmark": 0.0375,
+          "n": 160,
+          "net_contrast": 0.0375,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0375,
+          "p10": 0.0375
+        },
+        "temporal_shift": {
+          "contaminated_state_counts": {
+            "ambiguous": 4,
+            "other": 58,
+            "positive": 16,
+            "refuted": 82
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.025,
+            "other": 0.3625,
+            "positive": 0.1,
+            "refuted": 0.5125
+          },
+          "counts": {
+            "00": 144,
+            "01": 0,
+            "10": 16,
+            "11": 0
+          },
+          "independence_benchmark": 0.1,
+          "n": 160,
+          "net_contrast": 0.1,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.1,
+          "p10": 0.1
+        },
+        "unsupported_fabricated_detail": {
+          "contaminated_state_counts": {
+            "ambiguous": 1,
+            "other": 108,
+            "positive": 3,
+            "refuted": 48
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.00625,
+            "other": 0.675,
+            "positive": 0.01875,
+            "refuted": 0.3
+          },
+          "counts": {
+            "00": 157,
+            "01": 0,
+            "10": 3,
+            "11": 0
+          },
+          "independence_benchmark": 0.01875,
+          "n": 160,
+          "net_contrast": 0.01875,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.01875,
+          "p10": 0.01875
+        }
+      },
+      "injected_minus_placebo": {
+        "net_contrast_gap": 0.04625,
+        "net_contrast_gap_ci95_model_clustered": [
+          0.0462,
+          0.0462
+        ],
+        "net_contrast_gap_ci95_seed_clustered": [
+          0.0175,
+          0.0887
+        ],
+        "p10_gap": 0.04625
+      },
+      "placebo": {
+        "contaminated_state_counts": {
+          "ambiguous": 0,
+          "other": 776,
+          "positive": 0,
+          "refuted": 24
+        },
+        "contaminated_state_rates": {
+          "ambiguous": 0.0,
+          "other": 0.97,
+          "positive": 0.0,
+          "refuted": 0.03
+        },
+        "counts": {
+          "00": 800,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "independence_benchmark": 0.0,
+        "n": 800,
+        "net_contrast": 0.0,
+        "p0": 0.0,
+        "p01": 0.0,
+        "p1": 0.0,
+        "p10": 0.0
+      },
+      "placebo_by_model": {
+        "deepseek-v4-flash": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 776,
+            "positive": 0,
+            "refuted": 24
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 0.97,
+            "positive": 0.0,
+            "refuted": 0.03
+          },
+          "counts": {
+            "00": 800,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 800,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        }
+      },
+      "placebo_by_seed_type": {
+        "entity_substitution": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "numeric_perturbation": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "relation_swap": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "temporal_shift": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 160,
+            "positive": 0,
+            "refuted": 0
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 1.0,
+            "positive": 0.0,
+            "refuted": 0.0
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        },
+        "unsupported_fabricated_detail": {
+          "contaminated_state_counts": {
+            "ambiguous": 0,
+            "other": 136,
+            "positive": 0,
+            "refuted": 24
+          },
+          "contaminated_state_rates": {
+            "ambiguous": 0.0,
+            "other": 0.85,
+            "positive": 0.0,
+            "refuted": 0.15
+          },
+          "counts": {
+            "00": 160,
+            "01": 0,
+            "10": 0,
+            "11": 0
+          },
+          "independence_benchmark": 0.0,
+          "n": 160,
+          "net_contrast": 0.0,
+          "p0": 0.0,
+          "p01": 0.0,
+          "p1": 0.0,
+          "p10": 0.0
+        }
+      }
+    }
+  }
+}

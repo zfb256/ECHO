@@ -1,0 +1,42 @@
+{
+  "coverage": {
+    "conditions": {
+      "clean": 800,
+      "clean_b": 800,
+      "contaminated": 800
+    },
+    "duplicate_pair_conditions": 0,
+    "empty_responses": 0,
+    "expected_outputs": 2400,
+    "observed_outputs": 2400,
+    "pairs": 800
+  },
+  "errors": [],
+  "finish_reasons": {
+    "completed": 2392,
+    "incomplete": 8
+  },
+  "model": "doubao-seed-2-1-pro-260628",
+  "rates": {
+    "gap": 0.0175,
+    "injected_ccr": 0.0175,
+    "placebo_ccr": 0.0
+  },
+  "unfinished": {
+    "conditions": {
+      "clean": 3,
+      "clean_b": 4,
+      "contaminated": 1
+    },
+    "count": 8
+  },
+  "unfinished_worst_case": {
+    "absolute_gap_shift_bound": 0.01375,
+    "gap_interval": [
+      0.0037500000000000016,
+      0.03125
+    ],
+    "still_positive": true
+  },
+  "valid": true
+}

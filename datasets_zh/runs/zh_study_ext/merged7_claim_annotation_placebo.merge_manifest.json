@@ -1,0 +1,41 @@
+{
+  "kind": "injected_or_placebo_annotation",
+  "key_fields": [
+    "pair_id",
+    "model"
+  ],
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "detector_freeze_verified": true,
+  "primary": {
+    "path": "datasets_zh/runs/zh_study/claim_annotation_placebo.jsonl",
+    "sha256": "97fdd78a449d5ff7f70e240d5168d5c1f961e4a4e499b03115d12106fa22a59b",
+    "rows": 4000,
+    "models": [
+      "Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "Qwen2.5-3B-Instruct",
+      "Qwen2.5-7B-Instruct",
+      "internlm2_5-7b-chat"
+    ]
+  },
+  "extensions": [
+    {
+      "path": "datasets_zh/runs/zh_study_ext/claim_annotation_placebo.jsonl",
+      "sha256": "e47abad2519d1c3b8b3915eaee5c3271c887110106cbdd7d3d2458276ea771f7"
+    }
+  ],
+  "merged": {
+    "path": "datasets_zh/runs/zh_study_ext/merged7_claim_annotation_placebo.jsonl",
+    "sha256": "0af603e6810df136f5499c5b7f88e4f081522bf156e3150d1a289a0971cf694f",
+    "rows": 5600,
+    "rows_by_model": {
+      "Qwen2.5-1.5B-Instruct": 800,
+      "Qwen2.5-14B-Instruct": 800,
+      "Qwen2.5-3B-Instruct": 800,
+      "Qwen2.5-7B-Instruct": 800,
+      "Yi-1.5-9B-Chat": 800,
+      "glm-4-9b-chat-hf": 800,
+      "internlm2_5-7b-chat": 800
+    }
+  }
+}

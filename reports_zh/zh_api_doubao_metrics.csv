@@ -1,0 +1,3 @@
+arm,ccr,clean_seed_rate,hcr,model,n,source_dataset
+injected,0.0275,0.0,0.0275,doubao-seed-2-1-pro-260628,400,kdconv
+injected,0.0075,0.0,0.0075,doubao-seed-2-1-pro-260628,400,lccc

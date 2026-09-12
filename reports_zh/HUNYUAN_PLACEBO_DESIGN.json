@@ -1,0 +1,13 @@
+{
+  "protocol_sha256": "4f66b094845beacd3d6c5f79a7994760fecbfe163e46c25d1cec2efe562c509d",
+  "inputs_sha256": "1608604ceee9475e27a68177571d67fc533ae6ff04a09a14de11bb30fe44b780",
+  "outputs_sha256": "8cc6356b0d79bd6457b58293900e0f2e6dd87abc40881b9b51ceaa30f70071c9",
+  "injected_scores_sha256": "ac1372e62e3b4947339cb469e141e26e23087d86443739ec179f4ea9f007c42b",
+  "calibration_sha256": "f7e3f25f016281e5c927f2133b159780de8e776d31ea02704998b3a80d09bff8",
+  "n": 5600,
+  "scope": "Post-hoc open7 extension; A=Clean A, B=Clean B; frozen prompt unchanged.",
+  "inference": "Paired injected-minus-placebo; 2000 seed-cluster bootstraps, RNG 20260908; conditional on judge labels.",
+  "limitation": "Clean-clean pair type has no human calibration. Do not transfer the contaminated-clean Wilson error allowance.",
+  "reporting": "Retain all undecidables; report full results regardless of direction; do not alter headline detector labels.",
+  "created_at_utc": "2026-09-08T13:41:56Z"
+}

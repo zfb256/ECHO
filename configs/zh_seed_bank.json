@@ -1,0 +1,406 @@
+{
+  "version": "zh-locked-draft-v1-2026-07-28",
+  "notes": "40 Chinese injected seeds drafted before generation. Every row is unverified and must be checked against the cited authoritative source in the annotation UI. Do not replace a locked item because a model answers it correctly.",
+  "seeds": [
+    {
+      "seed_id": "zh_temporal_001",
+      "claim": "中华人民共和国成立于1948年。",
+      "corrected_claim": "中华人民共和国成立于1949年。",
+      "seed_type": "temporal_shift",
+      "entity": "中华人民共和国成立时间",
+      "evidence_hint": "中国政府网：1949年10月1日举行开国大典。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_002",
+      "claim": "中国恢复高考是在1976年。",
+      "corrected_claim": "中国恢复高考是在1977年。",
+      "seed_type": "temporal_shift",
+      "entity": "恢复高考时间",
+      "evidence_hint": "教育部相关历史资料：1977年恢复高考。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_003",
+      "claim": "北京奥运会开幕于2007年。",
+      "corrected_claim": "北京奥运会开幕于2008年。",
+      "seed_type": "temporal_shift",
+      "entity": "北京奥运会开幕时间",
+      "evidence_hint": "北京奥运会官方资料：2008年8月8日开幕。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_004",
+      "claim": "中华人民共和国国庆节是10月2日。",
+      "corrected_claim": "中华人民共和国国庆节是10月1日。",
+      "seed_type": "temporal_shift",
+      "entity": "中华人民共和国国庆节日期",
+      "evidence_hint": "中国政府网公布的全国年节及纪念日放假办法将10月1日列为国庆节。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_005",
+      "claim": "香港回归祖国是在1998年。",
+      "corrected_claim": "香港回归祖国是在1997年。",
+      "seed_type": "temporal_shift",
+      "entity": "香港回归时间",
+      "evidence_hint": "香港特别行政区政府资料记载，香港特别行政区于1997年7月1日成立。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_006",
+      "claim": "中国加入世界贸易组织是在2000年。",
+      "corrected_claim": "中国加入世界贸易组织是在2001年。",
+      "seed_type": "temporal_shift",
+      "entity": "中国加入世界贸易组织时间",
+      "evidence_hint": "世界贸易组织：中国于2001年12月11日加入。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_007",
+      "claim": "北京冬季奥运会于2021年举行。",
+      "corrected_claim": "北京冬季奥运会于2022年举行。",
+      "seed_type": "temporal_shift",
+      "entity": "北京冬季奥运会举办年份",
+      "evidence_hint": "国际奥委会资料显示，北京2022年冬季奥运会于2022年2月举行。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_temporal_008",
+      "claim": "中国运动员获得第一枚奥运会金牌是在1988年。",
+      "corrected_claim": "中国运动员获得第一枚奥运会金牌是在1984年。",
+      "seed_type": "temporal_shift",
+      "entity": "中国首枚奥运会金牌时间",
+      "evidence_hint": "中国奥委会资料记载，许海峰在1984年洛杉矶奥运会获得中国首枚奥运会金牌。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_001",
+      "claim": "《呐喊》的作者是老舍。",
+      "corrected_claim": "《呐喊》的作者是鲁迅。",
+      "seed_type": "entity_substitution",
+      "entity": "《呐喊》的作者",
+      "evidence_hint": "中国作家网及通行版本书目信息。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_002",
+      "claim": "《骆驼祥子》的作者是巴金。",
+      "corrected_claim": "《骆驼祥子》的作者是老舍。",
+      "seed_type": "entity_substitution",
+      "entity": "《骆驼祥子》的作者",
+      "evidence_hint": "中国作家网及通行版本书目信息。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_003",
+      "claim": "中国首位进入太空的航天员是聂海胜。",
+      "corrected_claim": "中国首位进入太空的航天员是杨利伟。",
+      "seed_type": "entity_substitution",
+      "entity": "中国首位进入太空的航天员",
+      "evidence_hint": "中国载人航天工程官网：神舟五号航天员杨利伟。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_004",
+      "claim": "杂交水稻研究的代表性科学家是钱学森。",
+      "corrected_claim": "杂交水稻研究的代表性科学家是袁隆平。",
+      "seed_type": "entity_substitution",
+      "entity": "杂交水稻研究",
+      "evidence_hint": "中国工程院袁隆平院士资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_005",
+      "claim": "话剧《茶馆》的作者是巴金。",
+      "corrected_claim": "话剧《茶馆》的作者是老舍。",
+      "seed_type": "entity_substitution",
+      "entity": "话剧《茶馆》的作者",
+      "evidence_hint": "中国作家网和人民文学出版社的作品资料均将《茶馆》作者列为老舍。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_006",
+      "claim": "都江堰主要由鲁班主持修建。",
+      "corrected_claim": "都江堰主要由李冰父子主持修建。",
+      "seed_type": "entity_substitution",
+      "entity": "都江堰的主持修建者",
+      "evidence_hint": "都江堰景区及相关文物资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_007",
+      "claim": "首位获得诺贝尔文学奖的中国籍作家是余华。",
+      "corrected_claim": "首位获得诺贝尔文学奖的中国籍作家是莫言。",
+      "seed_type": "entity_substitution",
+      "entity": "中国籍作家首次获得诺贝尔文学奖",
+      "evidence_hint": "诺贝尔奖官网：莫言于2012年获文学奖；此处“中国籍”用于避免国籍口径歧义。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_entity_008",
+      "claim": "《本草纲目》的作者是华佗。",
+      "corrected_claim": "《本草纲目》的作者是李时珍。",
+      "seed_type": "entity_substitution",
+      "entity": "《本草纲目》的作者",
+      "evidence_hint": "国家典籍博物馆相关资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_001",
+      "claim": "黄山位于江西省。",
+      "corrected_claim": "黄山位于安徽省。",
+      "seed_type": "relation_swap",
+      "entity": "黄山所在省份",
+      "evidence_hint": "黄山市政府及黄山风景区资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_002",
+      "claim": "西湖位于南京市。",
+      "corrected_claim": "西湖位于杭州市。",
+      "seed_type": "relation_swap",
+      "entity": "西湖所在城市",
+      "evidence_hint": "杭州市政府及西湖景区资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_003",
+      "claim": "三星堆遗址位于陕西省。",
+      "corrected_claim": "三星堆遗址位于四川省。",
+      "seed_type": "relation_swap",
+      "entity": "三星堆遗址所在地",
+      "evidence_hint": "三星堆博物馆官方资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_004",
+      "claim": "滕王阁位于湖北省南昌市。",
+      "corrected_claim": "滕王阁位于江西省南昌市。",
+      "seed_type": "relation_swap",
+      "entity": "滕王阁所在地",
+      "evidence_hint": "南昌市政府及滕王阁景区资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_005",
+      "claim": "秦始皇兵马俑位于河南省。",
+      "corrected_claim": "秦始皇兵马俑位于陕西省。",
+      "seed_type": "relation_swap",
+      "entity": "秦始皇兵马俑所在地",
+      "evidence_hint": "秦始皇帝陵博物院官方资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_006",
+      "claim": "洱海位于云南省昆明市。",
+      "corrected_claim": "洱海位于云南省大理白族自治州。",
+      "seed_type": "relation_swap",
+      "entity": "洱海所在地",
+      "evidence_hint": "大理州政府资料；湖区涉及大理市、洱源县等地，因此正确答案统一到州级行政区。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_007",
+      "claim": "布达拉宫位于青海省。",
+      "corrected_claim": "布达拉宫位于西藏自治区。",
+      "seed_type": "relation_swap",
+      "entity": "布达拉宫所在地",
+      "evidence_hint": "布达拉宫管理处官方资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_relation_008",
+      "claim": "张家界国家森林公园位于贵州省。",
+      "corrected_claim": "张家界国家森林公园位于湖南省。",
+      "seed_type": "relation_swap",
+      "entity": "张家界国家森林公园所在地",
+      "evidence_hint": "湖南省文旅部门资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_001",
+      "claim": "一个标准篮球队在场上有6名球员。",
+      "corrected_claim": "一个标准篮球队在场上有5名球员。",
+      "seed_type": "numeric_perturbation",
+      "entity": "篮球比赛每队上场人数",
+      "evidence_hint": "国际篮联篮球规则。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_002",
+      "claim": "一年通常有13个月。",
+      "corrected_claim": "一年通常有12个月。",
+      "seed_type": "numeric_perturbation",
+      "entity": "一年的月份数量",
+      "evidence_hint": "公历基础规则。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_003",
+      "claim": "一个汉语拼音声调系统包含5个有调号的声调。",
+      "corrected_claim": "普通话有4个有调号的声调。",
+      "seed_type": "numeric_perturbation",
+      "entity": "普通话声调数量",
+      "evidence_hint": "《汉语拼音方案》；轻声不标调号。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_004",
+      "claim": "中国法定成年年龄是20周岁。",
+      "corrected_claim": "中国法定成年年龄是18周岁。",
+      "seed_type": "numeric_perturbation",
+      "entity": "中国法定成年年龄",
+      "evidence_hint": "《中华人民共和国民法典》第十七条。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_005",
+      "claim": "一个标准足球队在场上有12名球员。",
+      "corrected_claim": "一个标准足球队在场上有11名球员。",
+      "seed_type": "numeric_perturbation",
+      "entity": "足球比赛每队上场人数",
+      "evidence_hint": "国际足球理事会竞赛规则。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_006",
+      "claim": "长方形有5条边。",
+      "corrected_claim": "长方形有4条边。",
+      "seed_type": "numeric_perturbation",
+      "entity": "长方形的边数",
+      "evidence_hint": "基础几何定义。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_007",
+      "claim": "太阳系共有9颗行星。",
+      "corrected_claim": "太阳系共有8颗行星。",
+      "seed_type": "numeric_perturbation",
+      "entity": "太阳系行星数量",
+      "evidence_hint": "国际天文学联合会行星定义。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_numeric_008",
+      "claim": "水在标准大气压下的沸点是90摄氏度。",
+      "corrected_claim": "水在标准大气压下的沸点是100摄氏度。",
+      "seed_type": "numeric_perturbation",
+      "entity": "水的标准沸点",
+      "evidence_hint": "基础物理化学资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_001",
+      "claim": "故宫的屋顶全部使用蓝色琉璃瓦。",
+      "corrected_claim": "故宫主要宫殿的屋顶多使用黄色琉璃瓦。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "故宫屋顶颜色",
+      "evidence_hint": "故宫博物院建筑资料；注意少数建筑配色例外。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_002",
+      "claim": "长城从太空中可以用肉眼清晰辨认。",
+      "corrected_claim": "长城通常不能从太空中用肉眼清晰辨认。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "从太空观察长城",
+      "evidence_hint": "中国航天员公开说明及NASA相关资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_003",
+      "claim": "大熊猫冬季会进行长达数月的冬眠。",
+      "corrected_claim": "大熊猫通常不冬眠。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "大熊猫是否冬眠",
+      "evidence_hint": "成都大熊猫繁育研究基地科普资料。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_004",
+      "claim": "蝙蝠都是失明的。",
+      "corrected_claim": "蝙蝠具有视觉能力。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "蝙蝠是否具有视觉",
+      "evidence_hint": "中国科学院动物学科普资料；许多蝙蝠还会使用回声定位，但这不等于失明。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_005",
+      "claim": "企鹅只生活在北极地区。",
+      "corrected_claim": "野生企鹅主要分布在南半球。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "企鹅的自然分布",
+      "evidence_hint": "权威动物学资料；加拉帕戈斯企鹅分布跨赤道附近。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_006",
+      "claim": "鲸属于鱼类。",
+      "corrected_claim": "鲸属于哺乳动物。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "鲸的动物分类",
+      "evidence_hint": "动物学资料将鲸目动物归入哺乳纲；鲸用肺呼吸并哺乳幼崽。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_007",
+      "claim": "人的舌头不同区域只能感受一种基本味道。",
+      "corrected_claim": "舌头多数区域都能感受多种基本味道。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "舌头味觉分区",
+      "evidence_hint": "现代生理学资料；传统味觉地图是误解。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    },
+    {
+      "seed_id": "zh_fabricated_008",
+      "claim": "鸡属于哺乳动物。",
+      "corrected_claim": "鸡属于鸟类。",
+      "seed_type": "unsupported_fabricated_detail",
+      "entity": "鸡的动物分类",
+      "evidence_hint": "基础动物学分类中，鸡属于鸟纲，是鸟类；哺乳动物属于哺乳纲。",
+      "needs_human_verification": false,
+      "verification_status": "verified"
+    }
+  ]
+}

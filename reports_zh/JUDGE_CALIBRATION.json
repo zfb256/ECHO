@@ -1,0 +1,56 @@
+{
+  "calibrated_at_utc": "2026-09-05T15:04:32Z",
+  "confusion_vs_human": {
+    "fn": 4,
+    "fp": 3,
+    "tp": 83
+  },
+  "decidable_fraction": 1.0,
+  "gate_failures": [],
+  "gates": {
+    "min_decidable_fraction": 0.9,
+    "min_kappa_vs_human": 0.7,
+    "min_precision_vs_human": 0.9
+  },
+  "human_contaminated_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_contaminated.jsonl",
+  "human_contaminated_sha256": "26658464f1e81f67c718aecfa1943dfe7e781f66680f9995c1a4af8cfe9f827b",
+  "human_pairs_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_pairs.jsonl",
+  "human_pairs_sha256": "4c5f66e774ac7450d514401102bf99b092dd181467b4bd928f4528192339e7df",
+  "judge_model": "kimi-k3",
+  "kappa_vs_human": 0.9367374604609128,
+  "mock": false,
+  "n_decidable": 216,
+  "n_pair_events_compared": 24,
+  "n_response_labels_compared": 240,
+  "n_scored": 216,
+  "note": "A failed calibration must still be reported; see handoff.md 8.1.",
+  "pair_event_comparable_fraction": 1.0,
+  "pair_event_disagreement_rate": 0.041666666666666664,
+  "pair_event_disagreement_wilson_upper_95": 0.20241806478655938,
+  "pair_event_disagreements": 1,
+  "pair_event_kappa_vs_human": 0.9166666666666667,
+  "passed": true,
+  "precision_vs_human": 0.9651162790697675,
+  "protocol_sha256": "085a77745ae464890df5a6ba6eb6150358a7034813e60972322df9249c37d2bc",
+  "recall_vs_human": 0.9540229885057471,
+  "source_provenance": [
+    {
+      "annotations": "datasets_zh/runs/zh_study_ext/merged7_claim_annotation_injected.jsonl",
+      "annotations_sha256": "96006ba9a5253368dfd2b3e3c1611927b736b1976dd7c3b8a896668f3e9c716f",
+      "outputs": "datasets_zh/runs/zh_study_ext/merged7_model_outputs.jsonl",
+      "outputs_sha256": "8cc6356b0d79bd6457b58293900e0f2e6dd87abc40881b9b51ceaa30f70071c9"
+    },
+    {
+      "annotations": "datasets_zh/runs/zh_study/claim_annotation_injected_api_deepseek.jsonl",
+      "annotations_sha256": "298bc0b995517bf1db72cbd58ba8c1fd113940576b55abd84faad0a66f87b8cd",
+      "outputs": "datasets_zh/runs/zh_study/model_outputs_api_deepseek.jsonl",
+      "outputs_sha256": "514932240003f957da8684daa578e36503d844e13189f297b9078d4d056fc834"
+    },
+    {
+      "annotations": "datasets_zh/runs/zh_study/claim_annotation_injected_api_doubao.jsonl",
+      "annotations_sha256": "cca10a306ecf5b0ac31a78bb03830a78c7a0b81b6e6e76a7a6ce2c90fa09db21",
+      "outputs": "datasets_zh/runs/zh_study/model_outputs_api_doubao.jsonl",
+      "outputs_sha256": "222b5cb07907d7dcc28490128d24b7ccf026eb1dc2751fe182ef5cca4d7b70e1"
+    }
+  ]
+}

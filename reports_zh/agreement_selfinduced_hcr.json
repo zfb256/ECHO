@@ -1,0 +1,17 @@
+{
+  "bootstrap_samples": 2000,
+  "cohen_kappa": 0.8578680203045685,
+  "cohen_kappa_ci95_bootstrap": [
+    0.6428571428571428,
+    1.0
+  ],
+  "comparison": "inter-annotator: annotation vs annotation_2 (hcr_has_contagious)",
+  "field": "hcr_has_contagious",
+  "go_kappa": true,
+  "is_inter_annotator": true,
+  "kappa_note": null,
+  "min_kappa_threshold": 0.6,
+  "n_compared": 28,
+  "percent_agreement": 0.9285714285714286,
+  "skipped_incomplete": 72
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "injected_or_placebo_annotation",
+  "key_fields": [
+    "pair_id",
+    "model"
+  ],
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "detector_freeze_verified": true,
+  "primary": {
+    "path": "datasets_zh/runs/zh_study_ext/merged7_claim_annotation_injected.jsonl",
+    "sha256": "96006ba9a5253368dfd2b3e3c1611927b736b1976dd7c3b8a896668f3e9c716f",
+    "rows": 5600,
+    "models": [
+      "Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "Qwen2.5-3B-Instruct",
+      "Qwen2.5-7B-Instruct",
+      "Yi-1.5-9B-Chat",
+      "glm-4-9b-chat-hf",
+      "internlm2_5-7b-chat"
+    ]
+  },
+  "extensions": [
+    {
+      "path": "datasets_zh/runs/zh_study/claim_annotation_injected_api_deepseek.jsonl",
+      "sha256": "298bc0b995517bf1db72cbd58ba8c1fd113940576b55abd84faad0a66f87b8cd"
+    }
+  ],
+  "merged": {
+    "path": "datasets_zh/runs/zh_study_ext/merged8_claim_annotation_injected.jsonl",
+    "sha256": "3c53265abae3e60eb6d488c39ed5617d2b3032435d09e6a1b83bec83060b3905",
+    "rows": 6400,
+    "rows_by_model": {
+      "Qwen2.5-1.5B-Instruct": 800,
+      "Qwen2.5-14B-Instruct": 800,
+      "Qwen2.5-3B-Instruct": 800,
+      "Qwen2.5-7B-Instruct": 800,
+      "Yi-1.5-9B-Chat": 800,
+      "deepseek-v4-flash": 800,
+      "glm-4-9b-chat-hf": 800,
+      "internlm2_5-7b-chat": 800
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-07-28",
+  "status": "human_verified",
+  "config": {
+    "path": "configs/zh_study.json",
+    "sha256": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b"
+  },
+  "seed_bank": {
+    "path": "configs/zh_seed_bank.json",
+    "items": 40,
+    "verified": 40,
+    "sha256": "20f475f55bd25bf9cc05d8533e3effbede8ee0f5af782f6d31b1bffd0a1a50e9"
+  },
+  "generation_tasks": {
+    "path": "datasets_zh/runs/zh_study/generation_tasks.jsonl",
+    "rows": 12000,
+    "sha256": "3d925d5d13df3807d8e9c4f006441bb9ea8abdb76925d2bc63ef6a69cbf93171"
+  },
+  "processed_pairs": {
+    "path": "datasets_zh/processed/zh_study_pairs_all.jsonl",
+    "rows": 800,
+    "sha256": "4384c03eaf933ad1d8bad9f5422145bfa0ca238aff9f5bca4c236411ce83f651"
+  },
+  "construct_gold": {
+    "path": "datasets_zh/runs/zh_study/construct_gold.jsonl",
+    "rows": 480,
+    "sha256": "15e49271625370ba80949e5ed2db1c2599b58f575c1251c4271720a4029ac2cc"
+  }
+}

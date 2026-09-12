@@ -1,0 +1,42 @@
+{
+  "kind": "model_outputs",
+  "key_fields": [
+    "pair_id",
+    "model",
+    "condition"
+  ],
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "detector_freeze_verified": true,
+  "primary": {
+    "path": "datasets_zh/runs/zh_study/model_outputs.jsonl",
+    "sha256": "dc6d9ba438a3f06089fc300fc12feeecb8e0146e1ac44154cd91414541cc7214",
+    "rows": 12000,
+    "models": [
+      "Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "Qwen2.5-3B-Instruct",
+      "Qwen2.5-7B-Instruct",
+      "internlm2_5-7b-chat"
+    ]
+  },
+  "extensions": [
+    {
+      "path": "datasets_zh/runs/zh_study_ext/model_outputs.jsonl",
+      "sha256": "fbb9a03e06010da4533e721e71bf3843985bfe4e6837b99558e74fe450ce6867"
+    }
+  ],
+  "merged": {
+    "path": "datasets_zh/runs/zh_study_ext/merged7_model_outputs.jsonl",
+    "sha256": "8cc6356b0d79bd6457b58293900e0f2e6dd87abc40881b9b51ceaa30f70071c9",
+    "rows": 16800,
+    "rows_by_model": {
+      "Qwen2.5-1.5B-Instruct": 2400,
+      "Qwen2.5-14B-Instruct": 2400,
+      "Qwen2.5-3B-Instruct": 2400,
+      "Qwen2.5-7B-Instruct": 2400,
+      "Yi-1.5-9B-Chat": 2400,
+      "glm-4-9b-chat-hf": 2400,
+      "internlm2_5-7b-chat": 2400
+    }
+  }
+}

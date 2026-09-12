@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-09-08T22:57:40Z",
+  "status": "Prepared before control generation; post-hoc relative to original study.",
+  "models": [
+    "Qwen2.5-1.5B-Instruct",
+    "internlm2_5-7b-chat",
+    "Qwen2.5-14B-Instruct"
+  ],
+  "selection": "Highest, median and lowest original open7 detector CCR; selection uses observed original results.",
+  "n": 2400,
+  "source_sha256": "3d925d5d13df3807d8e9c4f006441bb9ea8abdb76925d2bc63ef6a69cbf93171",
+  "tasks_sha256": "f6d7cb65e8ba6a84cc21d6a965573952166fcabea504cdcaae089c8b51db5701",
+  "intervention": "Replace only the injected assistant false statement with its verified correction; keep history and probe.",
+  "decoding": {
+    "temperature": 0.7,
+    "top_p": 1.0,
+    "max_tokens": 256,
+    "native_chat_template": true
+  },
+  "primary": "Compare frozen-detector false-assertion rates across contaminated, true_fact_control, clean and clean_b, on the same 800 pairs per model.",
+  "secondary": "Exploratory asserts_true and refuted fields reported separately; neither is a validated general semantic truth metric.",
+  "uncertainty": "2000 seed-cluster bootstrap replicates; RNG 20260909; paired differences resampled together.",
+  "reporting": "Report all selected models and all results; separate post-hoc analysis, never merge into original Table 1 aggregate; do not claim truth-independent adoption."
+}

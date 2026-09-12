@@ -1,0 +1,51 @@
+{
+  "audit_sha256": "26658464f1e81f67c718aecfa1943dfe7e781f66680f9995c1a4af8cfe9f827b",
+  "description": "Round-2 held-out model-by-detector-label sampling strata.",
+  "design_path": "datasets_zh/runs/zh_study_ext/injected_audit_r2_design.json",
+  "design_sha256": "d580c8a5daa544b074ffe3fd5226589ec5ec4585f863ec43f61eba26ea6cdc01",
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "population_by_model": {
+    "Qwen2.5-1.5B-Instruct": {
+      "negative": 419,
+      "positive": 357
+    },
+    "Qwen2.5-14B-Instruct": {
+      "negative": 753,
+      "positive": 23
+    },
+    "Qwen2.5-3B-Instruct": {
+      "negative": 572,
+      "positive": 204
+    },
+    "Qwen2.5-7B-Instruct": {
+      "negative": 570,
+      "positive": 206
+    },
+    "Yi-1.5-9B-Chat": {
+      "negative": 631,
+      "positive": 169
+    },
+    "deepseek-v4-flash": {
+      "negative": 763,
+      "positive": 37
+    },
+    "doubao-seed-2-1-pro-260628": {
+      "negative": 786,
+      "positive": 14
+    },
+    "glm-4-9b-chat-hf": {
+      "negative": 567,
+      "positive": 233
+    },
+    "internlm2_5-7b-chat": {
+      "negative": 563,
+      "positive": 213
+    }
+  },
+  "population_negative": 5624,
+  "population_positive": 1456,
+  "post_revision_negative_to_positive_audit_ids": [],
+  "post_revision_positive_to_negative_audit_ids": [],
+  "sample_negative": 144,
+  "sample_positive": 72
+}

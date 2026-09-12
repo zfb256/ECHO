@@ -1,0 +1,385 @@
+{
+  "design_sha256": "0abc81d123a85911b9b0a2ced3d0775b1e326dc7b82245ef78466211f9638a62",
+  "outputs_sha256": "b0971b51c9a88b9ee62870c505eedc3327d08ea227fc2abc135a0bdb4b649a4f",
+  "original_outputs_sha256": "8cc6356b0d79bd6457b58293900e0f2e6dd87abc40881b9b51ceaa30f70071c9",
+  "script_sha256": "30b182a200a9f259ac60c28540606f475b92284cd0232bc1aff00a0d5f96fc77",
+  "definition": "False rates exclude mixed unrefuted false/true responses; inclusive rates and unvalidated true/refuted proxies also reported. Marginal rates, not CCR.",
+  "summaries": {
+    "all_selected": {
+      "conditions": {
+        "contaminated": {
+          "n": 2400,
+          "counts": {
+            "false": 626,
+            "false_inclusive": 687,
+            "true": 1239,
+            "refuted": 363,
+            "ambiguous": 61,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.2608333333333333,
+            "false_inclusive": 0.28625,
+            "true": 0.51625,
+            "refuted": 0.15125,
+            "ambiguous": 0.025416666666666667,
+            "length_capped": 0.0
+          }
+        },
+        "true_fact_control": {
+          "n": 2400,
+          "counts": {
+            "false": 2,
+            "false_inclusive": 8,
+            "true": 2143,
+            "refuted": 1,
+            "ambiguous": 6,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0008333333333333334,
+            "false_inclusive": 0.0033333333333333335,
+            "true": 0.8929166666666667,
+            "refuted": 0.0004166666666666667,
+            "ambiguous": 0.0025,
+            "length_capped": 0.0
+          }
+        },
+        "clean": {
+          "n": 2400,
+          "counts": {
+            "false": 4,
+            "false_inclusive": 10,
+            "true": 1755,
+            "refuted": 7,
+            "ambiguous": 6,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0016666666666666668,
+            "false_inclusive": 0.004166666666666667,
+            "true": 0.73125,
+            "refuted": 0.002916666666666667,
+            "ambiguous": 0.0025,
+            "length_capped": 0.0
+          }
+        },
+        "clean_b": {
+          "n": 2400,
+          "counts": {
+            "false": 3,
+            "false_inclusive": 14,
+            "true": 1749,
+            "refuted": 6,
+            "ambiguous": 11,
+            "length_capped": 1
+          },
+          "rates": {
+            "false": 0.00125,
+            "false_inclusive": 0.005833333333333334,
+            "true": 0.72875,
+            "refuted": 0.0025,
+            "ambiguous": 0.004583333333333333,
+            "length_capped": 0.0004166666666666667
+          }
+        }
+      },
+      "contaminated_minus_true": {
+        "difference": 0.26,
+        "ci95_seed_clustered": [
+          0.18998958333333332,
+          0.33586458333333313
+        ]
+      },
+      "true_minus_clean": {
+        "difference": -0.0008333333333333334,
+        "ci95_seed_clustered": [
+          -0.004583333333333333,
+          0.0016666666666666668
+        ]
+      }
+    },
+    "Qwen2.5-1.5B-Instruct": {
+      "conditions": {
+        "contaminated": {
+          "n": 800,
+          "counts": {
+            "false": 369,
+            "false_inclusive": 372,
+            "true": 229,
+            "refuted": 4,
+            "ambiguous": 3,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.46125,
+            "false_inclusive": 0.465,
+            "true": 0.28625,
+            "refuted": 0.005,
+            "ambiguous": 0.00375,
+            "length_capped": 0.0
+          }
+        },
+        "true_fact_control": {
+          "n": 800,
+          "counts": {
+            "false": 0,
+            "false_inclusive": 1,
+            "true": 723,
+            "refuted": 0,
+            "ambiguous": 1,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0,
+            "false_inclusive": 0.00125,
+            "true": 0.90375,
+            "refuted": 0.0,
+            "ambiguous": 0.00125,
+            "length_capped": 0.0
+          }
+        },
+        "clean": {
+          "n": 800,
+          "counts": {
+            "false": 4,
+            "false_inclusive": 4,
+            "true": 515,
+            "refuted": 5,
+            "ambiguous": 0,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.005,
+            "false_inclusive": 0.005,
+            "true": 0.64375,
+            "refuted": 0.00625,
+            "ambiguous": 0.0,
+            "length_capped": 0.0
+          }
+        },
+        "clean_b": {
+          "n": 800,
+          "counts": {
+            "false": 2,
+            "false_inclusive": 2,
+            "true": 506,
+            "refuted": 1,
+            "ambiguous": 0,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0025,
+            "false_inclusive": 0.0025,
+            "true": 0.6325,
+            "refuted": 0.00125,
+            "ambiguous": 0.0,
+            "length_capped": 0.0
+          }
+        }
+      },
+      "contaminated_minus_true": {
+        "difference": 0.46125,
+        "ci95_seed_clustered": [
+          0.34996875,
+          0.575
+        ]
+      },
+      "true_minus_clean": {
+        "difference": -0.005,
+        "ci95_seed_clustered": [
+          -0.015,
+          0.0
+        ]
+      }
+    },
+    "internlm2_5-7b-chat": {
+      "conditions": {
+        "contaminated": {
+          "n": 800,
+          "counts": {
+            "false": 225,
+            "false_inclusive": 236,
+            "true": 361,
+            "refuted": 17,
+            "ambiguous": 11,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.28125,
+            "false_inclusive": 0.295,
+            "true": 0.45125,
+            "refuted": 0.02125,
+            "ambiguous": 0.01375,
+            "length_capped": 0.0
+          }
+        },
+        "true_fact_control": {
+          "n": 800,
+          "counts": {
+            "false": 0,
+            "false_inclusive": 2,
+            "true": 698,
+            "refuted": 0,
+            "ambiguous": 2,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0,
+            "false_inclusive": 0.0025,
+            "true": 0.8725,
+            "refuted": 0.0,
+            "ambiguous": 0.0025,
+            "length_capped": 0.0
+          }
+        },
+        "clean": {
+          "n": 800,
+          "counts": {
+            "false": 0,
+            "false_inclusive": 5,
+            "true": 609,
+            "refuted": 0,
+            "ambiguous": 5,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0,
+            "false_inclusive": 0.00625,
+            "true": 0.76125,
+            "refuted": 0.0,
+            "ambiguous": 0.00625,
+            "length_capped": 0.0
+          }
+        },
+        "clean_b": {
+          "n": 800,
+          "counts": {
+            "false": 1,
+            "false_inclusive": 11,
+            "true": 609,
+            "refuted": 1,
+            "ambiguous": 10,
+            "length_capped": 1
+          },
+          "rates": {
+            "false": 0.00125,
+            "false_inclusive": 0.01375,
+            "true": 0.76125,
+            "refuted": 0.00125,
+            "ambiguous": 0.0125,
+            "length_capped": 0.00125
+          }
+        }
+      },
+      "contaminated_minus_true": {
+        "difference": 0.28125,
+        "ci95_seed_clustered": [
+          0.18871875,
+          0.3875
+        ]
+      },
+      "true_minus_clean": {
+        "difference": 0.0,
+        "ci95_seed_clustered": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Qwen2.5-14B-Instruct": {
+      "conditions": {
+        "contaminated": {
+          "n": 800,
+          "counts": {
+            "false": 32,
+            "false_inclusive": 79,
+            "true": 649,
+            "refuted": 342,
+            "ambiguous": 47,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.04,
+            "false_inclusive": 0.09875,
+            "true": 0.81125,
+            "refuted": 0.4275,
+            "ambiguous": 0.05875,
+            "length_capped": 0.0
+          }
+        },
+        "true_fact_control": {
+          "n": 800,
+          "counts": {
+            "false": 2,
+            "false_inclusive": 5,
+            "true": 722,
+            "refuted": 1,
+            "ambiguous": 3,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0025,
+            "false_inclusive": 0.00625,
+            "true": 0.9025,
+            "refuted": 0.00125,
+            "ambiguous": 0.00375,
+            "length_capped": 0.0
+          }
+        },
+        "clean": {
+          "n": 800,
+          "counts": {
+            "false": 0,
+            "false_inclusive": 1,
+            "true": 631,
+            "refuted": 2,
+            "ambiguous": 1,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0,
+            "false_inclusive": 0.00125,
+            "true": 0.78875,
+            "refuted": 0.0025,
+            "ambiguous": 0.00125,
+            "length_capped": 0.0
+          }
+        },
+        "clean_b": {
+          "n": 800,
+          "counts": {
+            "false": 0,
+            "false_inclusive": 1,
+            "true": 634,
+            "refuted": 4,
+            "ambiguous": 1,
+            "length_capped": 0
+          },
+          "rates": {
+            "false": 0.0,
+            "false_inclusive": 0.00125,
+            "true": 0.7925,
+            "refuted": 0.005,
+            "ambiguous": 0.00125,
+            "length_capped": 0.0
+          }
+        }
+      },
+      "contaminated_minus_true": {
+        "difference": 0.0375,
+        "ci95_seed_clustered": [
+          -0.00125,
+          0.10125
+        ]
+      },
+      "true_minus_clean": {
+        "difference": 0.0025,
+        "ci95_seed_clustered": [
+          0.0,
+          0.00625
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "config_path": "configs/zh_study.json",
+  "config_sha256": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b",
+  "construct_gold_validation": {
+    "f1": 1.0,
+    "path": "reports_zh/detector_validation.json",
+    "precision": 1.0,
+    "recall": 1.0,
+    "sha256": "5b0ae2ae6f76af43edc60062737d73823f6fd4b350807a83459a4679b4dff2f0"
+  },
+  "detector_freeze_sha256": "d582fd8f59d446f772e8e8dd85dfeddf147e0f6f97e7de1cd03d4ac23af2cae5",
+  "detector_settings": {
+    "min_f1": 0.9,
+    "min_precision": 0.9,
+    "negation_window": 6,
+    "nli_clean_guard": false
+  },
+  "files": {
+    "auto_labeling/auto_label.py": "43cb02a56f546c1e62adfc7434541d2d2e4f978734d0f3488c0483d6bbe1d0a2",
+    "auto_labeling/build_construct_gold.py": "4b266a227659d3335f6af95449a55ebbca7fa39ac414a2bf82bbdb2ae5ef5d50",
+    "auto_labeling/detector.py": "eb1b7fc7b425ea09090b3b7545eeee6bbcf1cdef6d19a9bebed30341193c4306",
+    "auto_labeling/validate_detector.py": "bc7ab243e1fd9d2f347d1db436ba967604679e61a630f7b9536e4a9a47acc7d9",
+    "configs/zh_seed_bank.json": "20f475f55bd25bf9cc05d8533e3effbede8ee0f5af782f6d31b1bffd0a1a50e9",
+    "datasets_zh/runs/zh_study/construct_gold.jsonl": "15e49271625370ba80949e5ed2db1c2599b58f575c1251c4271720a4029ac2cc"
+  },
+  "files_absent_at_freeze": [],
+  "frozen_at_utc": "2026-09-03T09:13:39.715046+00:00",
+  "nli_enabled": false,
+  "purpose": "Detector frozen before the held-out blind audit. Any change after this point invalidates the held-out status of the replacement packet and requires a further audit round."
+}

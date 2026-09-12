@@ -1,0 +1,38 @@
+{
+  "judge_model": "hy4-preview",
+  "protocol_sha256": "4f66b094845beacd3d6c5f79a7994760fecbfe163e46c25d1cec2efe562c509d",
+  "scores_sha256": "ac1372e62e3b4947339cb469e141e26e23087d86443739ec179f4ea9f007c42b",
+  "calibration_passed": true,
+  "pair_disagreement_wilson_upper_95": 0.1379762046749802,
+  "all_models": {
+    "n": 7200,
+    "events": 2189,
+    "semantic_ccr": 0.3040277777777778,
+    "sensitivity_interval_95": [0.16605157299279758, 0.442003982452758]
+  },
+  "open_models": {
+    "n": 5600,
+    "events": 2133,
+    "semantic_ccr": 0.38089285714285714,
+    "sensitivity_interval_95": [0.24291665235587693, 0.5188690619298373],
+    "kdconv": {"n": 2800, "events": 1073, "semantic_ccr": 0.3832142857142857},
+    "lccc": {"n": 2800, "events": 1060, "semantic_ccr": 0.37857142857142856}
+  },
+  "hosted_models": {
+    "n": 1600,
+    "events": 56,
+    "semantic_ccr": 0.035,
+    "sensitivity_interval_95": [0.0, 0.1729762046749802]
+  },
+  "by_model": {
+    "Qwen2.5-1.5B-Instruct": {"n": 800, "events": 460, "semantic_ccr": 0.575},
+    "Qwen2.5-3B-Instruct": {"n": 800, "events": 349, "semantic_ccr": 0.43625},
+    "Qwen2.5-7B-Instruct": {"n": 800, "events": 292, "semantic_ccr": 0.365},
+    "Qwen2.5-14B-Instruct": {"n": 800, "events": 53, "semantic_ccr": 0.06625},
+    "internlm2_5-7b-chat": {"n": 800, "events": 385, "semantic_ccr": 0.48125},
+    "glm-4-9b-chat-hf": {"n": 800, "events": 324, "semantic_ccr": 0.405},
+    "Yi-1.5-9B-Chat": {"n": 800, "events": 270, "semantic_ccr": 0.3375},
+    "deepseek-v4-flash": {"n": 800, "events": 47, "semantic_ccr": 0.05875},
+    "doubao-seed-2-1-pro-260628": {"n": 800, "events": 9, "semantic_ccr": 0.01125}
+  }
+}

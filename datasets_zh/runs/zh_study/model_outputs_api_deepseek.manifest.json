@@ -1,0 +1,25 @@
+{
+  "api_mode": "chat",
+  "base_url": "https://api.deepseek.com/v1",
+  "concurrency": 6,
+  "config_path": "configs/zh_study.json",
+  "config_sha256": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b",
+  "created_at_utc": "2026-08-01T09:55:22.494101+00:00",
+  "hf_endpoint": "https://huggingface.co",
+  "max_tokens": 256,
+  "model": "deepseek-v4-flash",
+  "num_outputs": 2400,
+  "output_path": "datasets_zh/runs/zh_study/model_outputs_api_deepseek.jsonl",
+  "platform": "Linux-6.2.0-37-generic-x86_64-with-glibc2.35",
+  "provider": "deepseek",
+  "python": "3.10.12",
+  "random_seed": 20260728,
+  "rows_written_this_run": 2400,
+  "runner": "api",
+  "tasks_path": "datasets_zh/runs/zh_study/generation_tasks.jsonl",
+  "temperatures": {
+    "generation": 0.7,
+    "selfinduced_stage1": 0.0
+  },
+  "wall_seconds": 545.21
+}

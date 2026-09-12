@@ -1,0 +1,87 @@
+{
+  "chat_template": true,
+  "config_path": "configs/zh_selfinduced.json",
+  "config_sha256": "ad95087b9a5e9fe057f9cc6031e5a5854617b195f2190fe42e79b754ae36f990",
+  "created_at_utc": "2026-08-01T03:03:24.497557+00:00",
+  "decoding": {
+    "max_tokens": 256,
+    "per_condition_temperature": {
+      "cli_override": null,
+      "generation_arms": 0.7,
+      "selfinduced_stage1": 0.0
+    },
+    "seed": 20260801,
+    "temperatures_by_condition": {
+      "self_induced_stage1": 0.0
+    },
+    "top_p": 1.0
+  },
+  "dtype": "bfloat16",
+  "gpu_memory_utilization": 0.9,
+  "hardware": {
+    "gpu_compute_capability": [
+      8,
+      0
+    ],
+    "gpu_count_visible": 1,
+    "gpu_name": "NVIDIA A800-SXM4-40GB"
+  },
+  "hf_endpoint": "https://huggingface.co",
+  "max_model_len": 4096,
+  "model_artifacts": {
+    "Qwen2.5-1.5B-Instruct": {
+      "directory_sha256": "6dba0c2fb2b451fd014859c054092c9f4479dc46e82664014d4aeab3464b3afd",
+      "model_path": "models/Qwen2.5-1.5B-Instruct",
+      "repository": "Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    "Qwen2.5-14B-Instruct": {
+      "directory_sha256": "b17687d0df2ca9f2493b8bce394922dd7ee9afab83db90ea5348c5f52c6ed39a",
+      "model_path": "models/Qwen2.5-14B-Instruct",
+      "repository": "Qwen/Qwen2.5-14B-Instruct"
+    },
+    "Qwen2.5-3B-Instruct": {
+      "directory_sha256": "fce2bce39b938c6384abe366cef71f1bde63c800b36ff15bb25141561621dd8e",
+      "model_path": "models/Qwen2.5-3B-Instruct",
+      "repository": "Qwen/Qwen2.5-3B-Instruct"
+    },
+    "Qwen2.5-7B-Instruct": {
+      "directory_sha256": "6d22565f756f98e02b3419e3a960316deeb7afc7ad21370a72ad3d195f83db0f",
+      "model_path": "models/Qwen2.5-7B-Instruct",
+      "repository": "Qwen/Qwen2.5-7B-Instruct"
+    },
+    "internlm2_5-7b-chat": {
+      "directory_sha256": "e93ffa15e2a109ab41bf58c17824c3d00c06ce6d6c6589ac4d5bba2b0bf987bd",
+      "model_path": "models/internlm2_5-7b-chat",
+      "repository": "internlm/internlm2_5-7b-chat"
+    }
+  },
+  "models": [
+    "Qwen2.5-1.5B-Instruct",
+    "Qwen2.5-14B-Instruct",
+    "Qwen2.5-3B-Instruct",
+    "Qwen2.5-7B-Instruct",
+    "internlm2_5-7b-chat"
+  ],
+  "models_this_invocation": [
+    "Qwen2.5-7B-Instruct"
+  ],
+  "num_outputs": 300,
+  "output_path": "datasets_zh/runs/zh_selfinduced/selfinduced_stage1_outputs.jsonl",
+  "output_sha256": "3579e27977269356e7412d4e6ded7c83cb9c92d63352a4707cb278c43a066efd",
+  "platform": "Linux-6.2.0-37-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "random_seed": 20260801,
+  "runner": "vllm",
+  "runner_path": "scripts/run_vllm_inference.py",
+  "runner_sha256": "d7f182e7cb783f2cb48bf5b1bdcec7dab5cccf08d43c2e99b6433f013eac2a45",
+  "software_versions": {
+    "cuda": "12.4",
+    "cudnn": "90100",
+    "torch": "2.5.1",
+    "transformers": "4.47.1",
+    "vllm": "0.6.6.post1"
+  },
+  "tasks_path": "datasets_zh/runs/zh_selfinduced/selfinduced_stage1_tasks.jsonl",
+  "tasks_sha256": "5cf3cdf47105676e1186d491625cf40a86a32598d54fe8f64dcac6a10e2aaa6f",
+  "wall_seconds": 100.56
+}

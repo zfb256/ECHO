@@ -1,0 +1,156 @@
+{
+  "audit_complete": true,
+  "audit_decidable_fraction": 1.0,
+  "audit_filled_rows": 120,
+  "audit_missed_count": 13,
+  "audit_missed_rate_among_auto_negatives": 0.21130242072962838,
+  "audit_missed_rate_ci95_seed_clustered": [
+    0.09318111142182059,
+    0.3457708262302534
+  ],
+  "audit_post_revision_missed_count": 13,
+  "audit_post_revision_negative_filled": 63,
+  "audit_post_revision_positive_filled": 57,
+  "audit_post_revision_true_positive_count": 57,
+  "audit_rows": 120,
+  "audit_sampling_negative_filled": 60,
+  "audit_sampling_positive_filled": 60,
+  "audit_true_positive_count": 57,
+  "audit_uncertain_rows": 0,
+  "audit_unresolved_rows": 0,
+  "auto_negative_hcr_count": 2940,
+  "auto_positive_hcr_count": 1060,
+  "ci_method": "Original model-by-detector-label design weights; seed-cluster bootstrap for precision, miss rate, and recall.",
+  "detector_real_output_trustworthy": true,
+  "estimated_real_output_precision": 0.9908622305529522,
+  "estimated_real_output_precision_ci95_seed_clustered": [
+    0.9634489222118088,
+    1.0
+  ],
+  "estimated_real_output_recall": 0.6304412641621944,
+  "estimated_real_output_recall_ci95_seed_clustered": [
+    0.5101183473966129,
+    0.7939783191100546
+  ],
+  "estimated_total_missed": 619.75,
+  "estimated_total_missed_ci95_seed_clustered": [
+    273.3001998001998,
+    1014.1458333333333
+  ],
+  "min_decidable_fraction": 0.75,
+  "min_precision_gate": 0.9,
+  "model_stratified_reweighting": {
+    "estimated_false_negative_count": 619.7500000000001,
+    "estimated_precision": 0.9908622305529522,
+    "estimated_recall": 0.6304412641621944,
+    "estimated_true_positive_count": 1057.25,
+    "note": "Primary design estimate: reweights every model-by-initial-label stratum to its full-run count."
+  },
+  "note": "Single-reviewer audit. Primary estimates retain all pre-revision model-by-label sampling strata; post-revision packet precision is diagnostic only.",
+  "per_model_audit": {
+    "Qwen2.5-1.5B-Instruct": {
+      "audit_negative_count": 12,
+      "audit_positive_count": 12,
+      "auto_negative_count": 431,
+      "auto_positive_count": 369,
+      "false_positive_count": 0,
+      "miss_rate": 0.16666666666666666,
+      "missed_count": 2,
+      "precision": 1.0,
+      "true_positive_count": 12
+    },
+    "Qwen2.5-14B-Instruct": {
+      "audit_negative_count": 12,
+      "audit_positive_count": 12,
+      "auto_negative_count": 761,
+      "auto_positive_count": 39,
+      "false_positive_count": 3,
+      "miss_rate": 0.08333333333333333,
+      "missed_count": 1,
+      "precision": 0.75,
+      "true_positive_count": 9
+    },
+    "Qwen2.5-3B-Instruct": {
+      "audit_negative_count": 12,
+      "audit_positive_count": 12,
+      "auto_negative_count": 583,
+      "auto_positive_count": 217,
+      "false_positive_count": 0,
+      "miss_rate": 0.4166666666666667,
+      "missed_count": 5,
+      "precision": 1.0,
+      "true_positive_count": 12
+    },
+    "Qwen2.5-7B-Instruct": {
+      "audit_negative_count": 12,
+      "audit_positive_count": 12,
+      "auto_negative_count": 583,
+      "auto_positive_count": 217,
+      "false_positive_count": 0,
+      "miss_rate": 0.25,
+      "missed_count": 3,
+      "precision": 1.0,
+      "true_positive_count": 12
+    },
+    "internlm2_5-7b-chat": {
+      "audit_negative_count": 12,
+      "audit_positive_count": 12,
+      "auto_negative_count": 575,
+      "auto_positive_count": 225,
+      "false_positive_count": 0,
+      "miss_rate": 0.16666666666666666,
+      "missed_count": 2,
+      "precision": 1.0,
+      "true_positive_count": 12
+    }
+  },
+  "post_revision_packet_precision": 1.0,
+  "post_revision_packet_precision_ci95_wilson": [
+    0.9368611651470209,
+    0.9999999999999998
+  ],
+  "provenance": {
+    "annotations_path": "datasets_zh/runs/zh_study/claim_annotation_injected.jsonl",
+    "annotations_sha256": "0e440fc8131e069521b55d1b9709dcfa6c519ee6739f0ba0bf0035c8be7820e1",
+    "audit_path": "datasets_zh/runs/zh_study/injected_recall_human_audit_sample.jsonl",
+    "audit_sha256": "205317b000cbb37d59e7383310822c39b0470e23c30272dbde5df3f69112489f",
+    "compute_script_path": "scripts/compute_injected_recall_audit.py",
+    "compute_script_sha256": "488418be4f126fc9b6e2ac3d9bb8c1225286c237d760d8f9cab25a4bad9c1b9d",
+    "min_decidable_fraction": 0.75,
+    "min_precision": 0.9,
+    "sampling_manifest_path": "datasets_zh/runs/zh_study/injected_recall_audit_sampling_manifest.json",
+    "sampling_manifest_sha256": "1d0b17d3c61ed8b464efcf4cb406be0ce7273c0fbf843c12134ba96eee52fbd6"
+  },
+  "reviewer_count": 1,
+  "sampling_population_negative_count": 2933,
+  "sampling_population_positive_count": 1067,
+  "seed_cluster_bootstrap_valid_replicates": 1997,
+  "source_annotations": "datasets_zh/runs/zh_study/claim_annotation_injected.jsonl",
+  "source_audit": "datasets_zh/runs/zh_study/injected_recall_human_audit_sample.jsonl",
+  "unstratified_sensitivity": {
+    "estimated_miss_rate": 0.21666666666666667,
+    "estimated_miss_rate_ci95_seed_clustered": [
+      0.09375,
+      0.34615384615384615
+    ],
+    "estimated_miss_rate_ci95_wilson": [
+      0.13123044048190308,
+      0.33620027573194783
+    ],
+    "estimated_precision": 0.95,
+    "estimated_precision_ci95_seed_clustered": [
+      0.8813559322033898,
+      1.0
+    ],
+    "estimated_precision_ci95_wilson": [
+      0.8629948352365147,
+      0.9828504978356043
+    ],
+    "estimated_recall": 0.6146561830456402,
+    "estimated_recall_ci95_seed_clustered": [
+      0.4962492367172991,
+      0.7898796446652021
+    ],
+    "note": "Sensitivity analysis that pools across the model quotas."
+  }
+}

@@ -1,0 +1,19 @@
+# Analysis and dataset utilities.
+datasets>=2.19,<3
+huggingface_hub>=0.23,<1
+matplotlib>=3.8,<4
+tqdm>=4.66,<5
+
+# Hosted APIs; socksio supports SOCKS proxy configurations.
+openai>=1.68
+socksio>=1.0
+
+# Local inference and optional NLI (disabled in the reported Chinese study).
+torch>=2.1
+transformers>=4.44
+sentencepiece==0.1.99
+protobuf>=3.20
+
+# Install vLLM separately for GPU serving; recorded versions are in manifests.
+# Optional Anthropic routing requires anthropic>=0.40.
+# Figure-generation code requires Ghostscript for PDF font embedding.

@@ -1,0 +1,107 @@
+{
+  "backends": [
+    "vllm"
+  ],
+  "chat_template": true,
+  "config_path": "configs/zh_study.json",
+  "config_sha256": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b",
+  "created_at_utc": "2026-09-09T01:29:34.112376+00:00",
+  "decoding": {
+    "max_tokens": 256,
+    "per_condition_temperature": {
+      "cli_override": 0.7,
+      "generation_arms": 0.7,
+      "selfinduced_stage1": 0.0
+    },
+    "seed": 20260728,
+    "temperatures_by_condition": {
+      "true_fact_control": 0.7
+    },
+    "top_p": 1.0
+  },
+  "dtype": "bfloat16",
+  "gpu_memory_utilization": 0.85,
+  "hardware": {
+    "gpu_compute_capability": [
+      8,
+      0
+    ],
+    "gpu_count_visible": 1,
+    "gpu_name": "NVIDIA A800-SXM4-40GB"
+  },
+  "hf_endpoint": "https://huggingface.co",
+  "max_model_len": 4096,
+  "model_artifacts": {
+    "Qwen2.5-1.5B-Instruct": {
+      "directory_sha256": "6dba0c2fb2b451fd014859c054092c9f4479dc46e82664014d4aeab3464b3afd",
+      "model_path": "models/Qwen2.5-1.5B-Instruct",
+      "repository": "Qwen/Qwen2.5-1.5B-Instruct",
+      "runtime_profile": {
+        "backend": "vllm",
+        "stop_token_ids": [
+          151645,
+          151643
+        ],
+        "tokenizer_mode": "slow",
+        "use_fast_tokenizer": false
+      }
+    },
+    "Qwen2.5-14B-Instruct": {
+      "directory_sha256": "b17687d0df2ca9f2493b8bce394922dd7ee9afab83db90ea5348c5f52c6ed39a",
+      "model_path": "models/Qwen2.5-14B-Instruct",
+      "repository": "Qwen/Qwen2.5-14B-Instruct",
+      "runtime_profile": {
+        "backend": "vllm",
+        "stop_token_ids": [
+          151645,
+          151643
+        ],
+        "tokenizer_mode": "slow",
+        "use_fast_tokenizer": false
+      }
+    },
+    "internlm2_5-7b-chat": {
+      "directory_sha256": "e93ffa15e2a109ab41bf58c17824c3d00c06ce6d6c6589ac4d5bba2b0bf987bd",
+      "model_path": "models/internlm2_5-7b-chat",
+      "repository": "internlm/internlm2_5-7b-chat",
+      "runtime_profile": {
+        "backend": "vllm",
+        "stop_token_ids": [
+          2,
+          92542
+        ],
+        "tokenizer_mode": "slow",
+        "use_fast_tokenizer": false
+      }
+    }
+  },
+  "models": [
+    "Qwen2.5-1.5B-Instruct",
+    "Qwen2.5-14B-Instruct",
+    "internlm2_5-7b-chat"
+  ],
+  "models_this_invocation": [
+    "Qwen2.5-1.5B-Instruct",
+    "Qwen2.5-14B-Instruct",
+    "internlm2_5-7b-chat"
+  ],
+  "num_outputs": 2400,
+  "output_path": "datasets_zh/runs/zh_true_fact_control/model_outputs.jsonl",
+  "output_sha256": "b0971b51c9a88b9ee62870c505eedc3327d08ea227fc2abc135a0bdb4b649a4f",
+  "platform": "Linux-6.2.0-37-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "random_seed": 20260728,
+  "runner": "vllm",
+  "runner_path": "scripts/run_vllm_inference.py",
+  "runner_sha256": "2053eba3f97e497708d65bb9bfd62e25bceacfdb11375949bc358a3b081d07ed",
+  "software_versions": {
+    "cuda": "12.4",
+    "cudnn": "90100",
+    "torch": "2.5.1",
+    "transformers": "4.47.1",
+    "vllm": "0.6.6.post1"
+  },
+  "tasks_path": "datasets_zh/runs/zh_true_fact_control/tasks.jsonl",
+  "tasks_sha256": "f6d7cb65e8ba6a84cc21d6a965573952166fcabea504cdcaae089c8b51db5701",
+  "wall_seconds": 413.87
+}

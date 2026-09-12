@@ -1,0 +1,41 @@
+{
+  "coverage": {
+    "conditions": {
+      "clean": 800,
+      "clean_b": 800,
+      "contaminated": 800
+    },
+    "duplicate_pair_conditions": 0,
+    "empty_responses": 0,
+    "expected_outputs": 2400,
+    "observed_outputs": 2400,
+    "pairs": 800
+  },
+  "errors": [],
+  "finish_reasons": {
+    "length": 2,
+    "stop": 2398
+  },
+  "model": "deepseek-v4-flash",
+  "rates": {
+    "gap": 0.04625,
+    "injected_ccr": 0.04625,
+    "placebo_ccr": 0.0
+  },
+  "unfinished": {
+    "conditions": {
+      "clean": 1,
+      "clean_b": 1
+    },
+    "count": 2
+  },
+  "unfinished_worst_case": {
+    "absolute_gap_shift_bound": 0.00375,
+    "gap_interval": [
+      0.042499999999999996,
+      0.05
+    ],
+    "still_positive": true
+  },
+  "valid": true
+}
