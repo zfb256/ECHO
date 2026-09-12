@@ -44,6 +44,19 @@ python3 scripts/compute_ccr_estimand_robustness.py \
 `reports_zh/zh_full_metrics.json` retains the original five-model analysis.
 The manuscript is distributed separately, not inside this directory.
 
+## Reproduce Figure 3
+
+The plotted estimates and intervals are in `reports_zh/per_model_gap_ci.json`.
+Recompute them from saved labels, then generate the forest plot:
+
+```bash
+python3 scripts/compute_per_model_gap_ci.py
+python3 scripts/make_fig_forest.py
+```
+
+These commands require no GPU or API calls. The plotting script creates
+`paper/figures/fig_forest.pdf` and `.png`; the manuscript is not included.
+
 ## Environment
 
 Run commands from this directory. Install dependencies with

@@ -1,0 +1,83 @@
+{
+  "models": {
+    "Qwen2.5-1.5B": {
+      "gap": 0.4525,
+      "lo": 0.3475,
+      "hi": 0.5575,
+      "n": 800
+    },
+    "Qwen2.5-3B": {
+      "gap": 0.27,
+      "lo": 0.1725,
+      "hi": 0.37,
+      "n": 800
+    },
+    "Qwen2.5-7B": {
+      "gap": 0.2725,
+      "lo": 0.1713,
+      "hi": 0.38,
+      "n": 800
+    },
+    "Qwen2.5-14B": {
+      "gap": 0.04,
+      "lo": 0.0013,
+      "hi": 0.1037,
+      "n": 800
+    },
+    "InternLM2.5-7B": {
+      "gap": 0.28125,
+      "lo": 0.1913,
+      "hi": 0.3787,
+      "n": 800
+    },
+    "GLM-4-9B": {
+      "gap": 0.29125,
+      "lo": 0.1913,
+      "hi": 0.3937,
+      "n": 800
+    },
+    "Yi-1.5-9B": {
+      "gap": 0.20124999999999998,
+      "lo": 0.1263,
+      "hi": 0.2825,
+      "n": 800
+    },
+    "DeepSeek-V4-Flash": {
+      "gap": 0.04625,
+      "lo": 0.0175,
+      "hi": 0.0887,
+      "n": 800
+    },
+    "Doubao-Seed-2.1-Pro": {
+      "gap": 0.0175,
+      "lo": 0.0037,
+      "hi": 0.04,
+      "n": 800
+    }
+  },
+  "open_weight_aggregate": {
+    "gap": 0.25839285714285715,
+    "lo": 0.1914,
+    "hi": 0.3302,
+    "n": 5600
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "random_seed": 20260728,
+    "cluster": "seed_claim",
+    "function": "compute_ccr_metrics.bootstrap_gap_ci_clustered",
+    "quantiles": "sorted draws at floor(0.025*N), floor(0.975*N); rounded to 4 decimals"
+  },
+  "input_sha256": {
+    "configs/zh_study.json": "dfb8ee17de7f194de3dc9db4de33746dc8544f9b3e13149c94eca9443d2f974b",
+    "datasets_zh/runs/zh_study_ext/merged7_claim_annotation_injected.jsonl": "96006ba9a5253368dfd2b3e3c1611927b736b1976dd7c3b8a896668f3e9c716f",
+    "datasets_zh/runs/zh_study_ext/merged7_claim_annotation_placebo.jsonl": "0af603e6810df136f5499c5b7f88e4f081522bf156e3150d1a289a0971cf694f",
+    "reports_zh/zh_full_metrics_7models.json": "e75adf506a3889ea713f005dabcf446dc2aa4b2970da93c03ecf5a18a504767e",
+    "datasets_zh/runs/zh_study/claim_annotation_injected_api_deepseek.jsonl": "298bc0b995517bf1db72cbd58ba8c1fd113940576b55abd84faad0a66f87b8cd",
+    "datasets_zh/runs/zh_study/claim_annotation_placebo_api_deepseek.jsonl": "16b735689351584a53de7e01645a138fe9226897943463dd2a1a9bf1dce361e6",
+    "reports_zh/zh_api_deepseek_metrics.json": "762198095d49847bff47eeee36038310a87bb8a7d73c0f1e9b8ed46f8daba2c7",
+    "datasets_zh/runs/zh_study/claim_annotation_injected_api_doubao.jsonl": "cca10a306ecf5b0ac31a78bb03830a78c7a0b81b6e6e76a7a6ce2c90fa09db21",
+    "datasets_zh/runs/zh_study/claim_annotation_placebo_api_doubao.jsonl": "fabab1bc969910e193890c65f41154d393327486ce4226503b2f26b09260d181",
+    "reports_zh/zh_api_doubao_metrics.json": "458caf3c5640d7913034f57a75517623427558184203fd2d175ebef6e84fb128"
+  }
+}
