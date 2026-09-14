@@ -24,12 +24,7 @@ from policy import (  # noqa: E402
 )
 from checker import NLIChecker, OracleChecker  # noqa: E402
 
-# ECHO-R ONLINE multi-turn evaluation. For each confirmed-false seed, roll the dialogue forward N turns
-# under each policy at a budget B, applying PASS/DISCOUNT/CHECK between turns and RE-GENERATING the next
-# turn from the (edited) context, then measure downstream contagion (turn asserts the seed's false value,
-# via the validated detector). Hypothesis under test: ECHO-R's selective allocation beats the uniform
-# baselines at matched B. Outcome on real models: it does NOT (see the paper); this script produces that
-# negative result and the failure-mode trace. GPU (vLLM) for real; --mock for logic checks only.
+# Historical online intervention evaluation; --mock produces synthetic outputs only.
 
 DISCOUNT_COST = 0.2
 _GENERIC_BAN_TOKENS = {
@@ -43,11 +38,7 @@ def stable_seed(*parts: object) -> int:
 
 
 def suppression_bad_words(false_tokens: list[str]) -> list[str]:
-    """Decode bans should be distinctive false values, not generic fragments.
-
-    The detector can keep broader evidence tokens, but vLLM `bad_words` is a blunt
-    instrument: banning "1", "3", or "over" can corrupt unrelated generations.
-    """
+    """Exclude generic fragments from decode bans to avoid suppressing unrelated content."""
     out = []
     for tok in false_tokens:
         t = (tok or "").strip().lower()
@@ -143,9 +134,7 @@ def resolve_output_path(args: argparse.Namespace) -> Path:
 
 
 def load_seeds_injected(config: dict, model: str) -> list[dict]:
-    """Injected-arm seeds straight from the seed bank: C = the false claim (external), truth = corrected.
-    No per-model confirmation needed (the falsehood is external by construction). `model` is unused for
-    selection (every seed applies to every model); kept for signature symmetry."""
+    """Load false claims and verified corrections directly from the injected seed bank."""
     bank_path = resolve_project_path(config["paths"]["seed_bank"])
     seeds = []
     for s in json.loads(bank_path.read_text(encoding="utf-8")).get("seeds", []):
@@ -192,14 +181,7 @@ def load_seeds(config: dict, si_path: Path, model: str) -> list[dict]:
 
 
 def make_schedule(n_turns: int, risky_ratio: float, pool: dict, rng: random.Random) -> list[tuple[str, str]]:
-    """A per-dialogue interleaving of on-topic (risky) and tangent (safe) follow-ups, randomized.
-
-    The number of risky turns VARIES per dialogue (0..n_turns): some dialogues are all-tangent (C is
-    never elaborated -> benign, needs no check), others are elaboration-heavy. This spread is what makes
-    GLOBAL budget allocation matter — ECHO-R can skip the benign dialogues and spend its limited checks
-    where contagion is actually imminent, while uniform spenders waste checks on benign ones. `risky_ratio`
-    only biases the expected count.
-    """
+    """Randomize on-topic and tangent turns with a varying risky-turn count per dialogue."""
     lam = max(0, min(n_turns, int(round(rng.gauss(risky_ratio * n_turns, max(1.0, 0.5 * n_turns))))))
     n_risky = lam
     kinds = ["on_topic"] * n_risky + ["tangent"] * (n_turns - n_risky)
@@ -230,16 +212,14 @@ class _Roll:
     def context_messages(self, user_text: str, discounted: bool) -> list[dict]:
         msgs = list(self.history)
         if discounted and self.C.state is ProvenanceState.UNVERIFIED:
-            # De-emphasize without inserting a mid-dialogue system message: several chat
-            # templates only allow system messages at the beginning.
+            # Avoid mid-dialogue system messages unsupported by some chat templates.
             user_text = "Note: an earlier statement in this dialogue is unverified; do not rely on it.\n\n" + user_text
         msgs.append({"role": "user", "content": user_text})
         return msgs
 
 
 def _mock_turn(roll: _Roll, kind: str, discounted: bool, rng: random.Random) -> str:
-    """Deterministic stand-in for generation: assert C's false value with a prob depending on whether C
-    is still presented-as-true and the follow-up pulls on it."""
+    """Generate synthetic responses with condition-dependent probabilities for testing."""
     C, st = roll.seed["C"], roll.C.state
     if st is ProvenanceState.REFUTED:
         p = 0.05
@@ -253,8 +233,7 @@ def _mock_turn(roll: _Roll, kind: str, discounted: bool, rng: random.Random) -> 
 
 
 def rollout(policy, seeds, total_budget, checker, schedules, generate, max_tokens) -> dict:
-    """Online rollout over ALL dialogues sharing ONE budget pool (turn-interleaved, so early checks on
-    benign dialogues exhaust the pool before later risky turns — the realistic online constraint)."""
+    """Roll out turn-interleaved dialogues sharing one check budget."""
     rolls = [_Roll(s) for s in seeds]
     budget = Budget(total=total_budget)            # SHARED across dialogues
     n_turns = len(schedules[0])
@@ -270,8 +249,7 @@ def rollout(policy, seeds, total_budget, checker, schedules, generate, max_token
                 budget.spend(checker.cost)
                 r.C.state = checker.check(d.target)
                 if r.C.state is ProvenanceState.REFUTED:
-                    # (2) INJECT THE TRUTH, not just a disclaimer — replacing C with the corrected fact
-                    # suppresses re-assertion far better than telling the model to "disregard".
+                    # Replace the false claim with its verified correction.
                     for m in r.history:
                         if m["role"] == "assistant" and m["content"] == r.seed["C"]:
                             m["content"] = f"Correction: my earlier statement was wrong. The correct fact is: {r.seed['truth']}"
@@ -295,9 +273,7 @@ def rollout(policy, seeds, total_budget, checker, schedules, generate, max_token
 # ---------- MULTI-CLAIM rollout (the regime where selective allocation can beat uniform) ----------
 
 class _MultiRoll:
-    """One dialogue carrying K distinct injected claims (different entities). Probes target one entity per
-    turn; with budget < K, WHICH claim you check matters — ECHO-R checks the about-to-be-probed one,
-    uniform checks indiscriminately."""
+    """Track multiple injected claims per dialogue under a shared check budget."""
     def __init__(self, bundle: list[dict]):
         self.seeds = bundle
         self.dialogue_id = "|".join(str(s.get("q_id")) for s in bundle)
@@ -329,13 +305,7 @@ def make_schedule_multi(n_turns: int, k: int, risky_ratio: float, pool: dict, rn
 
 
 def _forced_answer(seed: dict, mode: str) -> str:
-    """法子D served response for a checked-and-refuted claim (replaces free generation).
-
-    Both modes are contagion-free by construction: 'grounded' emits the truth (which has no
-    distinctive false token — detector-blind seeds are filtered at load), 'abstain' asserts
-    nothing. The research claim is NOT 'this cures' (trivially it does) but that ECHO-R's
-    selective allocation gets MORE probes served this way per unit budget than uniform.
-    """
+    """Serve the verified fact or abstention after a refuting check, replacing free generation."""
     if mode == "abstain":
         return (f"I can't confirm a specific claim about {seed.get('entity', 'that topic')}; "
                 "I won't assert something I haven't verified.")
@@ -352,19 +322,13 @@ def _future_probe_turns(sched) -> dict[int, list[int]]:
 
 
 def _probe_risk_rank(risk, ctx, probed_claim) -> tuple[int | None, int]:
-    """Rank of `probed_claim` among open claims by the ECHO-R risk scorer (1 = highest risk).
-
-    Diagnostic only: measures whether the scorer would prioritise the claim that is about to
-    be probed. Returns (rank_or_None, n_open); rank is None when the probed claim is not open.
-    """
+    """Return (risk rank, open count); rank is None when the probed claim is not open."""
     openc = ctx.open_unverified() if hasattr(ctx, "open_unverified") else []
     n_open = len(openc)
     if risk is None or not hasattr(risk, "_per_claim") or probed_claim not in openc:
         return None, n_open
     pc = risk._per_claim(ctx)
-    # Match the policy's actual tie behavior. `riskiest()` uses max() over
-    # open claims, so ties go to the earliest open claim, not to every tied
-    # claim. This diagnostic should not count all zero-score ties as rank 1.
+    # Break risk-score ties by original claim order, matching the policy.
     ordered = sorted(enumerate(openc), key=lambda x: (-pc.get(id(x[1]), 0.0), x[0]))
     rank = next((j + 1 for j, (_orig_i, c) in enumerate(ordered) if c is probed_claim), None)
     return rank, n_open
@@ -437,9 +401,7 @@ def rollout_multiclaim(policy, bundles, total_budget, checker, schedules, genera
             if kind == "on_topic":
                 r.probe_turns += 1
                 s = r.seeds[k_idx]
-                # 法子D: if this probed claim was already CHECKed & refuted, serve a grounded/abstain
-                # answer instead of the model's free generation (which can paraphrase the falsehood past
-                # a token-ban). The moat is which policy gets more probes into this state per unit budget.
+                # Serve the configured fact or abstention for checked, refuted claims.
                 served = force_rewrite and r.claims[k_idx].state is ProvenanceState.REFUTED
                 if served:
                     turn_text = _forced_answer(s, rewrite_mode)
@@ -471,13 +433,12 @@ def _mock_turn_multi(roll: "_MultiRoll", kind: str, k_idx, disc: bool, rng: rand
     if kind != "on_topic" or k_idx is None:
         return "Here is some unrelated, careful elaboration."
     s = roll.seeds[k_idx]
-    # 法子A: if the claim's false tokens are banned from decoding, the model physically cannot restate
-    # the false value -> no contagion (this is the mechanism the real vLLM bad_words enforces).
+    # Simulate the token-ban branch without model inference.
     if any(tok in roll.banned for tok in s.get("ban_tokens", s.get("false_tokens", []))):
         return "A careful, unrelated elaboration."
     c = roll.claims[k_idx]
     if c.state is ProvenanceState.REFUTED:
-        p = 0.35   # context correction alone only partly helps (the real weakness we observed)
+        p = 0.35   # Synthetic probability for testing, not an empirical estimate.
     elif disc:
         p = 0.60
     else:
@@ -529,8 +490,7 @@ def main() -> None:
         print(json.dumps({"dry_run": True, "example_schedule": [s[0] for s in schedules[0]]}, ensure_ascii=False))
         return
 
-    # checker: real run = bounded NLI against the seed's truth_statement (no-oracle path); mock = perfect
-    # OracleChecker so the intervention logic is exercised without a local NLI model.
+    # Use bounded NLI for real checks and an oracle for synthetic tests.
     oracle_checker = OracleChecker(cost=args.check_cost)
     nli_meta = {
         "checker": "oracle" if args.mock else "nli",
@@ -556,8 +516,7 @@ def main() -> None:
                 "install sentencepiece/protobuf/transformers or use --mock/--dry-run for plumbing tests."
             )
 
-    # generation backend. generate(prompts, metas, max_tokens, bad_words) — bad_words[i] is the per-prompt
-    # decoding ban-list (法子A); empty for single-claim / unsuppressed.
+    # Generation accepts per-prompt bad_words lists for selective token suppression.
     if args.mock:
         if multi:
             def generate(prompts, metas, max_tokens, bad_words=None):
@@ -591,8 +550,7 @@ def main() -> None:
             outs = llm.generate(texts, params)
             return [o.outputs[0].text.strip() for o in outs]
 
-    # Multi-claim uses per-claim entity overlap (HeuristicRiskScorer) so ECHO-R can target the probed
-    # claim; single-claim uses the deictic elaboration scorer.
+    # Use per-claim entity overlap to prioritize the probed entity.
     risk = HeuristicRiskScorer() if multi else ElaborationRiskScorer()
     trace_rows = [] if (args.trace and multi) else None
     rows = []

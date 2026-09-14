@@ -14,10 +14,7 @@ from jsonl import write_jsonl
 from manifest import file_sha256, write_manifest
 
 
-# SELF-INDUCED arm, stage 1: the model answers a hallucination-prone factual
-# question on its own. Turn-1 answers later confirmed false become the natural
-# seed -- this is what makes the contagion claim ecologically valid (the model
-# hallucinated it, we did not inject it).
+# Stage 1 generates answers for replay; factual errors are identified after generation.
 
 
 def parse_args() -> argparse.Namespace:
@@ -91,8 +88,7 @@ def main() -> None:
                     "q_id": q["q_id"],
                     "question": q["question"],
                     "followup": q.get("followup", default_followup),
-                    # Bind the adjudication reference to the generated task. Downstream
-                    # labeling must not silently read a later, edited bank version.
+                    # Bind the reference fact to the task, independent of later bank edits.
                     "truth_statement": q["truth_statement"],
                     "evidence_hint": q.get("evidence_hint"),
                     "prompt": prompt,

@@ -1,27 +1,4 @@
-"""Why the rule flags 80 correction-control outputs that assert nothing false.
-
-Appendix A.2 states that most flagged spans are generic tokens, or a value that is true
-elsewhere in the same fact. This script derives that breakdown from the shipped outputs so
-the claim is checkable, and so a rebuttal can show why a human audit returned zero
-persistence on all 80 rows.
-
-Each flagged span is placed in one bucket:
-
-  generic          the span carries no distinctive value (no digit, not a proper-noun-like
-                   token), e.g. "human", "later", "tall", "taste"
-  true_elsewhere   the span is a real value for the entity that the seed attaches to the
-                   wrong role, e.g. 1799 is the true END of the French Revolution while the
-                   seed dates its START to 1799
-  refuted_mention  a distinctive false value that appears inside an explicit correction or
-                   contrast, e.g. "206 ... easier to recall than 256"
-
-The bucketing is a heuristic for exposition only. No headline number depends on it: the
-persistence rate itself comes from human labels via compute_revision_persistence_audit.py.
-
-    python -B scripts/inspect_revision_persistence_flags.py
-
-Writes reports/revision_persistence_flag_diagnostics.json.
-"""
+"""Group historical correction-control flags heuristically; human labels determine persistence."""
 
 from __future__ import annotations
 
@@ -92,8 +69,7 @@ def main() -> None:
             span = distinctive[0]
             i = text.lower().find(span.lower())
             window = text[max(0, i - args.context) : i + args.context] if i >= 0 else text
-            # A distinctive value stated without any nearby correction cue is a value the
-            # response uses in its own right, so the seed attached it to the wrong role.
+            # Heuristically classify distinctive values without nearby correction cues as true_elsewhere.
             bucket = "refuted_mention" if CORRECTION.search(window) else "true_elsewhere"
 
         buckets[bucket] += 1

@@ -24,17 +24,7 @@ from manifest import (
 )
 
 
-# GPU inference for the three task files produced locally:
-# task files produced locally:
-#   datasets_zh/runs/<run>/generation_tasks.jsonl          -> model_outputs.jsonl
-#   datasets_zh/runs/<run>/selfinduced_stage1_tasks.jsonl  -> selfinduced_stage1_outputs.jsonl
-#   datasets_zh/runs/<run>/selfinduced_stage2_tasks.jsonl  -> selfinduced_stage2_outputs.jsonl
-#
-# Contract: for each task, load models/<model>, generate
-# from task["prompt"], copy through every task field EXCEPT "prompt", add
-# "response" (+ token counts / finish_reason). Decoding params go in the manifest.
-# No API keys, no absolute path literals. Greedy decoding by default (temperature
-# 0) so stage-1 elicits the model's honest best answer and runs are reproducible.
+# Run local injected and self-induced inference; record decoding settings in manifests.
 
 
 def parse_args() -> argparse.Namespace:
@@ -66,15 +56,7 @@ def default_output_path(tasks_path: Path) -> Path:
 
 
 def build_text(task: dict, tokenizer: Any, use_chat_template: bool) -> str:
-    """Render a task to model input text.
-
-    A task may carry structured `messages` (a list of {role, content}) — used by the
-    self-induced stage-2 arm so the model's own turn-1 is replayed as a real ASSISTANT
-    turn and the follow-up conditions on it autoregressively (the mechanism under study),
-    instead of being quoted inside one user blob. Otherwise we wrap the flat `prompt` as a
-    single user message. When the chat template is unavailable / disabled we fall back to
-    the flat `prompt` for BOTH cases (so `prompt` must always be present).
-    """
+    """Apply structured chat roles or use the required flat prompt when templates are unavailable."""
     prompt = task["prompt"]
     if not use_chat_template or tokenizer is None or getattr(tokenizer, "chat_template", None) is None:
         return prompt
@@ -106,13 +88,7 @@ def rows_in_task_order(tasks: list[dict[str, Any]], previous: dict[str, dict[str
 
 
 def free_gpu_memory() -> None:
-    """Best-effort GPU release between sequentially-loaded models.
-
-    vLLM does NOT reliably free device memory on `del llm` alone — loading a second model in
-    the same process then OOMs (or trips 'process group already initialized'). We collect, empty
-    the CUDA cache, and tear down the model-parallel/NCCL state. This is belt-and-suspenders:
-    the ROBUST pattern is still one model per process (pass --model once each).
-    """
+    """Release GPU and distributed state; one model per process provides reliable isolation."""
     import gc
 
     gc.collect()
@@ -138,9 +114,7 @@ def free_gpu_memory() -> None:
 
 
 def main() -> None:
-    # vLLM 0.8.x defaults some models to the V1 engine, which can import optional
-    # flashinfer/tvm extensions from newer installs and fail before generation.
-    # The V0 engine is the stable path for this study's CUDA setup.
+    # Use V0 to avoid optional V1 dependencies incompatible with this CUDA setup.
     os.environ.setdefault("VLLM_USE_V1", "0")
 
     args = parse_args()
@@ -190,9 +164,7 @@ def main() -> None:
         if not tasks:
             raise SystemExit(f"No tasks match --model {sorted(wanted)}")
     if args.limit is not None:
-        # A limited smoke run must never overwrite an authoritative output file. The
-        # runner merges and then writes rows in the current task list's order; after
-        # slicing, that would truncate an existing full output to the limited subset.
+        # Prevent limited runs from truncating existing full outputs.
         safe_name = any(token in out_path.name.lower() for token in ("limit", "smoke", "tmp", "partial"))
         if not safe_name:
             raise SystemExit(
@@ -283,10 +255,7 @@ def main() -> None:
         software_versions["cudnn"] = None
 
     def task_seed(task: dict) -> int:
-        # Per-task sampling seed: clean_A and clean_B share the same prompt but differ
-        # by task_id, so they must draw INDEPENDENT samples at temp>0 — otherwise a
-        # single global seed makes them identical and the placebo noise floor is a
-        # degenerate 0 (which would falsely inflate the real-vs-placebo CCR gap).
+        # Use task-specific seeds for distinct stochastic draws from identical clean prompts.
         h = int(hashlib.sha256(task["task_id"].encode("utf-8")).hexdigest()[:8], 16)
         return (seed + h) % (2**31 - 1)
 
@@ -304,8 +273,7 @@ def main() -> None:
             raise SystemExit(f"Model path not found: {model_path} (place weights under models/ or symlink there).")
         model_tasks = [t for t in tasks if t["model"] == model]
         runtime = model_runtime_profile(model_path)
-        # Hash the exact local bytes used for this invocation. This is deliberately
-        # stronger than a mutable repository name or branch-level revision.
+        # Hash local model bytes rather than mutable repository identifiers.
         model_artifacts[model] = {
             "repository": model_repositories.get(model),
             "model_path": to_project_relative(model_path),
@@ -432,10 +400,7 @@ def main() -> None:
 
         free_gpu_memory()
 
-    # MERGE with any existing output keyed by task_id, so running ONE model per process over the
-    # same task file (the recommended pattern — vLLM can't safely load two models in one process)
-    # ACCUMULATES instead of the second run clobbering the first. New results win; re-running a
-    # model is idempotent. Stale rows whose task_id is no longer in this task file are dropped.
+    # Merge by task ID: replace duplicates with new results and drop obsolete tasks.
     merged: dict[str, dict[str, Any]] = {}
     if out_path.exists():
         for prev in read_jsonl(out_path):
@@ -460,9 +425,7 @@ def main() -> None:
     output_order = tasks if args.limit is not None else all_tasks
     rows = rows_in_task_order(output_order, merged, results)
 
-    # Manifest `models` must reflect ALL models present in the MERGED output, not just this
-    # invocation's — otherwise per-model runs (the recommended pattern) leave the manifest reading
-    # only the last model while the JSONL holds both, which misleads an auditor.
+    # Record all models in merged output, including earlier invocations.
     models_in_output = sorted({r.get("model") for r in rows if r.get("model")})
 
     missing_artifacts = sorted(set(models_in_output) - set(model_artifacts))

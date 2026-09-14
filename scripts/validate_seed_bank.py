@@ -20,10 +20,7 @@ SEED_TYPES = {
     "numeric_perturbation",
     "unsupported_fabricated_detail",
 }
-# truth_statement (N3): a CLEAN, verifiable true proposition (NOT a meta-note like
-# evidence_hint). The self-induced auto-labeler runs NLI(turn1, truth_statement) to
-# SUGGEST whether turn-1 is false; a human confirms. evidence_hint stays a free-form
-# annotator note. Keeping them separate is what makes the NLI suggestion meaningful.
+# truth_statement stores the reference fact; evidence_hint stores supporting notes.
 SI_REQUIRED = {"q_id", "question", "followup", "hallucination_prone_reason", "evidence_hint", "truth_statement"}
 
 
@@ -33,8 +30,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--require-verified",
         action="store_true",
-        help="Pre-run gate: fail if ANY item still has needs_human_verification truthy. Run this before "
-        "the real study so AI-authored / edited items cannot reach generation un-confirmed.",
     )
     return parser.parse_args()
 
@@ -66,13 +61,10 @@ def validate_seed_bank(path: Path, seeds: list[dict]) -> list[str]:
             errors.append(f"{path.name}:{sid} empty claim")
         if not _nonempty(s.get("corrected_claim")):
             errors.append(f"{path.name}:{sid} empty corrected_claim")
-        # The critical check: a 'seed' whose claim equals its correction is TRUE,
-        # so the injected arm has no falsehood to inject — it silently no-ops.
+        # Identical claims cannot define a false-statement intervention.
         if _nonempty(s.get("claim")) and s.get("claim", "").strip() == s.get("corrected_claim", "").strip():
             errors.append(f"{path.name}:{sid} claim == corrected_claim (seed is not false)")
-        # Detector-blind guard (N1): if corrected_claim restates the false value, the rule
-        # detector's false-token diff is empty and the seed is silently undetectable. This
-        # would still pass construct-gold validation, so catch it here at authoring time.
+        # The span detector requires tokens that distinguish the false claim.
         if _nonempty(s.get("claim")) and _nonempty(s.get("corrected_claim")) and detector_blind(s["claim"], s["corrected_claim"]):
             errors.append(
                 f"{path.name}:{sid} detector-blind: corrected_claim restates the false value, so the "

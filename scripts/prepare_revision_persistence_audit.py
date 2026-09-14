@@ -1,18 +1,4 @@
-"""Build the blind human-audit packet for injected correction-control persistence.
-
-Why this audit exists. The paper reports post-correction persistence $0.000$ for the injected
-correction-control arm (Section 5.3). That zero is produced by the NLI mention-vs.-assertion
-guard: the raw token rule flags 80 of 1,800 outputs as still asserting the seed falsehood, and
-the guard drops every one of them. So the single headline number that is exactly zero rests on
-an unaudited model judgment, in a paper whose stated position is "we measure the labeler rather
-than assume it". This packet puts those 80 rows in front of a human.
-
-The rule-only pass needs no NLI model and no GPU, so the packet can be built anywhere:
-    python -B scripts/prepare_revision_persistence_audit.py
-
-Rows are emitted blind: the packet carries the seed falsehood, the corrected claim, the user's
-correction turn, and the response to judge, but NOT the rule verdict and NOT the NLI verdict.
-"""
+"""Build blind rule-flagged audit packets for the historical correction control; no GPU or NLI."""
 
 from __future__ import annotations
 

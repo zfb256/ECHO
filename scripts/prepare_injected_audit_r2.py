@@ -1,35 +1,5 @@
 #!/usr/bin/env python3
-"""Draw the round-2 held-out blind audit packet for the frozen injected detector.
-
-Why a second script instead of editing prepare_injected_recall_audit.py
-----------------------------------------------------------------------
-The original script reproduces the original 120-row packet, whose SHA-256 is
-recorded in reports_zh/injected_recall_human_audit.json. Editing it would make
-that packet irreproducible. This script leaves it untouched.
-
-What is different from round 1
-------------------------------
-1. Held-out: `--exclude` drops every (pair_id, model) already audited, so the
-   new packet cannot overlap the packet that drove the detector repair.
-2. Asymmetric quota: round 1 spent half its budget on precision, whose CI was
-   already 0.037 wide, while recall's CI was 0.284 wide and rested on 13 events.
-   The default 8 positives / 16 negatives per endpoint moves the budget to the
-   under-determined side. The stratified estimator weights each cell by
-   N_stratum / n_stratum, so unequal n is handled exactly.
-3. All endpoints: strata are per model, so the hosted endpoints join the same
-   packet and finally receive a human audit.
-4. Matched Clean A partners: a subset of the sampled contaminated rows also
-   contributes its matched clean response, which makes the semantic CCR
-   *discordance* estimable rather than only the marginal assertion rate.
-5. Genuinely blind: the packet carries an opaque endpoint code instead of the
-   model name, and no condition field, so the annotator cannot tell a
-   contaminated row from a clean one, nor which model produced it. The mapping
-   lives in a separate design record that the annotator never opens.
-
-After annotation, run --deanonymize to restore model names and split the packet
-into a contaminated-only view (which compute_injected_recall_audit.py consumes
-unchanged) plus the matched pairs.
-"""
+"""Sample held-out stratified blind responses and matched clean pairs; --deanonymize restores IDs."""
 from __future__ import annotations
 
 import argparse
@@ -241,8 +211,7 @@ def prepare(args: argparse.Namespace) -> int:
     # Matched Clean A partners, spread evenly over endpoints.
     partners: list[dict[str, Any]] = []
     if args.clean_partners > 0 and models:
-        # Spread the budget evenly, then hand the remainder to the first endpoints
-        # in a hash order, so the total is met exactly and the choice is deterministic.
+        # Allocate equally, assigning the remainder in endpoint order.
         base, remainder = divmod(args.clean_partners, len(models))
         order = sorted(models, key=lambda m: stable_hash("partners", str(seed), m))
         quota = {m: base + (1 if i < remainder else 0) for i, m in enumerate(order)}
@@ -297,9 +266,7 @@ def prepare(args: argparse.Namespace) -> int:
             "blind_row_sha256": blind_row_sha256(packet[-1]),
         })
 
-    # audit_id is a truncated hash, so collisions are astronomically unlikely,
-    # but a collision would silently drop a row at --deanonymize time rather
-    # than failing, so it is checked rather than assumed.
+    # Reject hash collisions before deanonymization can lose rows.
     ids = [r["audit_id"] for r in packet]
     if len(set(ids)) != len(ids):
         dupes = sorted({i for i in ids if ids.count(i) > 1})
@@ -427,9 +394,7 @@ def deanonymize(args: argparse.Namespace) -> int:
         path.write_text("\n".join(json.dumps(r, ensure_ascii=False, sort_keys=True) for r in rows) + "\n",
                         encoding="utf-8")
 
-    # Existing compute_injected_recall_audit.py already implements the required
-    # model-by-label weighting. Emit its established manifest schema here so the
-    # round-2 packet cannot silently fall back to an unstratified estimate.
+    # Use the established manifest schema for model-by-label population weighting.
     population = {
         model: {
             "positive": int(values["population_positive"]),

@@ -41,7 +41,6 @@ python3 scripts/compute_ccr_estimand_robustness.py \
   --output reports_zh/ccr_recheck.json
 ```
 
-`reports_zh/zh_full_metrics.json` retains the original five-model analysis.
 The manuscript is distributed separately, not inside this directory.
 
 ## Reproduce Figure 3

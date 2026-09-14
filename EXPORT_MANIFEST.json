@@ -16,7 +16,7 @@
       "modified": false
     },
     "README.md": {
-      "sha256": "c0678e7f39a1be7ef8d6dda0b281cdd65a5b6103b0e9c4859aabcec4d5a09b1c",
+      "sha256": "3e155626ccd99e8fafda1f96ba7ec0dc1313fc45c0022c62a1ff1c9b5c32b5c4",
       "original_sha256": "9f61b9ff70ae6406c280b4cd14f29c0c02b5873c760f1eab1c35547baa691467",
       "modified": true
     },
@@ -726,9 +726,9 @@
       "modified": false
     },
     "scripts/build_selfinduced_stage1.py": {
-      "sha256": "c7f5bce14ee90a3e291e76961b8abd4fc46f6a12fbc933c98cdabeb6bcc51abb",
+      "sha256": "4e25b30bc776c57b7cf762f1fbce4c0c9ce7c5d0208e7129bfc568744fd25428",
       "original_sha256": "c7f5bce14ee90a3e291e76961b8abd4fc46f6a12fbc933c98cdabeb6bcc51abb",
-      "modified": false
+      "modified": true
     },
     "scripts/build_selfinduced_stage2.py": {
       "sha256": "57bdbaad550afbb9367bf058e32f2e8d59d206e902dc4e167c40d3bcf69949f2",
@@ -911,9 +911,9 @@
       "modified": false
     },
     "scripts/inspect_revision_persistence_flags.py": {
-      "sha256": "a394ac6cccf1c708bb44d90814481968b65cc13859ee13acd4fe93778df673c8",
+      "sha256": "52a3e96ed23875e9f148d70a647398504b69838ce503eaaa065aa2db114fef7d",
       "original_sha256": "a394ac6cccf1c708bb44d90814481968b65cc13859ee13acd4fe93778df673c8",
-      "modified": false
+      "modified": true
     },
     "scripts/intervention_power_analysis.py": {
       "sha256": "c4868595bb755c5f07143d58286f2bc288de741d2c8218611b259365499dda9d",
@@ -951,9 +951,9 @@
       "modified": false
     },
     "scripts/prepare_injected_audit_r2.py": {
-      "sha256": "a088eccb7005df3a3c9fb038b956f5f22c212e794a6ad75f19c2e43ed2ae701f",
+      "sha256": "3749a3a5db5ce0020a3f0805a5d1cbc3bf8df9d55c39e785dfd29fade6adc26b",
       "original_sha256": "a088eccb7005df3a3c9fb038b956f5f22c212e794a6ad75f19c2e43ed2ae701f",
-      "modified": false
+      "modified": true
     },
     "scripts/prepare_injected_recall_audit.py": {
       "sha256": "faba0b54d5c8c1b59fa4179b507125c9ca23bcaeee13ff69e5bb4a26788bedce",
@@ -966,9 +966,9 @@
       "modified": false
     },
     "scripts/prepare_revision_persistence_audit.py": {
-      "sha256": "18aab2d34eb0eeb43684ccd1d5adaec3279c366fbaf474b1a3a4a0f79444e447",
+      "sha256": "9838518ff7553698e19e275d74e35bc40ff19068e8d7d159a59df4f7f9b9f4c0",
       "original_sha256": "18aab2d34eb0eeb43684ccd1d5adaec3279c366fbaf474b1a3a4a0f79444e447",
-      "modified": false
+      "modified": true
     },
     "scripts/prepare_second_annotator_sample.py": {
       "sha256": "485575912587b5177c4046456a794b3ae8e635781c659fe0f5de8f2600165a6f",
@@ -1001,9 +1001,9 @@
       "modified": true
     },
     "scripts/run_echo_r_eval.py": {
-      "sha256": "85d97684d0ae6488df4a307559a2fca5d8a962ac5544b98f38da73d382b26a4a",
+      "sha256": "f1f99abc1a4b1df7d1fbbd0ee7e6557679d529e7cdfc3992e6929f996adc3265",
       "original_sha256": "85d97684d0ae6488df4a307559a2fca5d8a962ac5544b98f38da73d382b26a4a",
-      "modified": false
+      "modified": true
     },
     "scripts/run_hunyuan_placebo.py": {
       "sha256": "39202727bd6731f9d75bffae7361676b1bfc4a32369a4f50dbb02e46f6c0dedc",
@@ -1016,9 +1016,9 @@
       "modified": false
     },
     "scripts/run_vllm_inference.py": {
-      "sha256": "2053eba3f97e497708d65bb9bfd62e25bceacfdb11375949bc358a3b081d07ed",
+      "sha256": "51ca939e5709d9bc7aee85650ab3bb86e884608664d1edc3f42217ac9f7b0b77",
       "original_sha256": "2053eba3f97e497708d65bb9bfd62e25bceacfdb11375949bc358a3b081d07ed",
-      "modified": false
+      "modified": true
     },
     "scripts/run_zh_study_gpu.sh": {
       "sha256": "beb466ba907777158129a2f0d61480e6ac1db791262768fb7a320b8fefb8be5c",
@@ -1036,9 +1036,9 @@
       "modified": false
     },
     "scripts/validate_seed_bank.py": {
-      "sha256": "865ef079cc256a1c21acb45c73ee1079a8973acdb1f768428a9401bb690f0842",
+      "sha256": "5f6ecbecc80517174d48faf68446304dce771095307f0a701ba9082a9ece2135",
       "original_sha256": "865ef079cc256a1c21acb45c73ee1079a8973acdb1f768428a9401bb690f0842",
-      "modified": false
+      "modified": true
     },
     "scripts/validate_zh_study.py": {
       "sha256": "171400b4d6235b1cb482c60b2a2ea1a07cd970e79c3a51479afd5c526ee6b1d4",
